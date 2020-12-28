@@ -29,12 +29,12 @@
 			</ol>
 
 			<h2>Video Overview</h2>
-			<p>This short video demonstrates what the finished enhancement will look like and the functionality it	should possess.</p>
-				<iframe src="https://www.youtube.com/embed/cJ624wvZnY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>This short video demonstrates what the finished enhancement will look like and the functionality it should possess.</p>
+			<iframe src="https://www.youtube.com/embed/cJ624wvZnY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 			<h2>Tasks</h2>
 			<p>As described above you are being asked to implement <abbr
-					title="CREATE, READ, UPDATE, DELETE">CRUD</abbr> functionality for client data. Specifically:</p>
+							title="CREATE, READ, UPDATE, DELETE">CRUD</abbr> functionality for client data. Specifically:</p>
 
 			<h3>admin.php View</h3>
 			<p>When a client logs in they are taken to the <b>admin.php</b>" view where their data is displayed as
@@ -42,18 +42,18 @@
 			<ol>
 				<li>Remove the client level data from displaying in the view (do NOT display it at all).</li>
 				<li>Add text indicating to the client that they are "logged in".</li>
-				<li>Add an "update account information" link to the view so a client can update their information. The	link must direct to the "accounts controller" and pass a name - value pair to deliver the update	view. Make sure the link is visible	and clear for all clients.</li>
+				<li>Add an "update account information" link to the view so a client can update their information. The link must direct to the "accounts controller" and pass a name - value pair to deliver the update view. Make sure the link is visible and clear for all clients.</li>
 				<li>Add an HTML heading to preceed the "vehicles managment" link and a brief explanation telling
-					administrative clients that they should use the link to administer inventory (The heading,	explanation and inventory link should be visible	only to administrative clients (those with a clientLevel greater than 1), not to non-administrative	clients.</li>
-				<li>Add PHP code to display a message from the session if one exists. Make it display below the	&lt;h1&gt; heading but above the account information display.</li>
+					administrative clients that they should use the link to administer inventory (The heading, explanation and inventory link should be visible only to administrative clients (those with a clientLevel greater than 1), not to non-administrative clients.</li>
+				<li>Add PHP code to display a message from the session if one exists. Make it display below the &lt;h1&gt; heading but above the account information display.</li>
 			</ol>
 
 			<h3>Update Client View</h3>
 			<p>You will create a new view where clients can update their registration data - first name, last name,
 				email address and password:</p>
 			<ol>
-				<li>Create a new view using your phpmotors template. The view should be named <b>client-update.php</b>	and be saved into the <b>view</b> folder.</li>
-				<li>Add a PHP code block at the top of the view with code to only allow access to the view if the client	is logged in.</li>
+				<li>Create a new view using your phpmotors template. The view should be named <b>client-update.php</b> and be saved into the <b>view</b> folder.</li>
+				<li>Add a PHP code block at the top of the view with code to only allow access to the view if the client is logged in.</li>
 				<li>The view will contain <mark>two forms</mark>: 1) "Account Update", consisting of the first and last
 					names and email and 2) "Change Password" to change the password.</li>
 			</ol>
@@ -93,18 +93,19 @@
 						"modifyaccount":&nbsp;</b>. <mark><b>Solution:</b> The two values must match (e.g. $action =
 						"modifyAccount"; and <b>case "modifyAccount":</b>).</mark></li>
 				<li>Error: The input field's name and the input_filter's name do not match (e.g. &lt;input name="firstname"...&gt;, filter_input(INPUT_POST, "clientFirstName");). <mark><b>Solution:</b> The
-						two names match exactly (e.g. &lt;input  name="clientFirstname"...&gt;, filter_input(INPUT_POST,
+						two names match exactly (e.g. &lt;input name="clientFirstname"...&gt;, filter_input(INPUT_POST,
 						"clientFirstname");).</mark></li>
 				<li>Error: The parameters being passed into a function are not in the order expected by the function
 					(e.g. In the model the function is "updateClient($clientFirstname, $clientLastname, $clientEmail,
 					$clientId){...}". The function call in the controller is "updateClient($clientId, $clientFirstname, $clientLastname, $clientEmail)".)
 					<mark><b>Solution:</b> Make sure the parameters in the function are in the correct order in both
-						locations (e.g. updateClient($clientFirstname, $clientLastname, $clientEmail, $clientId);).</mark></li>
+						locations (e.g. updateClient($clientFirstname, $clientLastname, $clientEmail, $clientId);).</mark>
+				</li>
 			</ol>
 
 			<h3>Accounts Controller</h3>
 			<ol>
-				<li>Add a case statement that will deliver the  <b>client-update.php</b> view.</li>
+				<li>Add a case statement that will deliver the <b>client-update.php</b> view.</li>
 				<li>Add a case statement to handle the "account update" process:
 					<ol>
 						<li>Filter and collect the inputs, be sure to use correct validation or sanitization flags.</li>
@@ -145,7 +146,7 @@
 				<li>Log in to be directed to the "<b>admin.php</b>" view.</li>
 				<li>If logged in as an administrator (clientLevel greater than 1), the "inventory" link should appear with a heading and text explanation.</li>
 				<li>If logged in as any type of client (any clientLevel), there should be an "account update" link.</li>
-				<li>When the "account update" link is clicked, the  "account update" view should appear:
+				<li>When the "account update" link is clicked, the "account update" view should appear:
 					<ul>
 						<li>There should be two forms, each with its own heading.</li>
 						<li>The "Account Update" form should have three fields. The first name, last name and email fields should be populated with the current client's data.</li>
@@ -165,18 +166,21 @@
 						<li>Build, run and test to make sure that each of the tasks works.</li>
 						<li>When satisfied that the code is operational:
 							<ol>
-								<li>Create a video showing:
+								<!-- <li>Create a video showing: -->
+								<li>Create a video showing all of the points in each of the Objectives in the Grading Matrix below. Also include the following:
 									<ul>
 										<li>Show that the "<b>admin.php</b>" view possesses the called for changes.</li>
-										<li>Show that the "<b>client-update.php</b>" view is valid HTML5.</li>
+										<!-- <li>Show that the "<b>client-update.php</b>" view is valid HTML5.</li> -->
 										<li>The account update process works.</li>
 										<li>The password change process works.</li>
 										<li>Logging out and logging in again after a password change.</li>
 									</ul>
 								</li>
 								<li>Post your video to your YouTube channel and copy the link to the video when published.</li>
-								<li>Zip the entire phpmotors folder and name it enhancement 7 (save this zip file outside of your web site).</li>
-								<li>Submit the zip file to the enhancement 7 assignment dropbox and add the video URL to the assignment dropbox comment.</li>
+								<!-- <li>Zip the entire phpmotors folder and name it enhancement 7 (save this zip file outside of your web site).</li> -->
+								<!-- <li>Submit the zip file to the enhancement 7 assignment dropbox and add the video URL to the assignment dropbox comment.</li> -->
+								<li>Push your changes to your private GitHub repository and copy the link to the repository.</li>
+								<li>Submit the video link and the GitHub link to the Enhancement 7 Code Submission page as comments.</li>
 							</ol>
 						</li>
 					</ul>
@@ -193,7 +197,8 @@
 					<h3>Objective 2</h3>
 					<ul>
 						<li>A case statement is present and operational in the accounts controller to deliver the
-							<b>client-update.php</b> view: 3 points (all or nothing)</li>
+							<b>client-update.php</b> view: 3 points (all or nothing)
+						</li>
 						<li>A case statement is present and operational in the accounts controller to process the
 							account update: 7 points (all or nothing)</li>
 						<li>A case statement is present and operational in the accounts controller to process the
@@ -230,6 +235,8 @@
 
 					<h3>Objective 6</h3>
 					<ul>
+						<li>The video URL is submitted and the video is narrated by you using your own voice. The video demonstrates each of the points for each Objective in the Grading Matrix.</li>
+						<!--
 						<li>The video URL is present and the video is narrated by you using your own voice. The video shows:
 							<ul>
 								<li>That the "<b>admin.php</b>" view possesses the called for changes.</li>
@@ -239,6 +246,7 @@
 								<li>Logging out and logging in again after a password change.</li>
 							</ul>
 						</li>
+					-->
 						<li>Total value for Objective 6: <b>5 points</b></li>
 					</ul>
 				</li>

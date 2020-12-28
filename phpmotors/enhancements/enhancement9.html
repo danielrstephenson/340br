@@ -62,20 +62,20 @@
 						<li>Copy the existing "images > vehicles" folder and store it on your desktop.</li>
 						<li>Delete all existing images in the original "images > vehicles" folder within the phpmotors folder.</li>
 						<li>Use the image upload application to upload the original images and associate them with the correct vehicle. Each of these images must be designated as "Primary" images for the vehicel. The thumbnails do not need to be uploaded as new thumbnails will be created as part of the upload process.</li>
-						</ol>
-						</li>
 					</ol>
-					<h3>Revisions</h3>
-					<ol>
-						<li>When done uploading the images you will need to make changes to the vehicles controller and model and helper functions for displaying vehicles by classification. All images should now be obtained from the images table, and not the inventory table. In the model it will require the use of a "JOIN" and a "LIKE" in the query, as well as limiting images to primary images. When done, as you use the main navigation bar to click each classification item and make sure the thumbnail images of each vehicle appear in the view and are from the images table.</li>
-						<li>You may need to write a new function for obtaining vehicle details to display in the detail view.</li>
-						<li>Do NOT alter the function that obtains vehicle information that is used in the vehicle editting process.</li>
-						<li>This functionality should be true for all vehicle images throughout the PHP Motors site.</li>
-					</ol>
-					<h3>New Functionality</h3>
-					<ol>
-						<li>When the classification view is delivered the vehicle image(s) should be delivered from the images table.</li>
-					<li>When the "vehicle detail" view is loaded the "full size" image should display (again, from the images table), but what if additional images have been uploaded for that vehicle? It would be beneficial if "thumbnails" of all images pertaining to that item were displayed. Therefore:
+				</li>
+			</ol>
+			<h3>Revisions</h3>
+			<ol>
+				<li>When done uploading the images you will need to make changes to the vehicles controller and model and helper functions for displaying vehicles by classification. All images should now be obtained from the images table, and not the inventory table. In the model it will require the use of a "JOIN" and a "LIKE" in the query, as well as limiting images to primary images. When done, as you use the main navigation bar to click each classification item and make sure the thumbnail images of each vehicle appear in the view and are from the images table.</li>
+				<li>You may need to write a new function for obtaining vehicle details to display in the detail view.</li>
+				<li>Do NOT alter the function that obtains vehicle information that is used in the vehicle editting process.</li>
+				<li>This functionality should be true for all vehicle images throughout the PHP Motors site.</li>
+			</ol>
+			<h3>New Functionality</h3>
+			<ol>
+				<li>When the classification view is delivered the vehicle image(s) should be delivered from the images table.</li>
+				<li>When the "vehicle detail" view is loaded the "full size" image should display (again, from the images table), but what if additional images have been uploaded for that vehicle? It would be beneficial if "thumbnails" of all images pertaining to that item were displayed. Therefore:
 					<ol>
 						<li>In the uploads model, build a new function that will obtain thumbnail image information from the "<b>images</b>" table that are based on the vehicleId. You will need to use the <a href="//www.w3schools.com/sql/sql_like.asp" title="Opens in a new tab" target="_blank">LIKE</a> operator in your SQL query to find "-tn" in the file name.</li>
 						<li>In the <b>vehicles</b> controller, call the function when the vehicle detail page is requested. <b>The uploads model will have to be brought into the controller's scope.</b></li>
@@ -95,7 +95,8 @@
 			<ul>
 				<li>Work with your learning team to accomplish the tasks and post to and read the weekly discussion board to help one another.</li>
 				<li>Build, run and test to make sure that each of the tasks works.</li>
-				<li>When satisfied that the code is operational, create a video showing:
+				<li>When satisfied that the code is operational, create a video showing all of the points for each Objective in the Grading Matrix below.
+					<!--
 					<ol>
 						<li>Navigate to a "vehicle detail" view that contains additional images in the database from the main navigation bar. Show that:
 							<ol>
@@ -107,11 +108,13 @@
 							</ol>
 						</li>
 						<li>Show the "<b>images</b>" table in the PHPMyAdmin tool to demonstrate that two versions of each image in the "images > vehicles>" folder exist in the table.</li>
-					</ol>
+					</ol>-->
 				<li>Post your video to your YouTube channel and copy the link to the video when published.</li>
-				<li>Zip the entire phpmotors folder and name it enhancement 9 (save this zip file outside of your web site).
+				<!-- <li>Zip the entire phpmotors folder and name it enhancement 9 (save this zip file outside of your web site).
 				</li>
-				<li>Submit the zip file to the enhancement 9 submission dropbox and add the video URL as a comment.</li>
+				<li>Submit the zip file to the enhancement 9 submission dropbox and add the video URL as a comment.</li> -->
+				<li>Push your changes to your private GitHub repository and copy the link to the repository.</li>
+				<li>Submit the video link and the GitHub link to the Enhancement 9 Code Submission page as comments.</li>
 			</ul>
 
 			<h2>Grading Matrix</h2>
@@ -128,7 +131,7 @@
 			<h3>Objective 2</h3>
 			<ul>
 				<li>A new custom function exists in the <b>functions.php</b> file to wrap the vehicle images in HTML and return the result to the vehicles controller (fully operational). (5 points: Yes or No)</li>
-				<li>Exisiting functions have been updated to obtain all vehicle image information from the "images" table, and not from the "inventory" table. (5 points: Yes or No)</li>
+				<li>Existing functions have been updated to obtain all vehicle image information from the "images" table, and not from the "inventory" table. (5 points: Yes or No)</li>
 				<li><b>Total value for Objective 2: 10 points</b></li>
 			</ul>
 
@@ -140,7 +143,9 @@
 
 			<h3>Objective 6</h3>
 			<ul>
-				<li>The video URL is present and the video is narrated by you using your own voice. The video demonstrates:
+				<li>The video URL is submitted and the video is narrated by you using your own voice. The video demonstrates all of the points for each Objective in the Grading Matrix.</li>
+				<!--
+				<li>The video URL is present and the video is narrated by you using your own voice. The video shows:
 					<ul>
 						<li>Navigating to a "vehicle detail" view that contains additional images in the database from the main navigation bar. Show that:
 							<ol>
@@ -156,6 +161,7 @@
 						<li>Show the "<b>images</b>" table in the PHPMyAdmin tool to demonstrate that two versions of each image in the "images > vehicles>" folder exist in the table: 1 point</li>
 					</ul>
 				</li>
+				-->
 				<li><b>Total value for Objective 6: 8 points</b></li>
 			</ul>
 
