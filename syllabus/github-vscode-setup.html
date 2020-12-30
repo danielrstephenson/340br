@@ -13,7 +13,7 @@
 <body>
   <div id="wrapper">
     <header id="header">
-      <img src="/340br/340br/340banner.jpg" alt="CSE 340 Banner Image">
+      <img src="/340br/340banner.jpg" alt="CSE 340 Banner Image">
     </header>
     <main>
       <h1 id="github-and-vs-code">GitHub and VS Code</h1>
@@ -85,6 +85,7 @@
         </li>
       </ul>
       <p>Now VS Code is connected to the GitHub repo and we can start adding files in VS Code.</p>
+
       <h2 id="git-workflow">Git Workflow</h2>
       <p>Now is a good time to remind you of the workflow you will be using as you work through the assignments in this class.</p>
       <p>Normally, when working with a version control software, you want to work on small discrete chunks of code. After each feature or chunk is complete, you submit that to the version control software as a commit.</p>
@@ -93,9 +94,11 @@
       <p>Next, work on the Assignment portion by making new files or editing the code of existing files following the Enhancement instructions. Then stage the work, and then commit the work.</p>
       <p>Finally, you will push the commits from the local repository on your computer to the copy of the repository on GitHub.</p>
       <p>We’ll walk through that process by adding a helpful file, called a README file that is used to explain what the repo is all about.</p>
+
       <h2 id="the-readme-file">The README file</h2>
       <p>Back in VS Code, make a new file by clicking on the new file icon, or go to the File menu and click “New File”. <img src="/340br/images/github-vscode/readme-file.png" alt="New file button" /></p>
       <p>We’ll use Markdown in this file, which is like a distant cousin to HTML. It makes text readable as plain text, but still has some syntax that allows computers to alter the display of the text, just like HTML.</p>
+      <p>To learn more about the Markdown language, see here: <a href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></p>
       <p>In this new file type in:</p>
       <pre><code>  # CSE 340 – Winter 2021
   - Name: Your Name Here
@@ -126,8 +129,31 @@
         <figcaption>Git push</figcaption>
       </figure>
       <p>If you go to the GitHub website in your browser and refresh the page, you should see the README.md file is now listed as a file, and the contents are displayed below.</p>
-      <p>To learn more about the Markdown language, see here: <a href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></p>
       <p>Note: If you discard the changes (the bent arrow icon), then all the changes you made to the file will be lost and the file will change back to how it was before you ‘staged’ it for the commit.</p>
+
+
+      <h2>Add Collaborator</h2>
+      <p>In order for your professor or the TAs to see your code on GitHub, you will need to add them as a collaborator. You at least want to add me, your instructor, as a collaborator.</p>
+      <p>On the GitHub website, you should be on the repo page you just created.</p>
+      <p>Click on the Settings tab.</p>
+      <img src="/340br/images/github-vscode/settings-tab.png" alt="Settings tab" />
+      <p>Next, click the "Manage Access" tab.</p>
+      <p>Then, click the green "Invite a collaborator" button.</p>
+      <img src="/340br/images/github-vscode/invite-button.png" alt="Manage access tab and Invite button" />
+      <p>Type in my GitHub username: <code>ammonshepherd</code></p>
+      <img src="/340br/images/github-vscode/add-collaborator.png" alt="Add collaborator" />
+      <p>And finally, click the green "Add ammonshepherd to this repository" button.</p>
+
+      <h2>All set</h2>
+      <p>You are now all set up with a GitHub repository and your VS Code app is now connected to the repo.</p>
+      <p>As a reminder, the workflow for the course will be:</p>
+      <ol>
+        <li>Work on the Assignment</li>
+        <li>Stage and then commit the changes</li>
+        <li>Work on the Enhancement</li>
+        <li>Stage and then commit the changes</li>
+        <li>Push the changes to your GitHub repo</li>
+      </ol>
     </main>
     <footer>
       <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png"></a> This page created by Ammon Shepherd and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" title="Read the license" target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.
