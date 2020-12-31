@@ -44,7 +44,7 @@
 
       <h1 id="create-a-project-folder">Create a Project Folder</h1>
       <p>Next we need to decide where to locate the files for this course. Create a project folder anywhere on your computer that you like. One suggestion is to create this in your Documents folder.</p>
-      <p>Open VS Code in a new window (File-&gt;New Window), create a new folder named <code>phpmotors</code>. This will hold the Docker files, and the website project files. Click the <u>Open Folder</u> button, browse to the path where you want your project files to reside, and create a new folder named <code>phpmotors</code>. Then click the <u>Open</u> button.</p>
+      <p>Open VS Code in a new window (<u>File-&gt;New Window</u>). We will now create a new folder named <code>phpmotors</code> that will hold the Docker files and the website project files. Click the <u>Open Folder</u> button, browse to the path where you want your project files to reside, and create a new folder named <code>phpmotors</code>. Then click the <u>Open</u> button.</p>
       <p><img src="/340br/images/docker/open-folder-button.png" alt="Open folder button" /> <img src="/340br/images/docker/create-folder.png" alt="Create folder" /></p>
       <p>Your workspace in VS Code should now look something like this:</p>
       <p><img src="/340br/images/docker/vscode-workspace.png" alt="VS Code Workspace" /></p>
@@ -53,7 +53,7 @@
 
       <h1 id="clone-the-web-server-files">Clone the Web Server Files</h1>
       <p>Most of your interaction with Git in this course will take place in VS Code using icons, buttons and menu items to initiate Git commands. For this step, though, we are going to use the built-in Terminal in VS Code to clone, or copy, the necessary Docker files to create the web server on your local computer.</p>
-      <p>We will use a set of containers all put together nicely so all we need to do is run a command in the terminal to get it up and running. See the project's GitHub page here: <a target="_blank" href="https://github.com/ammonshepherd/pmamp.git">https://github.com/ammonshepherd/pmamp.git</a></p>
+      <p>We will use a set of images all put together nicely so all that we will need to do is run a command in the terminal to get it up and running. See the <a target="_blank" href="https://github.com/ammonshepherd/pmamp.git">PMAMP project's GitHub page</a> for more information.</p>
 
       <p>Open the Terminal by going to the Terminal menu and selecting <u>New Terminal</u></p>
       <p><img src="/340br/images/docker/terminal-menu.png" alt="Terminal Menu" /></p>
@@ -64,16 +64,16 @@
 
       <p>Now, we will use Git to clone the files. Type in</p>
       <p> <code class="command">git clone https://github.com/ammonshepherd/pmamp.git .</code> </p>
-      <p>then hit the Enter key on your keyboard. <mark>Notice the space and period at the end.</mark> The period means that the files will be copied into the current directory. Without the period, or if a different word were used in place of the period, Git would create a folder and copy the files into that folder.
+      <p>then hit the Enter key on your keyboard. <mark>Notice the space and period at the end.</mark> The period means that the files will be copied into the current directory. Without the period, Git would automatically create a folder named pmamp. If a different word were used in place of the period, Git would create a folder named that word and copy the files into that folder.
       </p>
       <p><img src="/340br/images/docker/clone-before.png" alt="Clone command" /></p>
       <p>After the clone command runs, your VS Code will look like this:</p>
       <p><img src="/340br/images/docker/clone-after.png" alt="Clone command" /></p>
       <p>You will notice a new folder and four files. Here is what they do:</p>
       <ul>
-        <li><code>www</code> folder = This is where all of the website files will go</li>
+        <li><code>www</code> folder = This is where all of the website files will go (PHP, HTML, CSS, images, etc)</li>
         <li><code>.gitignore</code> = just ignore this file :) This file tells Git to ignore files and folders</li>
-        <li><code>docker-compose.yml</code> = A file to select specific images and send commands to the containers</li>
+        <li><code>docker-compose.yml</code> = A file to select specific images and send commands to the containers. Docker uses this file to know what images to use to turn into running containers.</li>
         <li><code>Dockerfile</code> = Tells Docker how to create an image used in the docker-compose.yml file</li>
         <li><code>README.md</code> = Contains the text you see on the GitHub page for this repo</li>
       </ul>
@@ -84,19 +84,24 @@
       <p>In the Terminal, type in </p>
       <p> <code class="command">docker network create traefikNetwork</code> </p>
       <p> and hit Enter. </p>
+      <p><img src="/340br/images/docker/docker-create-network.png" alt="Docker create network" /></p>
+
       <p>Click on the docker-compose.yml file in the VS Code sidebar so you can edit the contents.</p>
       <p>Change the name of the database on line 43 to <code>phpmotors</code>. Make sure to save the file!</p>
+      <p><img src="/340br/images/docker/change-db-name.png" alt="Change db name" /></p>
+
       <p>You can change the root password, username and user password if you desire, but it's not necessary for this course. In a production environment, you would want to use a more secure password and use environment variables so that the passwords are not saved in a file that will be shared.</p>
-      <p>Type the command </p>
+
+      <p>To see what containers are currently running, type the command </p>
       <p> <code class="command">docker ps</code> </p>
-      <p>and hit Enter. This shows you what docker containers are currently running. It should show no containers at all.</p>
+      <p>and hit Enter. It should show no containers at all.</p>
       <p><img src="/340br/images/docker/docker-ps-command.png" alt="Docker ps" /></p>
 
       <p>Now type in the command</p>
       <p> <code class="command">docker-compose up</code> </p>
       <p>and hit Enter. Docker will now go through a process of downloading all of the images, applying settings, and running the containers. Notice how long it takes to get all up and running.</p>
       <p><img src="/340br/images/docker/docker-compose-up.png" alt="Docker compose up" /></p>
-      <p>Once the info logs stop, you can go to your web browser and browse to <a target="_blank" href="http://lvh.me">http://lvh.me</a>. If you see this landing page, you have a running web server! </p>
+      <p>Once Docker stops showing new log messages, you can go to your web browser and browse to <a target="_blank" href="http://lvh.me">http://lvh.me</a>. If you see this landing page, you have a running web server! </p>
       <p><img src="/340br/images/docker/landing-page.png" alt="Landing page" /></p>
 
       <p>You can see if phpMyAdmin is working by visiting <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a> or clicking the blue button on the landing page.</p>
@@ -109,15 +114,15 @@
       </p>
       <p>If you go back to VS Code you'll notice that the Terminal is showing the visits to the websites. We can potentially use this for debugging. We can also have Docker run in the background.</p>
 
-      <p>Stop Docker by clicking in the Terminal to select that area. Then hold down the Control key and type the C key (Ctrl-C). This will close the Docker process. Next we'll run a command to ensure all of the Docker containers stopped correctly. Type </p>
+      <p>Stop Docker by clicking in the Terminal to select that area. Then hold down the Control key and type the C key (Ctrl-C). This will close the Docker process. Next, run a command to ensure all the Docker containers stopped correctly. Type </p>
       <p><code class="command">docker-compose down</code></p>
       <p>After that finishes, run the containers again using </p>
 
       <p> <code class="command">docker-compose up -d</code> </p>
       <p>This will run the processes in the background, freeing up the terminal for use. Also note how much quicker the process goes, as Docker does not need to download the images again.</p>
       <p><img src="/340br/images/docker/docker-compose-up-d.png" alt="Docker Compose up command" /></p>
-      <p>We can see the containers are running with the <code class="command">docker ps</code> command.</p>
 
+      <p>We can see the containers are running with the <code class="command">docker ps</code> command.</p>
       <p>Here we see the four containers running.
       <p><img src="/340br/images/docker/docker-ps.png" alt="Docker containers" /></p>
       <ol>
@@ -127,7 +132,8 @@
         <li><code>traefik</code> is a container to manage the networking and domain routing.</li>
       </ol>
       </p>
-      <p>Finally, note a new folder named <code>dbdata</code>. This is where all of the MySQL database files are stored. We won't need to touch the files in here at all. </p>
+      <p>As a reminder, all website files that we create in this course will go in the <code>www</code> folder.</p>
+      <p>Finally, note a new folder named <code>dbdata</code>. This is where all of the MySQL database files are stored. <mark>Do not change any of the files in this folder.</mark></p>
 
     </main>
 
