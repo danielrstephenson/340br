@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CSE 340 Syllabus | Web Backend Development I</title>
+  <meta name="description" content="CSE 340 Syllabus, last updated 4-6-18">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/340br/css/340course-min.css" media="screen">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <img src="/340br/340banner.jpg" alt="CSE 340 Banner Image">
+    </header>
+    <main>
+
+      <h1 id="installing-docker">Installing Docker</h1>
+      <p>This tutorial assumes that you have installed Git and VS Code.</p>
+      <h2 id="introduction">Introduction</h2>
+      <p>Docker is a piece of software that creates and runs very lightweight virtual machines. A virtual machine, or VM, is basically like a second computer running on your computer. VM software lets you run, for example, Windows and Mac on the same hardware at the same time. A full virtual machine is very resource intensive (it uses a lot of RAM and CPU). Docker is software that takes advantage of breaking a virtual machine into much smaller parts. Where a virtual machine is like a full blown operating system running inside of your main operating system, Docker runs a container, or a very slimmed down version of a virtual machine that only has the basic programs needed to do the thing you want the container to do. There is no bloat of a full operating system, which means a container uses much less resources.</p>
+      <p>Docker uses the concepts of <code>images</code> which are prepackaged bundles of applications, and <code>containers</code> which are running instances of an image.</p>
+      <p>For a more in-depth, but still very high-level introduction to Docker see the video below.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/JSLpG_spOBM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      <p>We do not need to worry about exactly how Docker works for this course. We will be using Docker to turn our local computer (your laptop or desktop) into a local webhost. Instead of building and hosting the website on a live production server, we will build and host on our own computer.</p>
+
+      <h2 id="install-docker-on-windows">Install Docker on Windows</h2>
+      <p><mark> WARNING: These steps will require you to restart your computer. </mark></p>
+      <p>Get the Docker Desktop software for your operating system at <a target="_blank" href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a></p>
+      <p>Watch this video for installing Docker on Windows 10, <mark>up to the 8 minute 10 second mark</mark>.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_9AWYlt86B8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      <p>If the above instructions did not work, you can use <a target="_blank" href="https://youtu.be/F3bccaS9iMM">these instructions</a> for installing on Windows 10 Home or other Windows version.</p>
+
+      <h2 id="install-docker-on-mac">Install Docker on Mac</h2>
+      <p>Get the Docker Desktop software for your operating system at <a target="_blank" href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a></p>
+      <p>Watch this video for installing Docker on Mac, <mark>up to the 1 minute 40 second mark</mark>.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/O4Yro0VN5Ds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+
+
+      <h1 id="create-a-project-folder">Create a Project Folder</h1>
+      <p>Next we need to decide where to locate the files for this course. Create a project folder anywhere on your computer that you like. One suggestion is to create this in your Documents folder.</p>
+      <p>Open VS Code in a new window (File-&gt;New Window), create a new folder named <code>phpmotors</code>. This will hold the Docker files, and the website project files. Click the <u>Open Folder</u> button, browse to the path where you want your project files to reside, and create a new folder named <code>phpmotors</code>. Then click the <u>Open</u> button.</p>
+      <p><img src="/340br/images/docker/open-folder-button.png" alt="Open folder button" /> <img src="/340br/images/docker/create-folder.png" alt="Create folder" /></p>
+      <p>Your workspace in VS Code should now look something like this:</p>
+      <p><img src="/340br/images/docker/vscode-workspace.png" alt="VS Code Workspace" /></p>
+      <p>When you are asked to zip your project folder, this is the folder you will zip up, including all of the contents within.</p>
+
+
+      <h1 id="clone-the-web-server-files">Clone the Web Server Files</h1>
+      <p>Most of your interaction with Git in this course will take place in VS Code using icons, buttons and menu items to initiate Git commands. For this step, though, we are going to use the built-in Terminal in VS Code to clone, or copy, the necessary Docker files to create the web server on your local computer.</p>
+      <p>We will use a set of containers all put together nicely so all we need to do is run a command in the terminal to get it up and running. See the project's GitHub page here: <a target="_blank" href="https://github.com/ammonshepherd/pmamp.git">https://github.com/ammonshepherd/pmamp.git</a></p>
+
+      <p>Open the Terminal by going to the Terminal menu and selecting <u>New Terminal</u></p>
+      <p><img src="/340br/images/docker/terminal-menu.png" alt="Terminal Menu" /></p>
+      <p>OR going to the <u>View</u> menu and selecting <u>Appearance-&gt;Show Panel</u>.</p>
+      <p><img src="/340br/images/docker/view-menu.png" alt="View Menu" /></p>
+      <p>VS Code should now look similar to this. Your command prompt (the words that show up) will look different than mine.</p>
+      <p><img src="/340br/images/docker/terminal.png" alt="Terminal open" /></p>
+
+      <p>Now, we will use Git to clone the files. Type in</p>
+      <p> <code class="command">git clone https://github.com/ammonshepherd/pmamp.git .</code> </p>
+      <p>then hit the Enter key on your keyboard. <mark>Notice the space and period at the end.</mark> The period means that the files will be copied into the current directory. Without the period, or if a different word were used in place of the period, Git would create a folder and copy the files into that folder.
+      </p>
+      <p><img src="/340br/images/docker/clone-before.png" alt="Clone command" /></p>
+      <p>After the clone command runs, your VS Code will look like this:</p>
+      <p><img src="/340br/images/docker/clone-after.png" alt="Clone command" /></p>
+      <p>You will notice a new folder and four files. Here is what they do:</p>
+      <ul>
+        <li><code>www</code> folder = This is where all of the website files will go</li>
+        <li><code>.gitignore</code> = just ignore this file :) This file tells Git to ignore files and folders</li>
+        <li><code>docker-compose.yml</code> = A file to select specific images and send commands to the containers</li>
+        <li><code>Dockerfile</code> = Tells Docker how to create an image used in the docker-compose.yml file</li>
+        <li><code>README.md</code> = Contains the text you see on the GitHub page for this repo</li>
+      </ul>
+
+
+      <h1 id="run-docker">Run Docker</h1>
+      <p>Before we run Docker we need to create a Docker network. This is a special Docker-only network that allows the running containers to talk to each other.</p>
+      <p>In the Terminal, type in </p>
+      <p> <code class="command">docker network create traefikNetwork</code> </p>
+      <p> and hit Enter. </p>
+      <p>Click on the docker-compose.yml file in the VS Code sidebar so you can edit the contents.</p>
+      <p>Change the name of the database on line 43 to <code>phpmotors</code>. Make sure to save the file!</p>
+      <p>You can change the root password, username and user password if you desire, but it's not necessary for this course. In a production environment, you would want to use a more secure password and use environment variables so that the passwords are not saved in a file that will be shared.</p>
+      <p>Type the command </p>
+      <p> <code class="command">docker ps</code> </p>
+      <p>and hit Enter. This shows you what docker containers are currently running. It should show no containers at all.</p>
+      <p><img src="/340br/images/docker/docker-ps-command.png" alt="Docker ps" /></p>
+
+      <p>Now type in the command</p>
+      <p> <code class="command">docker-compose up</code> </p>
+      <p>and hit Enter. Docker will now go through a process of downloading all of the images, applying settings, and running the containers. Notice how long it takes to get all up and running.</p>
+      <p><img src="/340br/images/docker/docker-compose-up.png" alt="Docker compose up" /></p>
+      <p>Once the info logs stop, you can go to your web browser and browse to <a target="_blank" href="http://lvh.me">http://lvh.me</a>. If you see this landing page, you have a running web server! </p>
+      <p><img src="/340br/images/docker/landing-page.png" alt="Landing page" /></p>
+
+      <p>You can see if phpMyAdmin is working by visiting <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a> or clicking the blue button on the landing page.</p>
+      <p><img src="/340br/images/docker/phpmyadmin.png" alt="PHP MyAdmin" /></p>
+      <p>The username and password for phpMyAdmin will be the values in the docker-compose.yml file. If you did not change them, it will be
+      <pre>
+          username = dbuser 
+          password = dbpass
+        </pre>
+      </p>
+      <p>If you go back to VS Code you'll notice that the Terminal is showing the visits to the websites. We can potentially use this for debugging. We can also have Docker run in the background.</p>
+
+      <p>Stop Docker by clicking in the Terminal to select that area. Then hold down the Control key and type the C key (Ctrl-C). This will close the Docker process. Next we'll run a command to ensure all of the Docker containers stopped correctly. Type </p>
+      <p><code class="command">docker-compose down</code></p>
+      <p>After that finishes, run the containers again using </p>
+
+      <p> <code class="command">docker-compose up -d</code> </p>
+      <p>This will run the processes in the background, freeing up the terminal for use. Also note how much quicker the process goes, as Docker does not need to download the images again.</p>
+      <p><img src="/340br/images/docker/docker-compose-up-d.png" alt="Docker Compose up command" /></p>
+      <p>We can see the containers are running with the <code class="command">docker ps</code> command.</p>
+
+      <p>Here we see the four containers running.
+      <p><img src="/340br/images/docker/docker-ps.png" alt="Docker containers" /></p>
+      <ol>
+        <li><code>php-apache</code> is the container with the webserver and PHP software.</li>
+        <li><code>pma</code> is the phpMyAdmin contianer. </li>
+        <li><code>mysql</code> is the MySQL container. </li>
+        <li><code>traefik</code> is a container to manage the networking and domain routing.</li>
+      </ol>
+      </p>
+      <p>Finally, note a new folder named <code>dbdata</code>. This is where all of the MySQL database files are stored. We won't need to touch the files in here at all. </p>
+
+    </main>
+
+    <footer>
+      <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png"></a> This page created by Ammon Shepherd and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" title="Read the license" target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.
+    </footer>
+  </div>
+
+</body>
+
+</html>
