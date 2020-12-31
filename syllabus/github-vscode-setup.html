@@ -19,43 +19,9 @@
       <h1 id="github-and-vs-code">GitHub and VS Code</h1>
       <p>This tutorial will guide you through connecting VS Code to your GitHub account.</p>
 
-      <h2 id="what-is-git-and-why-github">What is Git and why GitHub?</h2>
-      <p>Git is a really smart content management tool, that also works well for version control. What is version control? It’s a way to keep track of the changes in your code. It’s like an undo for your whole project directory, not just your Word documents. </p>
-
-      <p>There are a lot of tutorials and articles about Git out there, and they all start with a good explanation of what Git is, but not really why or how Git works. At the most fundamental level, Git is a way to take snapshots of your project folders at a specific point in time. It's like you copy all of the contents of your project folder and paste them in a special snapshot folder. Each time you take a snapshot, you add a new folder in the snapshot folder. Git is the software tool that takes care of making the snapshots, and gives you the ability to name certain snapshots, retrieve old snapshots, and easily collaborate with others and merge their code with yours.</p>
-
-      <p>In Git language, a snapshot is a commit. Naming a snapshot is creating and naming a branch.</p>
-
-      <p>For reasons that are too complex to go into here, there is a middle step between making changes to your code and making a snapshot or commit. This middle step is called "staging." You can think of it as staging or preparing your files for the snapshot. This middle step lets you commit some files that have changed, without committing others.</p>
-
-      <p>The workflow for using Git is actually pretty simple:
-      <ol>
-        <li>Make changes to your code (edit, add or delete files and folders)</li>
-        <li>Stage the files and folders you want to commit</li>
-        <li>Commit the changes</li>
-      </ol>
-      </p>
-
-      <p>Here are some good articles for understanding Git theory.
-      <ul>
-        <li><a href="https://matthew-brett.github.io/curious-git/index.html"> https://matthew-brett.github.io/curious-git/index.html</a></li>
-        <li><a href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a></li>
-        <li><a href="http://practical-neuroimaging.github.io/git_parable.html">http://practical-neuroimaging.github.io/git_parable.html</a></li>
-        <li><a href="http://matthew-brett.github.io/pydagogue/foundation.html">http://matthew-brett.github.io/pydagogue/foundation.html</a></li>
-      </ul>
-      </p>
-
-      <p>And here are some helpful sites to practice using Git.
-      <ul>
-        <li><a href="https://onlywei.github.io/explain-git-with-d3/">https://onlywei.github.io/explain-git-with-d3/</a></li>
-        <li><a href="http://pel-daniel.github.io/git-init/index.html">http://pel-daniel.github.io/git-init/index.html</a></li>
-        <li><a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/</a></li>
-      </ul>
-      </p>
-
       <p>GitHub is an online service that hosts your Git repositories. It can also provide a social aspect to your code. It is used by pretty much all major software companies. GitHub is not the only service out there, but it is the most well known. If you go further in the field of software or web development, you will most definitely interact with GitHub at some point.</p>
 
-      <p>Using GitHub adds one more step to the workflow:
+      <p>Using GitHub adds one more step to the normal Git workflow:
       <ol>
         <li>Make changes to your code (edit, add or delete files and folders)</li>
         <li>Stage the files and folders you want to commit</li>
@@ -69,7 +35,7 @@
       <p>The first step in using Git for this course is to create an account at GitHub.com.</p>
       <img src="/340br/images/github-vscode/github-signup.png" alt="GitHub sign up page" />
       <ul>
-        <li>Visit <a href="https://github.com">https://github.com</a> in a browser.</li>
+        <li>Visit <a target="_blank" href="https://github.com">https://github.com</a> in a browser.</li>
         <li>Click the Sign up button.</li>
         <li>Fill in the required fields for a unique username, email and password. You can uncheck the spam box – er, I mean Email preferences checkbox.</li>
         <li>Complete the “puzzle” by clicking the “Verify” button, then selecting the right images.</li>
@@ -121,6 +87,7 @@
         <li>Click “Open”. <img src="/340br/images/github-vscode/vscode-open.png" alt="VS Code Open" /></li>
       </ul>
       <p>After a second, you will see a drop down with all the repos in your GitHub account available.</p>
+      <p>If the repos are not showing as options, then make sure you have authorized VS Code to access GitHub as done above.</p>
       <ul>
         <li>
           <p>Pick the repo you just created. <img src="/340br/images/github-vscode/pick-repo.png" alt="Pick your repo" /></p>
@@ -140,13 +107,13 @@
 
       <p>Normally, when working with a version control software, you want to work on small discrete chunks of code. After each feature or chunk is complete, you submit that to the version control software as a commit.</p>
 
-      <p>For this course, you will break this pattern just a bit. Each week you have a Activity and an Assignment. You will submit one commit for all of the work you do in the Activity, and a separate, second commit for the Assignment (or Enhancement as they are called in this course).</p>
+      <p>For this course, you will break this pattern just a bit. Each week you have a Activity and an Assignment. You will submit one commit for all of the work you do in the Activities section, and a separate, second commit for the Enhancement you complete in the Assignment section. See the Overview page for each week to find the Activities and Assignment sections.</p>
 
-      <p>So the process is, work on the Activity portion by making new files or editing the code in existing files by following the instructions in the Activity section. Stage the work in Git. Then make a commit of the work in Git.</p>
+      <p>So the process is, work on the Activity portion by making new files and folders, or editing the code in existing files by following the instructions in the Activity section. Stage the work in Git. Then make a commit of the work to your local Git repository.</p>
 
-      <p>Next, work on the Assignment portion by making new files or editing the code of existing files following the Enhancement instructions. Then stage the work, and then commit the work.</p>
+      <p>Next, work on the Assignment portion by making new files or editing the code of existing files following the Enhancement instructions. Then stage the work, and then commit the work to your local Git repository.</p>
 
-      <p>Finally, you will push the commits from the local repository on your computer to the copy of the repository on GitHub.</p>
+      <p>Finally, when the activities and enhancement is done, you will push the commits from the local repository on your computer to the copy of the repository on GitHub.</p>
 
       <p>Simply stated, the weekly workflow is:
       <ol>
@@ -167,7 +134,7 @@
 
       <p>We’ll use Markdown in this file, which is like a distant cousin to HTML. It makes text readable as plain text, but still has some syntax that allows computers to alter the display of the text, just like HTML.</p>
 
-      <p>To learn more about the Markdown language, see here: <a href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></p>
+      <p>To learn more about the Markdown language, see here: <a target="_blank" href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></p>
 
       <p>In this new file type in:</p>
       <pre><code>  # CSE 340 – Winter 2021
@@ -201,6 +168,7 @@
         <img src="/340br/images/github-vscode/git-push.png" alt="" />
         <figcaption>Git push</figcaption>
       </figure>
+      <p>You may be asked if you wish to periodically fetch new changes from GitHub. You don't want this, so select the option that does not fetch.</p>
       <p>If you go to the GitHub website in your browser and refresh the page, you should see the README.md file is now listed as a file, and the contents are displayed below.</p>
       <p>Note: If you discard the changes (the bent arrow icon), then all the changes you made to the file will be lost and the file will change back to how it was before you ‘staged’ it for the commit.</p>
 
