@@ -44,11 +44,16 @@
 
       <h1 id="create-a-project-folder">Create a Project Folder</h1>
       <p>Next we need to decide where to locate the files for this course. Create a project folder anywhere on your computer that you like. One suggestion is to create this in your Documents folder.</p>
-      <p>Open VS Code in a new window (<u>File-&gt;New Window</u>). We will now create a new folder named <code>phpmotors</code> that will hold the Docker files and the website project files. Click the <u>Open Folder</u> button, browse to the path where you want your project files to reside, and create a new folder named <code>phpmotors</code>. Then click the <u>Open</u> button.</p>
-      <p><img src="/340br/images/docker/open-folder-button.png" alt="Open folder button" /> <img src="/340br/images/docker/create-folder.png" alt="Create folder" /></p>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/FhjLQYFg3FY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <p>Open VS Code in a new window (<u>File-&gt;New Window</u>). We will now create a new folder named <code>cse340</code> that will hold the Docker files and the website project files. Click the <u>Open Folder</u> button, browse to the path where you want your project files to reside, and create a new folder named <code>cse340</code>. Then click the <u>Open</u> button.</p>
+      <p><img src="/340br/images/docker/open-folder-button.png" alt="Open folder button" /></p>
+
+      <p> <img src="/340br/images/docker/create-folder.png" alt="Create folder" /></p>
       <p>Your workspace in VS Code should now look something like this:</p>
       <p><img src="/340br/images/docker/vscode-workspace.png" alt="VS Code Workspace" /></p>
-      <p>When you are asked to zip your project folder, this is the folder you will zip up, including all of the contents within.</p>
+      <p>When you are asked to zip your project folder, the <code>cse340</code> folder is the folder you will zip up, including all of the contents within.</p>
 
 
       <h1 id="clone-the-web-server-files">Clone the Web Server Files</h1>
@@ -84,7 +89,7 @@
       <p>In the Terminal, type in </p>
       <p> <code class="command">docker network create traefikNetwork</code> </p>
       <p> and hit Enter. </p>
-      <p><img src="/340br/images/docker/docker-create-network.png" alt="Docker create network" /></p>
+      <p><img src="/340br/images/docker/docker-network-create.png" alt="Create Docker network" /></p>
 
       <p>Click on the docker-compose.yml file in the VS Code sidebar so you can edit the contents.</p>
       <p>Change the name of the database on line 43 to <code>phpmotors</code>. Make sure to save the file!</p>
@@ -114,10 +119,14 @@
       </p>
       <p>If you go back to VS Code you'll notice that the Terminal is showing the visits to the websites. We can potentially use this for debugging. We can also have Docker run in the background.</p>
 
-      <p>Stop Docker by clicking in the Terminal to select that area. Then hold down the Control key and type the C key (Ctrl-C). This will close the Docker process. Next, run a command to ensure all the Docker containers stopped correctly. Type </p>
-      <p><code class="command">docker-compose down</code></p>
-      <p>After that finishes, run the containers again using </p>
+      <p>Stop Docker by clicking in the Terminal to select that area. Then hold down the Control key and type the C key (Ctrl-C).</p>
+      <p><img src="/340br/images/docker/docker-compose-up-d.png" alt="Docker Compose up command" /></p>
 
+      <p> This will close the Docker process. Next, run a command to ensure all the Docker containers stopped correctly. Type the following command </p>
+      <p><code class="command">docker-compose down</code></p>
+      <p><img src="/340br/images/docker/docker-compose-down.png" alt="Docker Compose down command" /></p>
+
+      <p>After that finishes, run the containers again using </p>
       <p> <code class="command">docker-compose up -d</code> </p>
       <p>This will run the processes in the background, freeing up the terminal for use. Also note how much quicker the process goes, as Docker does not need to download the images again.</p>
       <p><img src="/340br/images/docker/docker-compose-up-d.png" alt="Docker Compose up command" /></p>
@@ -132,7 +141,7 @@
         <li><code>traefik</code> is a container to manage the networking and domain routing.</li>
       </ol>
       </p>
-      <p>As a reminder, all website files that we create in this course will go in the <code>www</code> folder.</p>
+      <p>As a reminder, all website files that we create in this course will go in a subfolder of the <code>www</code> folder. We will create that in a later step.</p>
       <p>Finally, note a new folder named <code>dbdata</code>. This is where all of the MySQL database files are stored. <mark>Do not change any of the files in this folder.</mark></p>
 
     </main>
