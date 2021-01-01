@@ -25,7 +25,8 @@
       <p>In order to work with the local database, the local Apache and MySQL database servers must be running, this means that Docker is up and running the containers. Once they are both running:</p>
       <ol>
         <li>Open a browser.</li>
-        <li>In the address bar type <a href="http://pma.lvh.me">http://pma.lvh.me</a>.</li>
+        <li>In the address bar type <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a>.</li>
+        <li>The username and password were set in the docker-compose.yml file. If you did not change them, for the username, enter <code>root</code>. For the password, enter <code>rootPASS</code></li>
         <li>The PHPMyAdmin tool should now be visible
           <br>
           <img src="/340br/images/phpmyadmin.png" alt="Image of the PHPMyAdmin interface">
@@ -35,7 +36,7 @@
 
       <h2>Generic Processes</h2>
       <h3>Creating a Local Database</h3>
-      <p>This is a <b>generic process for creating a local database</b>.</p>
+      <p>This is a <b>generic process for creating a local database</b> for instruction only. Do not follow these steps.</p>
       <ol>
         <li>Click the "Databases" tab.</li>
         <li>Type the name of the new database into the "Create Database" text field.</li>
@@ -63,6 +64,7 @@
       </ol>
 
       <h2>Download the PHP Motors Tables SQL File</h2>
+      <p>Some tables and data have been created for you already. You will import them from an SQL file. This is a text file with SQL commands.</p>
       <p>Download the <strong><a href="../downloads/phpmotors-db.sql.zip" title="Download the zip file" target="_blank">phpmotors-db.sql.zip</a></strong> file to use for importing a SQL file below as part of creating
         the <b>phpmotors</b> database.</p>
 
@@ -71,7 +73,14 @@
       <h2>Open The PHPMyAdmin Tool</h2>
       <ol>
         <li>With the Docker containers running (test with <code>docker ps</code> in the terminal), open a browser window or new tab.</li>
-        <li>Type <a href="http://pma.lvh.me">http://pma.lvh.me</a> into the browser address bar.</li>
+        <li>Type <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a> into the browser address bar.</li>
+        <li>You can log in with the MySQL root (super) user with all privileges:
+          <p><code>username: root, password: rootPASS</code>
+          <p>
+            or with the limited MySQL user with access to the phpmotors database only (if you did not change them in the docker-compose.yml file):
+          <p><code>username: dbuser, password: dbpass</code>
+          <p>
+        </li>
       </ol>
 
       <h2>The <b>phpmotors</b> database</h2>
