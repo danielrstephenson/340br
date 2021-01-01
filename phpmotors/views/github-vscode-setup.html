@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CSE 340 Syllabus | Web Backend Development I</title>
+  <title>CSE 340 GitHub and VS Code | Web Backend Development I</title>
   <meta name="description" content="CSE 340 Syllabus, last updated 4-6-18">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="/340br/css/340course-min.css" media="screen">
@@ -38,30 +38,30 @@
         <li>Visit <a target="_blank" href="https://github.com">https://github.com</a> in a browser.</li>
         <li>Click the Sign up button.</li>
         <li>Fill in the required fields for a unique username, email and password. You can uncheck the spam box – er, I mean Email preferences checkbox.</li>
-        <li>Complete the "puzzle" by clicking the "Verify" button, then selecting the right images.</li>
-        <li>Finally, click the big blue "Create account" button.</li>
+        <li>Complete the "puzzle" by clicking the <u>Verify</u> button, then selecting the right images.</li>
+        <li>Finally, click the big blue <u>Create account</u> button.</li>
       </ul>
 
 
       <h2 id="create-a-repo">Create a repo</h2>
       <p>The next step is to create a new repository. A repository is the folder that holds the code. In our case, this is where we will put the code for building the website during this course.</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/hu9nU6cRBjY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>Watch the video and follow the steps below.</p>
+      <p>[The video shows the steps detailed below.]</p>
 
       <img src="/340br/images/github-vscode/repository.png" alt="Repository link" />
       <p>On the GitHub website, after you have logged in,</p>
       <ul>
         <li>Click on your profile icon on the top right of the page.</li>
-        <li>Click the "Your repositories" link, then click the green "New" button.
+        <li>Click the <u>Your repositories</u> link, then click the green <u>New</u> button.
           <ul>
-            <li>Alternatively, if you are on the profile page already, click the "Repositories" tab, then click the green "New" button.</li>
+            <li>Alternatively, if you are on the profile page already, click the <u>Repositories</u> tab, then click the green <u>New</u> button.</li>
           </ul>
         </li>
         <img src="/340br/images/github-vscode/new-repo-button.png" alt="New repo button" />
         <li>On the New repository page, name the repository <code>phpmotors</code>.</li>
         <li>Fill in a description if you like.</li>
         <li>Check the "Private" option. Leave the remaining checkboxes empty.</li>
-        <li>Click the green "Create repository" button.</li>
+        <li>Click the green <u>Create repository</u> button.</li>
       </ul>
       <img src="/340br/images/github-vscode/create-new-repo.png" alt="Create new repo page" />
 
@@ -74,6 +74,8 @@
 
       <h3>Delete the Docker Git repo folder</h3>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/6ffy30KJbSI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>[The video shows the steps detailed below.]</p>
+
       <p>Fist, delete the Git repository associated with Docker that we set up in the previous tutorial. To do this, we need to change a setting to allow hidden files to be visible in the Explorer sidebar.</p>
       <p>Open the settings file for VS Code by using the following VS Code menu command:
       <ul>
@@ -97,39 +99,40 @@
       <p>Proceed to delete the folder.</p>
       <p><img src="/340br/images/github-vscode/delete-git-folder.png" alt="delete Git folder" /></p>
 
-      <p>Go back and edit the entry for .git to remove the octothorpe.</p>
+      <p>Go back and edit the entry for <code>**/.git</code> to remove the octothorpe and save the change.</p>
 
-      <p>Your VS Code should now look like this.</p>
+      <p>Close the Settings page by clickin the X on the Settings tab. Your VS Code should now look like this.</p>
       <p><img src="/340br/images/github-vscode/project-working-directory.png" alt="Project working directory" /></p>
 
 
 
       <h3>Set up remote Git repo</h3>
-      <p>VS Code is set to edit from the <code>phpmotors</code> folder, but it needs to edit from a new folder within the <code>www</code> folder.</p>
+      <p>VS Code is set to edit from the <code>cse340</code> folder, but it needs to edit from a new folder within the <code>www</code> folder.</p>
       <p>We will create this folder, have VS Code set to edit from this folder, and connect GitHub to this folder all at the same time.</p>
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/2qWF0TvE8nw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yzUen29sb9Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>[The video shows the steps detailed below.]</p>
 
       <p>The first step is to open a new VS Code window with <u>File->New Window</u>. You can close the other VS Code window. It will not be needed anymore.</p>
       <p>Notice the Git icon on the left sidebar. Click on that.</p>
       <p><img src="/340br/images/github-vscode/new-vscode-window.png" alt="New VS Code window" /></p>
 
-      <p>You should see two pink colored buttons; one for "Open Folder" and one for "Clone Repository." Click on the "Clone Repository" button. This opens the VS Code Command Prompt. </p>
+      <p>You should see two pink colored buttons; one for <u>Open Folder</u> and one for <u>Clone Repository.</u> Click on the <u>Clone Repository</u> button. This opens the VS Code Command Prompt. </p>
       <p><img src="/340br/images/github-vscode/git-open-repo.png" alt="Clone Repository button" /></p>
 
-      <p>Click on the dropdown option "Clone from GitHub".</p>
+      <p>Click on the dropdown option <u>Clone from GitHub</u>.</p>
       <p><img src="/340br/images/github-vscode/clone-from-github.png" alt="Clone from GitHub button" /></p>
 
-      <p>A pop-up will ask if you want to allow the extension to sign in to GitHub. Click the "Allow" button. </p>
+      <p>A pop-up will ask if you want to allow the extension to sign in to GitHub. Click the <u>Allow</u> button. </p>
       <p><img src="/340br/images/github-vscode/allow-github.png" alt="Clone Repository button" /></p>
 
-      <p>Your browser will then open with a page asking you to continue authorization of VS Code to access GitHub. Click the big green "Continue" button.</p>
+      <p>Your browser will then open with a page asking you to continue authorization of VS Code to access GitHub. Click the big green <u>Continue</u> button.</p>
       <p><img src="/340br/images/github-vscode/authorize-vscode.png" alt="Click the big green button" /></p>
 
-      <p>You'll see a success message with an alert box. Click the "Open Link" button.</p>
+      <p>You'll see a success message with an alert box. Click the <u>Open Link</u> button.</p>
       <p><img src="/340br/images/github-vscode/open-link.png" alt="Open the link" /></p>
 
-      <p>This sends you back to VS Code with a prompt to allow the extension to open the URI (the address). Click "Open".</p>
+      <p>This sends you back to VS Code with a prompt to allow the extension to open the URI (the address). Click <u>Open</u>.</p>
       <p><img src="/340br/images/github-vscode/vscode-open.png" alt="VS Code Open" /></p>
 
       <p>After a second, you will see a drop down with all the repos in your GitHub account available.</p>
@@ -141,16 +144,16 @@
       <p>If the repo does not show up, you can type in your GitHub account name followed by the repo name: <code>username/phpmotors</code> Click on that option.</p>
       <p><img src="/340br/images/github-vscode/type-repo.png" alt="Type your GitHub username followed by repo name" /></p>
 
-      <p>Next, VS Code will ask you to select a location on your computer to put the files. Browse to your project folder, for example <code>Documents/phpmotors/www/</code>.</p>
+      <p>Next, VS Code will ask you to select a location on your computer to put the files. Browse to your project folder, for example <code>Documents/cse340/www/</code>.</p>
 
       <p>Now select the <code>www</code> folder and click the Select Repository Location button.</p>
       <p><img src="/340br/images/github-vscode/select-location.png" alt="Select a location to put your files" /></p>
 
-      <p>Next click the "Open" or "Open in New Window" button on the VS Code notification pop-up. If the notification disappeared before you could click on it, you can click the little bell icon to get the notification to reappear.</p>
+      <p>Next click the <u>Open</u> or <u>Open in New Window</u> button on the VS Code notification pop-up. If the notification disappeared before you could click on it, you can click the little bell icon to get the notification to reappear.</p>
       <p><img src="/340br/images/github-vscode/open-in-vscode.png" alt="Open or Open in New Window" /></p>
 
-      <p> Or you can click on the <u>Open Folder</u> button and browse to the <code>Documents/phpmotors/www/phpmotors/</code> folder and select the second <code>phpmotors</code> folder.</p>
-      <p><img src="/340br/images/github-vscode/open-phpmotors-folder.png" alt="Open Folder, browse to second phpmotors folder" /></p>
+      <p> Or you can click on the <u>Open Folder</u> button and browse to the <code>Documents/cse340/www/phpmotors/</code> folder and select the <code>phpmotors</code> folder. This is the process for opening this folder from this point on if the VS Code application is closed.</p>
+      <p><img src="/340br/images/github-vscode/open-phpmotors-folder.png" alt="Open Folder, browse to phpmotors folder" /></p>
 
       <p>Now VS Code is connected to the GitHub repo and we can start adding files in VS Code.</p>
 
@@ -184,7 +187,9 @@
 
       <h2 id="the-readme-file">The README file</h2>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/s5Ovc8JYlDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>Back in VS Code, make a new file by clicking on the new file icon, or go to the File menu and click "New File". Name the file <code>README.md</code> The <code>.md</code> is the file extension for Markdown files. GitHub will know what to do with it.</p>
+      <p>[The video shows the steps detailed below.]</p>
+
+      <p>Back in VS Code, make a new file by clicking on the new file icon, or go to the File menu and click <u>New File</u>. Name the file <code>README.md</code> The <code>.md</code> is the file extension for Markdown files. GitHub will know what to do with it.</p>
       <p><img src="/340br/images/github-vscode/readme-file.png" alt="New file button" /></p>
 
       <p>We'll use Markdown in this file, which is like a distant cousin to HTML. It makes text readable as plain text, but still has some syntax that allows computers to alter the display of the text, just like HTML.</p>
@@ -209,7 +214,7 @@
       <p>Stage the changes for a commit by pressing the plus icon.</p>
 
       <p>To commit the changes, first type in a short message, then click the check mark or use the short-cut keys (command-Enter on Mac).</p>
-      <p>Once you have committed the changes, you can push the changes to the GitHub repo. Click on the three-dots icon and select "Push".</p>
+      <p>Once you have committed the changes, you can push the changes to the GitHub repo. Click on the three-dots icon and select <u>Push</u>.</p>
       <p> <img src="/340br/images/github-vscode/git-push.png" alt="" /> </p>
       <p>You may be asked if you wish to periodically fetch new changes from GitHub. You don't want this, so select the option that does not fetch.</p>
 
@@ -233,6 +238,7 @@
       <h2>Add Collaborator</h2>
       <p>In order for your instructor or the TAs to see your code on GitHub, you will need to add them as a collaborator. You at least want to add me, your instructor, as a collaborator. :)</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/a9To390OEUo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>[The video shows the steps detailed below.]</p>
 
       <p>On the GitHub website, you should be on the repo page you just created.</p>
 
@@ -240,13 +246,13 @@
       <img src="/340br/images/github-vscode/settings-tab.png" alt="Settings tab" />
 
       <p>Next, click the "Manage Access" tab.</p>
-      <p>Then, click the green "Invite a collaborator" button.</p>
+      <p>Then, click the green <u>Invite a collaborator</u> button.</p>
       <img src="/340br/images/github-vscode/invite-button.png" alt="Manage access tab and Invite button" />
 
       <p>Type in your instructor's GitHub username: <code>ammonshepherd</code></p>
       <img src="/340br/images/github-vscode/add-collaborator.png" alt="Add collaborator" />
 
-      <p>And finally, click the green "Add ammonshepherd to this repository" button.</p>
+      <p>And finally, click the green <u>Add ammonshepherd to this repository</u> button.</p>
 
 
       <h2>All set</h2>
