@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CSE 340 Syllabus | Web Backend Development I</title>
+  <title>CSE 340 Docker Setup | Web Backend Development I</title>
   <meta name="description" content="CSE 340 Syllabus, last updated 4-6-18">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="/340br/css/340course-min.css" media="screen">
@@ -46,6 +46,7 @@
       <p>Next we need to decide where to locate the files for this course. Create a project folder anywhere on your computer that you like. One suggestion is to create this in your Documents folder.</p>
 
       <iframe width="560" height="315" src="https://www.youtube.com/embed/FhjLQYFg3FY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>[This video shows the steps that are detailed below.]</p>
 
       <p>Open VS Code in a new window (<u>File-&gt;New Window</u>). We will now create a new folder named <code>cse340</code> that will hold the Docker files and the website project files. Click the <u>Open Folder</u> button, browse to the path where you want your project files to reside, and create a new folder named <code>cse340</code>. Then click the <u>Open</u> button.</p>
       <p><img src="/340br/images/docker/open-folder-button.png" alt="Open folder button" /></p>
@@ -106,6 +107,9 @@
       <p> <code class="command">docker-compose up</code> </p>
       <p>and hit Enter. Docker will now go through a process of downloading all of the images, applying settings, and running the containers. Notice how long it takes to get all up and running.</p>
       <p><img src="/340br/images/docker/docker-compose-up.png" alt="Docker compose up" /></p>
+
+      <p>This setup makes use of http://lvh.me, which is a free service that seamlessly redirects the domain name <code>lvh.me</code> and any sub-domains back to your local computer, specifically to the local IP Address 127.0.0.1. This makes the nice trick of having your project look like it is being hosted at a real domain name. But be aware, nobody else in the world will be able to see what you see at lvh.me. If they visit that URL in their browser, the service will redirect them to their own computer which will likely result in an error message in the browser, unless they have a web server running on their computer.</p>
+
       <p>Once Docker stops showing new log messages, you can go to your web browser and browse to <a target="_blank" href="http://lvh.me">http://lvh.me</a>. If you see this landing page, you have a running web server! </p>
       <p><img src="/340br/images/docker/landing-page.png" alt="Landing page" /></p>
 
