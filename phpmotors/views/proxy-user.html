@@ -24,9 +24,31 @@
       <p>The proxy user is generally only given "data manipulation" privileges. This means the proxy can read (SELECT) data, add (INSERT) new data, change (UPDATE) data, sometimes upload files (FILES), and perhaps remove (DELETE) data from the database. However, the proxy is <strong>never</strong> given the ability to change the actual database in any way! </p>
 
       <h2>Creating a Proxy Database User</h2>
-      <p>In order to work with the phpmotors database for our class using PHP you will need to create a proxy user. Follow the steps shown in this video to do so.</p>
-      <p>In the video, you will see references of localhost. You will see the Server as <code>mysql:3306</code></p>
+      <p>The process of creating the MySQL server with Docker creates a proxy user for us. The username and password are in the docker-compose.yml file. As a reminder, that information is</p>
+      <p>
+        <code>
+      <pre>
+        MYSQL_USER: "dbuser"
+        MYSQL_PASSWORD: "dbpass"
+      </pre>
+    </code>
+      </p>
+      <p>It is not necessary for you to create a new proxy user, but this is good practice. In order to create a new MySQL user, follow the steps in the video below.</p>
+      <p>In order to create a user, you will need to log in to phpMyAdmin as the root user (unless you changed them in the docker-compose.yml file).</p>
+      <p>
+        <code>
+      <pre>
+        username: root
+        password: rootPASS
+      </pre>
+    </code>
+      </p>
+
+      <p>As you follow the video instructions, <mark>use a percent sign <code>%</code> instead of <code>localhost</code> for the "Host Name"</mark>. This is wildcard variable, meaning any host is allowed.</p>
+
       <iframe src="https://www.youtube.com/embed/9UxdVpgibWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <p>The video above has you select the Data privileges, which gives the user those privileges for all databases on this MySQL server. In a real production environment, you would restrict the user to only have permissions for the specific database(s) needed, rather than such global privileges.</p>
 
 
     </main>
