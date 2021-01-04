@@ -2,7 +2,16 @@
 
 Course materials for CSE 340
 
-# Using Git and Docker
+# Changes From the Official Repo
+
+This fork of the "official" repo from Blaine Robertson makes a few significant changes:
+
+1. This version uses Git, GitHub and Docker.
+2. Submitting a link to the private GitHub repo is part of the assignment. Each Activity is a commit, and each Enhancement is a commit.
+3. All of the Objective 6 video requirements have been updated to require the Enhancement videos to include all of the points in the Grading Matrix. (This makes it easier for students to see if they have completed all of the requirements, and makes it easier to grade.)
+4. All of the references to XAMPP have been changed to use Docker.
+
+## Using Git and Docker
 
 This course is well adapted to using Git and GitHub. Some of the main benefits for using Git and GitHub:
 
