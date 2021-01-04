@@ -21,6 +21,8 @@ This course is well adapted to using Git and GitHub. Some of the main benefits f
 
 It is also very easy to set up Docker with containers for Apache, MySQL, and phpMyAdmin. An added benefit is that this setup can utilize a free domain "hack" to make the project look like it is being hosted from a real domain name. Both options are available; http://lvh.me and localhost.
 
+Docker makes it easy to troubleshoot a students code in the exact same environment they are using. The student just sends a copy of their entire project directory, and the instructor can run the containers from the student project directory (after stopping their own running containers) and get a working copy of the student's project.
+
 To Use Git, GitHub and Docker in the course, replace the Week 01 Activities with the following:
 
 ## Activities
