@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Update Vehicle Information (Step 1) | Web Backend Development I</title>
 	<meta name="description"
-		content="The update process for vehicle information is began in this activity where the data to be updated is selected and displayed so the update can occur in the PHP Motors project for CSE 340">
+				content="The update process for vehicle information is began in this activity where the data to be updated is selected and displayed so the update can occur in the PHP Motors project for CSE 340">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="/340br/css/340course.css" media="screen">
 	<link rel="stylesheet" href="/340br/css/prism-coy-dev.min.css" type="text/css" media="screen">
@@ -32,23 +32,23 @@
 			<ol>
 				<li>Open the <b>vehicle</b> controller.</li>
 				<li>Scroll down and add an additional case statement (prior to the default case) to the control structure based on the value being passed through the "Modify" link in the <b> Vehicle Management</b> view:
-<pre class="line-numbers"><code class="language-php">case 'mod':
+					<pre class="line-numbers"><code class="language-php">case 'mod':
             
 break;</code></pre>
 				</li>
 				<li>Within this case block we need to capture the value of the second name - value pair (remember that this is coming from a link, therefore it is a <b>GET</b> request:
-<pre class="line-numbers"><code class="language-php">case 'mod':
+					<pre class="line-numbers"><code class="language-php">case 'mod':
 &nbsp;$invId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 break;</code></pre>
 				</li>
 				<li>Next we will send the <code>$invId</code> variable into a function (that we will write in a minute) that will get the information for that single vehicle:
-<pre class="line-numbers"><code class="language-php">case 'mod':
+					<pre class="line-numbers"><code class="language-php">case 'mod':
 &nbsp;$invId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 $invInfo = getInvItemInfo($invId);
 break;</code></pre>
 				</li>
 				<li>Next we will check to see if <code>$invInfo</code> has any data. If not, we will set an error message:
-<pre class="line-numbers"><code class="language-php">case 'mod':
+					<pre class="line-numbers"><code class="language-php">case 'mod':
 &nbsp;$invId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 &nbsp;$invInfo = getInvItemInfo($invId);
 &nbsp;if(count($invInfo)<1){
@@ -57,7 +57,7 @@ break;</code></pre>
 break;</code></pre>
 				</li>
 				<li>Finally we will call a view where the data can be displayed so that the changes can be made to the data:
-<pre class="line-numbers"><code class="language-php">case 'mod':
+					<pre class="line-numbers"><code class="language-php">case 'mod':
 &nbsp;$invId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 &nbsp;$invInfo = getInvItemInfo($invId);
 &nbsp;if(count($invInfo)<1){
@@ -102,24 +102,24 @@ function getInvItemInfo($invId){
 				<li>Find and open the <b>add vehicle</b> view.</li>
 				<li>Do a "Save As..." and save the view into the <b>view</b> folder, but change the name to <b>vehicle-update.php</b>.</li>
 				<li>Scroll down to the <code>Title</code> element and add the following code block between the opening and closing title tags:
-<pre class="line-numbers"><code class="language-php">&lt;?php if(isset($invInfo['invMake']) && isset($invInfo['invModel'])){ 
+					<pre class="line-numbers"><code class="language-php">&lt;?php if(isset($invInfo['invMake']) && isset($invInfo['invModel'])){ 
 		echo "Modify $invInfo[invMake] $invInfo[invModel]";} 
 	elseif(isset($invMake) && isset($invModel)) { 
 		echo "Modify $invMake $invModel"; }?&gt;</code></pre>
 				</li>
 				<li>When you're done the title could look like this:
-<pre class="line-numbers"><code class="language-php">&lt;title&gt;&lt;?php if(isset($invInfo['invMake']) && isset($invInfo['invModel'])){ 
+					<pre class="line-numbers"><code class="language-php">&lt;title&gt;&lt;?php if(isset($invInfo['invMake']) && isset($invInfo['invModel'])){ 
 	 echo "Modify $invInfo[invMake] $invInfo[invModel]";} 
 	elseif(isset($invMake) && isset($invModel))) { 
 		echo "Modify $invMake $invModel"; }?&gt; | PHP Motors&lt;/title&gt;</code></pre>
- When the page loads, the vehicle make and model will appear in the title tab of the browser. Or, if	the page is returned for error correction the vehicle name will reappear from the vehicle	variable.
+					When the page loads, the vehicle make and model will appear in the title tab of the browser. Or, if the page is returned for error correction the vehicle name will reappear from the vehicle variable.
 				</li>
-				<li>Scroll down and find the main content heading. Add the same PHP code block to it. It could look	something like this:
-<pre class="line-numbers"><code class="language-php">&lt;h1&gt;&lt;?php if(isset($invInfo['invMake']) && isset($invInfo['invModel']))){ 
+				<li>Scroll down and find the main content heading. Add the same PHP code block to it. It could look something like this:
+					<pre class="line-numbers"><code class="language-php">&lt;h1&gt;&lt;?php if(isset($invInfo['invMake']) && isset($invInfo['invModel'])){ 
 	echo "Modify $invInfo[invMake] $invInfo[invModel]";} 
 elseif(isset($invMake) && isset($invModel)) { 
 	echo "Modify$invMake $invModel"; }?&gt;&lt;/h1&gt;</code></pre>
- By making these subtle changes we are personalizing the view's contents.
+					By making these subtle changes we are personalizing the view's contents.
 				</li>
 				<li>Look for any instructions that may exist indicating that you are "adding" a new vehicle. Delete all references to "adding" and replace them with "modifying".</li>
 				<li>Scroll down into the form and find the hidden input that contains the "action" name - value pair. Change the value to "updateVehicle". When done it could look something like this:
@@ -133,31 +133,33 @@ elseif(isset($invMake) && isset($invModel)) {
 						<li>Scroll to the top of the form and find the input for the vehicle make and model.</li>
 						<li>Alter the PHP code block to look like this (<strong>Keep in mind your code and variables may be slightly different than what you see here)</strong>:
 							<h4>Original Code Block</h4>
-<pre class="line-numbers"><code class="language-php">&lt;input type="text" name="invMake" id="invMake" required &lt;?php if(isset($invMake)){ echo "value='$invMake'"; } ?&gt;&gt;
+							<pre class="line-numbers"><code class="language-php">&lt;input type="text" name="invMake" id="invMake" required &lt;?php if(isset($invMake)){ echo "value='$invMake'"; } ?&gt;&gt;
 								
 &lt;input type="text" name="invModel" id="invModel" required &lt;?php if(isset($invModel)){ echo "value='$invModel'"; } ?&gt;&gt;</code></pre>
 							<h4>Altered Code Block</h4>
-<pre class="line-numbers"><code class="language-php">&lt;input type="text" name="invMake" id="invMake" required &lt;?php if(isset($invMake)){ echo "value='$invMake'"; } elseif(isset($invInfo['invMake'])) {echo "value='$invInfo[invMake]'"; }?&gt;&gt;
+							<pre class="line-numbers"><code class="language-php">&lt;input type="text" name="invMake" id="invMake" required &lt;?php if(isset($invMake)){ echo "value='$invMake'"; } elseif(isset($invInfo['invMake'])) {echo "value='$invInfo[invMake]'"; }?&gt;&gt;
 	
-&lt;input type="text" name="invModel" id="invModel" required &lt;?php if(isset($invModel)){ echo "value='$invModel'"; } elseif(isset($invInfo['invModel'])) {echo "value='$invInfo[invModel]'"; }?&gt;&gt;</code></pre></li>
+&lt;input type="text" name="invModel" id="invModel" required &lt;?php if(isset($invModel)){ echo "value='$invModel'"; } elseif(isset($invInfo['invModel'])) {echo "value='$invInfo[invModel]'"; }?&gt;&gt;</code></pre>
+						</li>
 						<li>By doing this we have code to display the data from the <code>$invInfo</code> array as well as from a variable if we are sending data back for repair and want the form inputs to be "sticky".</li>
 					</ul>
 				</li>
 				<li>Repeat adding the additional code block to each input and then altering the name of each field from the database so that the value of the <code>$invInfo</code> array can be displayed as well as maintaining the form's stickiness. Remember that this small piece of code is all that was added to the vehicle make and model inputs:
-<pre><code class="language-php">elseif(isset($invInfo['invMake']) && isset($invInfo['invModel'])) {echo "value='$invInfo[invMake] $invInfo[invModel]'"; }</code></pre>
+					<pre><code class="language-php">elseif(isset($invInfo['invMake']) && isset($invInfo['invModel'])) {echo "value='$invInfo[invMake] $invInfo[invModel]'"; }</code></pre>
 					<strong>It may be helpful to open the Inventory table and go to the "structure" tab of PHPMyAdmin to see the various field names as you work.</strong>
 				</li>
 				<li>If your form includes a <code>textarea</code> then the alteration occurs between the opening and closing tags and there is no "value" attribute. For example, if the original code looked like this:
-<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;
-&lt;?php if(isset($invDescription)){ echo $invDescription; } ?&gt;&lt;/textarea&gt;</code></pre> 
+					<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;
+&lt;?php if(isset($invDescription)){ echo $invDescription; } ?&gt;&lt;/textarea&gt;</code></pre>
 
-After editing, it would look like this:
-<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;
-&lt;?php if(isset($invDescription)){ echo $invDescription; } elseif(isset($invInfo['invDescription'])) {echo $invInfo['invDescription']; }?&gt;&lt;/textarea&gt;</code></pre></li>
+					After editing, it would look like this:
+					<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;
+&lt;?php if(isset($invDescription)){ echo $invDescription; } elseif(isset($invInfo['invDescription'])) {echo $invInfo['invDescription']; }?&gt;&lt;/textarea&gt;</code></pre>
+				</li>
 				<li>Finally, we need to add the same test to our code that builds the car classification select drop down list.
 					<ol>
 						<li>Scroll to the top of the view. There should be a code block that was used earlier to determine if the classification was being returned for correction, but add the "selected" attribute so the same classification item was chosen in the drop list. My code looks like this (yours may be different):
-<pre class="line-numbers"><code class="language-php">// Build the car classification option list
+							<pre class="line-numbers"><code class="language-php">// Build the car classification option list
 $classifList = '&lt;select name="classificationId" id="classificationId"&gt;';
 $classifList .= "&lt;option&gt;Choose a Classification&lt;/option&gt;";
 foreach ($carClassifications as $classification) {
@@ -169,10 +171,11 @@ foreach ($carClassifications as $classification) {
  }
 $classifList .= "&gt;$classification[classificationName]&lt;/option&gt;";
 }
-$classifList .= '&lt;/select&gt;';</code></pre></li>
+$classifList .= '&lt;/select&gt;';</code></pre>
+						</li>
 						<li>In this case we will add an additional test using an <code>elseif</code> to check for the <code>$invInfo</code> array and then check if its classificationId value matches the value from the original car classifications query. If true, then the <code>selected</code> attribute will be added to the <code>option</code>.</li>
 						<li>Alter the code to look like this:
-<pre class="line-numbers"><code class="language-php">// Build the classifications option list
+							<pre class="line-numbers"><code class="language-php">// Build the classifications option list
 $classifList = '&lt;select name="classificationId" id="classificationId"&gt;';
 $classifList .= "&lt;option&gt;Choose a Car Classification&lt;/option&gt;";
 foreach ($carClassifications as $classification) {
@@ -188,10 +191,11 @@ foreach ($carClassifications as $classification) {
 }
 $classifList .= "&gt;$classification[classificationName]&lt;/option&gt;";
 }
-$classifList .= '&lt;/select&gt;';</code></pre></li>
+$classifList .= '&lt;/select&gt;';</code></pre>
+						</li>
 					</ol>
 				</li>
-				<li>Double check that no code errors are being displayed in the page, if there are find and fix	them.</li>
+				<li>Double check that no code errors are being displayed in the page, if there are find and fix them.</li>
 				<li>Save all files.</li>
 			</ol>
 			<h2>Test, Test, Test</h2>
@@ -209,7 +213,8 @@ $classifList .= '&lt;/select&gt;';</code></pre></li>
 			</ol>
 		</main>
 		<footer>
-			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png"></a> All materials (except as noted) are by  Blaine Robertson and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" title="Read the license" target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.</footer>
+			<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png"></a> All materials (except as noted) are by Blaine Robertson and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" title="Read the license" target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.
+		</footer>
 	</div>
 	<script src="/340br/js/prism-coy-dev.min.js"></script>
 </body>
