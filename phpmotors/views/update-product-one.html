@@ -144,8 +144,8 @@ elseif(isset($invMake) && isset($invModel)) {
 						<li>By doing this we have code to display the data from the <code>$invInfo</code> array as well as from a variable if we are sending data back for repair and want the form inputs to be "sticky".</li>
 					</ul>
 				</li>
-				<li>Repeat adding the additional code block to each input and then altering the name of each field from the database so that the value of the <code>$invInfo</code> array can be displayed as well as maintaining the form's stickiness. Remember that this small piece of code is all that was added to the vehicle make and model inputs:
-					<strong>It may be helpful to open the Inventory table and go to the "structure" tab of PHPMyAdmin to see the various field names as you work.</strong>
+				<li>Repeat adding the additional code block to each input and then altering the name of each field from the database so that the value of the <code>$invInfo</code> array can be displayed as well as maintaining the form's stickiness.
+					<p><strong>It may be helpful to open the Inventory table and go to the "structure" tab of PHPMyAdmin to see the various field names as you work.</strong></p>
 				</li>
 				<li>If your form includes a <code>textarea</code> then the alteration occurs between the opening and closing tags and there is no "value" attribute. For example, if the original code looked like this:
 					<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;
