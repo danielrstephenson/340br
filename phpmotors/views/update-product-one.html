@@ -145,7 +145,6 @@ elseif(isset($invMake) && isset($invModel)) {
 					</ul>
 				</li>
 				<li>Repeat adding the additional code block to each input and then altering the name of each field from the database so that the value of the <code>$invInfo</code> array can be displayed as well as maintaining the form's stickiness. Remember that this small piece of code is all that was added to the vehicle make and model inputs:
-					<pre><code class="language-php">elseif(isset($invInfo['invMake']) && isset($invInfo['invModel'])) {echo "value='$invInfo[invMake] $invInfo[invModel]'"; }</code></pre>
 					<strong>It may be helpful to open the Inventory table and go to the "structure" tab of PHPMyAdmin to see the various field names as you work.</strong>
 				</li>
 				<li>If your form includes a <code>textarea</code> then the alteration occurs between the opening and closing tags and there is no "value" attribute. For example, if the original code looked like this:
