@@ -18,9 +18,21 @@
       <h1>Enhancement 3</h1>
       <h2>Purpose</h2>
       <p>In this enhancement you will combine skills from the last two weeks to build a system into the phpmotors web site that is capable of delivering both a registration and login view to a site visitor when the "My Account" link in the page header on the PHP Motors site is clicked. This process will require use of the MVC architecture.</p>
+
+      <h2>When done you will have created...</h2>
+      <ul>
+        <li>A function and code to create a dynamic navigation bar, replacing the static one created in enhancement 1</li>
+        <li>A new folder for storing a controller</li>
+        <li>Two new php pages (views), one will contain a login form and the other will contain a registration form. Neither of these forms need work, this week.</li>
+        <li>Both views must be valid HTML and CSS and pass usability tests.</li>
+        <li>Alter the header module to add a link for "My Account"</li>
+        <li>Create a controller with logic to deliver the correct view based on the incoming request</li>
+      </ul>
+
       <h2>Video Demo</h2>
       <p>This short video demonstrates what your links and the flow of this enhancement should look like.</p>
-      <iframe src="https://www.youtube.com/embed/UPdORcv_UC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/4k3TOPw-7qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
       <h3>Keeping Things Straight</h3>
       <p>One of the most difficult tasks for new programmers is keeping data coming from the browser, being stored into
@@ -103,16 +115,9 @@
         <li>When satisfied that the code is operational:
           <ol>
             <li>Create a video that demonstrates all of the points in the below Grading Matrix.</li>
-            <!-- <ol>
-                <li>The "My Account" link works in the home, login and registration views.</li>
-                <li>That the home, login and registration views are valid html and css.</li>
-              </ol>
-            </li> -->
-            <li>Post your video to your YouTube channel and copy the link to the video when published.</li>
-            <!-- <li>Zip the phpmotors folder and name it enhancement 3 (save this zip file outside of your web site)</li> -->
-            <!-- <li>Submit the zip file to the enhancement 3 assignment dropbox and add the video URL to the dropbox comment. -->
+            <li>Post your video to your YouTube channel as <b>Unlisted</b> and copy the link to the video when published.</li>
             <li>Zip the entire <code>cse340</code> folder and name it "enhancement3.zip" (save this zip file outside of your web site).</li>
-            <li>Push your changes to your private GitHub repository and copy the link to the repository.</li>
+            <li>Push your changes to your private GitHub repository with a comment noting this as Enhancement 3 and copy the link to the repository.</li>
             <li>Submit the zip file, video link, and the GitHub link to the Enhancement 3 Code Submission page as comments.</li>
         </li>
         </ol>
@@ -122,23 +127,27 @@
       <h2>Grading Matrix</h2>
       <h3>Objective 1 Items</h3>
       <ul>
-        <li>Home, login and registration views are valid HTML5 - 5 points (minus 1 for each error found)</li>
-        <li>Home, login and registration views are valid CSS - 5 points (minus 1 for each error found)</li>
+        <li>Home, login and registration views are valid HTML5.</li>
+        <li>Home, login and registration views are valid CSS.</li>
         <li>Total value of objective 1: <b>10 points</b></li>
       </ul>
       <h3>Objective 3 Items</h3>
       <ul>
-        <li>The "My Account" link in the home, login and registration views point to the accounts controller and passes an appropriate name - value pair to request the login view and the view is delivered - 10 points (minus 3 points for each view that is missing this link or minus 10 points if the link doesn't work)</li>
-        <li>The registration link in the login view points to the accounts controller and passes an appropriate name - value pair to request the registration view and the view is delivered - 5 points (all or nothing)</li>
-        <li>The accounts controller has operable case statements to deliver the appropriate views according to the value of the $action variable - 5 points (all or nothing)</li>
-        <li>Total value of objective 3: <b>20 points</b></li>
+        <li>The "My Account" link in the home, login and registration views point to the accounts controller and passes an appropriate name - value pair to request the login view and the view is delivered.</li>
+        <li>The registration link in the login view points to the accounts controller and passes an appropriate name - value pair to request the registration view and the view is delivered.</li>
+        <li>The accounts controller has operable case statements to deliver the appropriate views according to the value of the $action variable.</li>
+        <li>Total value of objective 3: <b>30 points</b></li>
       </ul>
       <h3>Objective 6</h3>
       <ul>
-        <li>The video URL is submitted and the video is narrated by you using your own voice. The video demonstrates each of the points for each Objective in the Grading Matrix.</li>
-        <!-- <li>A video is provided, which is narrated by you using your voice, that demonstrates that:</li>
-        <li>The "My Account" link works in the home, login and registration views.</li>
-        <li>That the home, login and registration views are valid HTML and CSS.</li> -->
+        <li>The video URL is submitted and the video is narrated by you using your own voice. The video demonstrates each of the points for each Objective in the Grading Matrix, including the following:
+          <ul>
+            <li>The "My Account" link works in the home, login and registration views.</li>
+            <li>That the home, login and registration views are valid HTML and CSS.</li>
+            <li>That the links to the views pass through controllers and not directly to the view.</li>
+            <li>That each of the listed items function.</li>
+          </ul>
+        </li>
         <li>Total value of objective 6: <b>5 points</b></li>
       </ul>
 

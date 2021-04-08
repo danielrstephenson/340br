@@ -176,10 +176,6 @@ iframe {
 
 @media screen and (min-width: 680px) {
 
-  body {
-    font-size: 2vw;
-  }
-
   #wrapper {
     max-width: 1300px;
     padding: 0 1rem;
