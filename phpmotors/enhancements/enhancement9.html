@@ -57,7 +57,7 @@
 
 			<h3>New Functionality</h3>
 			<ol>
-				<li>When the "vehicle detail" view is loaded the large, primary image should display (again, from the images table), but what if additional images have been uploaded for that vehicle? It would be beneficial if "thumbnails" of all images pertaining to that item were displayed. Therefore:
+				<li>When the "vehicle detail" view is loaded the large, primary image should display (again, from the images table). But what if additional images have been uploaded for that vehicle? It would be beneficial if "thumbnails" of all images pertaining to that item were displayed. Therefore:
 					<ol>
 						<li>In the uploads model, <mark>build a new function that will obtain thumbnail image information from the "<b>images</b>" table that are based on the vehicleId.</mark> You will need to use the <a href="//www.w3schools.com/sql/sql_like.asp" title="Opens in a new tab" target="_blank">LIKE</a> operator in your SQL query to find "-tn" in the file name.</li>
 						<li>In the <b>vehicles</b> controller, call the function when the vehicle detail page is requested. <b>The uploads model will have to be brought into the controller's scope.</b></li>
