@@ -28,7 +28,7 @@
       <p>In this enhancement you will:</p>
       <ol>
         <li>add client-side validation to the <b>new vehicles</b> and <b>new carclassification</b> view forms,</li>
-        <li>add server-side validation to the <b>new vehicles</b> and <b>new carclassification</b> processes in the vehicles controller including making the forms "sticky" so previous entered values are maintained in the forms, and</li>
+        <li>add server-side validation to the <b>new vehicles</b> and <b>new carclassification</b> processes in the vehicles controller including making the new vehicle form "sticky" so previous entered values are maintained in the forms (don't worry about the new classification form since it only has a single input), and</li>
         <li>make the creation of the $navList variable for building the site navigation easier, by creating a custom function for it in the "<b>functions.php</b>" page and then calling the function in all three controllers (phpmotors, accounts, vehicles) to store the navigation html data into a variable for use in all views.</li>
       </ol>
 
@@ -40,6 +40,7 @@
       <h3>Client-side Validation</h3>
       <ol>
         <li>Add HTML5 attributes as needed to the various input elements in the "<b>new carclassification</b>" and "<b>new vehicle</b>" forms. Make sure that each input's data type is also appropriate to the data being requested.</li>
+        <li>The classificationName field in the database is limited to 30 characters. Add client-side code to limit the input to no more than 30 characters. In addition, be sure to inform the client of this limitation prior to their entering text.</li>
         <li>Add a PHP code block to each input in the "<b>new vehicle</b>" form so that the form inputs become "sticky" if and when errors in submissions are returned.</li>
         <li><strong>Note:</strong> <mark>To display the value of a variable in a <code>textarea</code> element, it must be echoed between the opening and closing tags with no extra spaces or line breaks between the html opening and closing tags and the PHP code block between them.</mark></li>
       </ol>
@@ -49,7 +50,8 @@
       <ol>
         <li>Use a require_once to get the functionality of the "<b>functions.php</b>" page and make it available to this controller.</li>
         <li>Make sure the filter_input functions are using appropriate types for the data being collected (all incoming data must be filtered using an appropriate type). <b>Note:</b> If using sanitize types for float values, you must add a second flag - FILTER_FLAG_ALLOW_FRACTION - to allow the decimal place to be retained. <mark><b>Note:</b> The float sanitize filter removes all characters except numbers and the + or - sign. This means if a person enters 50.5 and it is sanitized, it leaves 505.</mark></li>
-        <li>If any specific patterns were used in the Native HTML5 validation, make sure that those patterns are duplicated using PHP.</li>
+        <li>Remember to use the trim() function with each of the data collection items to remove extra white space.</li>
+        <li>If any specific patterns or requirements were used in the Native HTML5 validation, make sure that those patterns and requirements are duplicated using PHP. JavaScript and PHP patterns will be similar, but may not be exact. Use the Internet to find any differences.</li>
         <li>If you create custom functions for any part of the server-side validation, make sure they are created in the "<b>functions.php</b>" page and labeled.</li>
         <li>To dynamically select the correct carclassification in the "add new vehicle" view when returning errors from server-side validation you will want to watch and follow along with this video:<br>
           <iframe src="https://www.youtube.com/embed/kkNWOXF9RbY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
