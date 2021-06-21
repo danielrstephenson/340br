@@ -45,7 +45,7 @@
                 <li>Remove the client level data from displaying in the view (do NOT display it at all).</li>
                 <li>Add text indicating to the client that they are "logged in".</li>
                 <li>Add an "update account information" link to the view so a client can update their information. The link must direct to the "accounts controller" and pass a name - value pair to deliver the update view. Make sure the link is visible and clear for all clients.</li>
-                <li>Add an HTML heading to preceed the "vehicles managment" link and a brief explanation telling
+                <li>Add an HTML heading to precede the "vehicles management" link and a brief explanation telling
                     administrative clients that they should use the link to administer inventory (The heading, explanation and inventory link should be visible only to administrative clients (those with a clientLevel greater than 1), not to non-administrative clients.</li>
                 <li>Add PHP code to display a message from the session if one exists. Make it display below the &lt;h1&gt; heading but above the account information display.</li>
             </ol>
@@ -137,8 +137,8 @@
             <h3>Accounts Model</h3>
             <p>The model will need two or three new functions:</p>
             <ol>
-                <li>The first function will need to handle the update of the account information as submitted to the controller from the account update form. It will only need to update the firstname, lastname and email values based on the clientId.</li>
-                <li>The second function will be similar to the function that was previously built to get client nformation based on the email address. However, this function will get the client information based on the clientId.</li>
+                <li>The first function will need to handle the update of the account information as submitted to the controller from the account update form. It will only need to update the first name, last name and email values based on the clientId.</li>
+                <li>The second function will be similar to the function that was previously built to get client information based on the email address. However, this function will get the client information based on the clientId.</li>
                 <li>The third function will need to update the password (as a hash) as submitted to the controller from the change password form, based on the clientId. Be sure that after submitting the new password to check the clients table to make sure the password is a hash as part of your testing.</li>
             </ol>
 
