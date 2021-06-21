@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Delete Vehicle| Web Backend Development I</title>
 	<meta name="description"
-				content="An activity describing the process to delete a vehicle in the PHP Motors site for CSE 340">
+	      content="An activity describing the process to delete a vehicle in the PHP Motors site for CSE 340">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="/340br/css/340course.css" media="screen">
 	<link rel="stylesheet" href="/340br/css/prism-coy-dev.min.css" type="text/css" media="screen">
@@ -133,7 +133,7 @@ break;</code></pre>
 				<li>Alter the include statement to point to the new <b>vehicle-delete.php</b> view.</li>
 				<li>When done the finished "del" case should look similar to this:
 					<pre class="line-numbers"><code class="language-php">case 'del':
-$invId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+$invId = filter_input(INPUT_GET, 'invId', FILTER_VALIDATE_INT);
 $invInfo = getInvItemInfo($invId);
 if (count($invInfo) < 1) {
 		$message = 'Sorry, no vehicle information could be found.';
