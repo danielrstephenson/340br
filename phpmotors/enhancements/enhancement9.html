@@ -109,23 +109,33 @@
       </ul>
 
       <h3>Objective 6</h3>
+      <p>The video URL is submitted and the video is narrated by you using
+        your own voice. The video should be about 5 minutes in length. To
+        receive the points above, the video should demonstrate each of the items
+        below:</p>
       <ul>
-        <li>The video URL is submitted and the video is narrated by you using your own voice. The video demonstrates all of the points for each Objective in the Grading Matrix, including the following:
+        <li>Objective 1: Navigating to one "vehicle detail" view that contains additional images. Show that:
+          <ol>
+            <li>All images (large and thumbnails) load.</li>
+            <li>The vehicle detail view meets the standards found in the <a href="https://ammonshepherd.github.io/340br/phpmotors/views/dev-checklist.html">Frontend Checklist</a></li>
+            <li>Use the browser's inspect tool to show that the full size image is no larger than 500 pixels wide or tall.</li>
+            <li>Use the browser's inspect tool to show that the thumbnail images are no larger than 200 pixels wide or tall.</li>
+            <li>The thumbnails are to the left of the vehicle large image and details on large screens and enlarge to provide more detail during a hover.</li>
+            <li>The thumbnails are below the vehicle details on mobile devices.</li>
+          </ol>
+        </li>
+        <li>Objective 2:
           <ul>
-            <li>Navigating to each "vehicle detail" view that contains additional images (at least three). Show that:
-              <ol>
-                <li>All images (large and thumbnails) load.</li>
-                <li>The vehicle detail view meets the standards found in the <a href="https://ammonshepherd.github.io/340br/phpmotors/views/dev-checklist.html">Frontend Checklist</a></li>
-                <li>Use the browser's inspect tool to show that the full size image is no larger than 500 pixels wide or tall.</li>
-                <li>Use the browser's inspect tool to show that the thumbnail images are no larger than 200 pixels wide or tall.</li>
-                <li>The thumbnails are to the left of the vehicle large image and details on large screens and enlarge to provide more detail during a hover.</li>
-                <li>The thumbnails are below the vehicle details on mobile devices.</li>
-              </ol>
-            </li>
-            <li>Show the "<b>images</b>" table in the PHPMyAdmin tool to demonstrate that two versions of each image in the "phpmotors/images/vehicles>" folder exist in the table.</li>
+            <li>Show the code in the function.php file that wraps the thumbnail images in HTML and returns the results to the vehicles controller.</li>
+            <li>Show that the affected functions pull the vehicle image information from the images table instead of the inventory table.</li>
           </ul>
         </li>
-        <li><b>Total value for Objective 6: 5 points</b></li>
+        <li>Objective 4:
+          <ul>
+            <li>Show the SQL code that pulls the image info from the database.</li>
+            <li>Show the "<b>images</b>" table in the PHPMyAdmin tool to demonstrate that two versions of each image in the "phpmotors/images/vehicles/" folder exist in the table.</li>
+          </ul>
+        </li>
       </ul>
 
     </main>
