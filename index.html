@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Weekly Activities and Assignments | Web Backend Development I</title>
+  <meta name="description"
+        content="This activity completes the registration process in the accounts controller for the PHP Motors project of CSE 340">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/340br/css/340course.css" media="screen">
+  <link rel="stylesheet" href="/340br/css/prism-coy-dev.min.css" media="screen">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <img src="/340br/340banner.jpg" alt="CSE 340 Banner Image">
+    </header>
+    <main>
+      <h1 id="cse-340">CSE 340</h1>
+      <p>This course will help you learn the skills to build a website using PHP and MySQL as the database back end. You can choose Docker or XAMPP as the development backend (the software required to host a website on your computer). You will use the MVC architecture to build the website.</p>
+      <h2 id="activities">Activities</h2>
+      <p>Each week’s activities and assignments builds upon the previous week’s work, so they must be completed in order.</p>
+      <p>Each week consists of a set of activities with step-by-step instructions that help you learn the MVC architecture and how to use PHP and MySQL. The activities are not graded, but are essential for completing the weekly assignment.</p>
+      <h2 id="enhancements">Enhancements</h2>
+      <p>After you complete the activities you will complete an assignment that enhances the website and uses the skills you were just taught. The “Enhancements” are turned in for a grade.</p>
+      <p><strong>Enhancement = Weekly graded assignment</strong></p>
+      <h2 id="turning-in-enhancements">Turning in Enhancements</h2>
+      <p>Turning in an Enhancement (or weekly assignment) consists of three things</p>
+      <ul>
+        <li>First, after completing the week’s activities and the Enhancement, you’ll make a video of your work that week, showing how you met each of the Enhancement’s criteria. If you follow all of the instructions for the Enhancement, you’ll complete all of the graded items. In the video, just show me that those things are completed. Show me the code or the functionality on the website. At the end of each Enhancement page is a Grading Matrix. In the video, show everything listed in Objective 6 of the Grading Matrix. The video should be about 5 minutes in length. If using YouTube, make sure your video is marked as Public and Unlisted.</li>
+        <li>Second, push all of your code to your GitHub repository (see Week 1 Activities for setting up a GitHub account and Git).</li>
+        <li>Third, send an email to the instructor with the URL for the video and the URL to your GitHub repo.</li>
+      </ul>
+      <h2 id="week-1">Week 1</h2>
+      <p>In this week you will be installing software to set up your computer for developing a website.</p>
+      <h3 id="activities-1">Activities</h3>
+      <p>There are two different local development environments available. A local development environment is simply the software you need on your desktop or laptop to develop a website. You should use the steps below to set up the Docker environment.</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/git.html">Installing Git</a> (content management and version control)</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/vscode-install.html">Download and Install VS Code</a> (including the extensions)</li>
+        <li>(06:35 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vSwncKnss-b1Q_3YO77IAmXnrsktSqCiFzWiX2Wyp_xwDumvyX4MhRbuJZ1YWdqIykvJ5-u2y5aAVzc/pub">“Install Visual Studio on Mac” Transcript</a> )</li>
+        <li>(02:43 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQrnhEFxe6K4HwD1YHwn7q7ZSrLkvefihkb8mWui17mRAL5vBSKcZGlW7ocytlNlBW5rKRihcHuchdr/pub">“Install Visual Studio on Windows” Transcript</a>)</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/docker-setup.html">Installing Docker</a> (local development environment)</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/github-vscode-setup.html">GitHub and VS Code</a> set up</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/downloads/code-shortcuts.pdf">Download Common VS Code keyboard shortcuts</a></li>
+        <li>Stage and commit your changes to your local Git repository.</li>
+      </ul>
+      <p>If you already have the XAMPP environment installed, or if the Docker installation does not work, follow these instructions:</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/xampp_windows.html">Installing XAMPP for Windows</a> (local development environment)<br />
+        </li>
+        <li>(06:51 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vS-a4lLFMYBAWka_M0lm_VhECV9GOJVKINQIG23oMYujiu6pK7fnbQALvThDgJUXMnu_JsndZZ3Hd_l/pub">“XAMPP for Windows” Transcript</a>)</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/xampp_mac.html">Installing XAMPP for Mac</a> (local development environment)<br />
+        </li>
+        <li>(03:39 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vR0bQeRGUYH_nEoKdnOOnG9iMYwLVxKvX4-oGXLB7I8KEqpWbUjVRsECJCrtyU87a2IdZt8gtKiYthu/pub">“XAMPP for Mac” Transcript</a>)</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/clean-htdocs.html">Clean up the htdocs folder</a><br />
+        </li>
+        <li>(03:38 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQ799arWm-dxwUJFB-W3c2UcVEzK7aAuzsWHsZE8i72kuryj7XAGzSMdUWPV5Z6o0mhBt8Pew-0x0Sb/pub">“Clean up htdocs Folder” Transcript</a>)</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/vscode-localhost.html">Complete the VS Code Localhost Tutorial</a><br />
+        </li>
+        <li>(03:15 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vRHNmIUUpvWIyv_47ZSGH9w96iTvvQkSIgUtpuxRyjcFmW-cWwyJNh19-xMH8yumdDukPQsDZY-o3QQ/pub">“Localhost Tutorial” Transcript</a>)</li>
+      </ul>
+      <h3 id="extra-credit">Extra Credit</h3>
+      <p>You can earn 5 extra credit points if you complete this <a href="https://www.sololearn.com/learning/1059">SoloLearn PHP Course</a>. This activity will help you understand basic programming concepts.</p>
+      <h2 id="week-2">Week 2</h2>
+      <p>You’ll be creating an HTML page to use as a template for the website you create this semester. As the course progresses, you’ll make a copy of the template file, rename it, and use the copied file for building out the website. This first assignment is to create the template.php file, then make a copy of it and name it home.php. Then you’ll build the home page for the website with the home.php file.</p>
+      <h3 id="activities-2">Activities</h3>
+      <ul>
+        <li><a href="https://youtu.be/z8xUCzToff8">Watch the Accessibility Fundamentals video</a></li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/modularization.html">Modularizing Common Content</a><br />
+        </li>
+        <li>(09:02 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQgnUC6WRsrnQiA05xqrVx8JA5YuWd5mWDMrx210GdgSZlwSbwRgRTqhEdU_MAr2sfG3lD-eme3dD-M/pub">“PHP Modularization” Transcript</a>)</li>
+        <li><a href="https://byui.instructure.com/courses/143100/pages/the-web-developer-extension?module_item_id=16216354">Install and Use the Web Developer Extension</a></li>
+      </ul>
+      <h3 id="enhancement-1">Enhancement 1</h3>
+      <ul>
+        <li>Complete <a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement1.html">Enhancement 1</a>.
+          <ul>
+            <li>(02:25 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vSE-HcxM7pcXdq3DD3KvToFppi4_sKl2mUpWhnvt-ilgLNDCtN_EkXhIsUDjZRHOtDJZPvgTNaUVtEY/pub">“Enhancement 1 Overview” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="week-3">Week 3</h2>
+      <p>This week you’ll learn how PHP and MySQL talk to each other. You will create a database and add some tables. You can think of a database like a collection of spreadsheets. Each spreadsheet is like a database table. When you create a table, it’s like you hard code the title of each column, and hard code what type of data (numbers, letters, or any character) can be put into that column.</p>
+      <p>Each row of the spreadsheet is a record in the database table. When you add stuff to a database, you are creating records, or rows in a spreadsheet.</p>
+      <p>You will also create a database user. This is a user account (username and password) to access the database. Your website will need these credentials in order to connect to the database and Create, Read, Update and Delete (the CRUD).</p>
+      <p>You’ll put the username, password and database name into a php file that will hold all of the details for connecting to the right database.</p>
+      <h3 id="activities-3">Activities</h3>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/local-db.html">Create a Local Database</a>
+          <ul>
+            <li>You will create the database and import two tables, then</li>
+            <li>You will build one table from scratch using the provided ERD and video as a guide</li>
+            <li>(02:27 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vRRLXv3hbQ6f-MngKLMwYnWnbc8kcRtswmj8adV6uif5_u_ynbEluihZeBMSfcV6DQyG8kX5RFmbfjS/pub">“Create MySQL and Import from SQL file” Transcript</a>)</li>
+            <li>(03:53 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vTPEHH7Fvvm6JpTiisTq843BQRq73GJppImsZZ41byYeWGLzE0jNZ8n3q7o_DJN9A3aI_8UUT2UYqN-/pub">“Creating a Table from Scratch” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Carefully review the SQL code examples in the Intro to SQL reading listed above</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/proxy-user.html">Create a Proxy User</a> to work with the database
+          <ul>
+            <li>(03:07 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vSyPhZ_McT6TwkXivM2r6mua1YWxG_jOltYla9gdXTV9kY5vSuPze9vxiiB-GKo8hB-5DbPTxapbfMO/pub">“Create a Proxy Database User” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/db-connection.html">Create a PDO Connection</a>
+          <ul>
+            <li>(05:42 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vRE2PuZGTYTLiyx84dga1SN2vaOaZLwyEDd5Ii9BABXHvhyubR3R5pruMBxRnzKOAFxWdMThmniAtSr/pub">“Creating a PHP/PDO Object” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://youtu.be/SuP01-e3aHw">Connect the Database to VS Code</a> (opens in a new tab)
+          <ul>
+            <li>This doesn’t always work, and it is totally optional.</li>
+          </ul>
+        </li>
+        <li>Stage, commit and push your changes to your local Git repository. Name the message for the commit “Week 3 Activity”.</li>
+      </ul>
+      <h3 id="enhancement-2">Enhancement 2</h3>
+      <p>For this week’s Enhancement, you will create the following: - An SQL file containing six queries as described in the task list - A php file containing a PDO connection function to talk to the database server - A new php web page to display a generic server error message - Two new folders for storing files</p>
+      <p>The submission video should be short, 3-5 minutes, and cover each of the points in Objective 6 of the Grading Matrix at the end of the Enhancement 2 page.</p>
+      <ul>
+        <li>Complete <a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement2.html">Enhancement 2</a>.
+          <ul>
+            <li>(03:32 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQzEna2bB3Y1o1XbinwnHpS86ZEqe0YdJBfzsHmzfqxBGssfjDgzXpig9KGXudaUlyRcjetgLjEoj52/pub">“Enhancement 2 Overview” Transcript</a></li>
+          </ul>
+        </li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="week-4">Week 4</h2>
+      <p>In this week’s activities, you’ll learn to use the MVC structure. This is basically just a way to break up our code into manageable chunks. It’s kind of like separating content to HTML and style to CSS. In MVC you are separating out the database parts (the Model), the HTML displayed in the browser (the View), and the code that decides which view to show and which data to pull from the database (the Controller).</p>
+      <p>You’ll use data from the database to build the navigation. The data from the database will come to the PHP file in the form of an array. We can then loop over that array to build the navigation links.</p>
+      <p>This brings us to the magic of the URLs. We’ll be using the URLs to tell the code which page to display. The main index.php page (the main controller for the site) will have code (a switch statement) that checks the URL for a variable named “action” and the value of that variable, which will determine which page to display. The URL might look like <code>http://localhost/?action=login</code> the “?” tells PHP that a variable and its value are to follow. In this case, the variable is “action”, the value is “login”. We’ll be using this pattern throughout the site to determine which page (view) to display.</p>
+      <h3 id="activities-4">Activities</h3>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/mvc-overview.html">Complete the MVC Overview</a> and build the main controller to deliver the home view (built in week 2)</li>
+        <li>(07:23 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vSK5_VKUgt5QoiSFNigAQ27mjK7pamwRaMGpFVTnyxNHZkHXvqAy6rnL3zyEKhRSX1mlgnZNYNrqCeJ/pub">“MVC Introduction” Transcript</a>)</li>
+        <li>(04:27 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vS4_W0q7edPM0qbojccL1TxVekEFp_syYU1Jaa-icLEF5oOUT9lDjlUDDZuqTabX1heN4OW9LjQUkd6/pub">“Basic MVC Operation” Transcript</a>)</li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/mvc-navigation.html">Build a dynamic navigation menu</a> using PHP and SQL within the MVC framework
+          <ul>
+            <li>(04:57 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vREe8cp3WHCMJIsy_ciV8sPdBh2VL5cpM6AP2xqLV2KfcziGuqcf4QovLlaScJFTgV7da8J8PHqm2PM/pub">“Build Dynamic Menu” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/create-accounts.html">Create the Accounts folder and Controller</a></li>
+        <li>Stage, commit and push your changes to your local Git repository. Name the message for the commit “Week 4 Activity”</li>
+      </ul>
+      <h3 id="enhancement-3">Enhancement 3</h3>
+      <p>For the assignment this week, you’ll build a page for logging in and a page to register. They won’t really work yet; we are just creating the views for now. You’ll build a controller for account settings that will control which view (PHP page in the views folder) is displayed based on the URL. You’ll also change the “My Accounts” link to use the accounts controller.</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement3.html">Complete Enhancement 3</a>.
+          <ul>
+            <li>(01:14 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQni1-zY51YRhoZk2tb7epljeJUSeErePwCaCvdcaZC3-O6fuStsYWTZN7_ysFF2oDxnb0F6yT3MLE2/pub">“Enhancement 3” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="weeks-5-6">Weeks 5 &amp; 6</h2>
+      <p>This week will be different. You will be starting an assignment in week 5 and will continue working on it through next week. The whole thing will be due at the end of week 6. There is a lot to do and comprehend in these two weeks, so don’t put off the work until the end.</p>
+      <p>This is the week where file paths seem to cause the most confusion. Take a look at this explanation to hopefully clarify some things about file paths as used in web development.</p>
+      <p><a href="https://blog.codeanalogies.com/2018/06/24/file-directories-explained-by-getting-dressed-in-the-morning/">File Directories</a></p>
+      <h3 id="activities-5">Activities</h3>
+      <p>For the activity this week, you’ll level the database, or re-import the SQL file so the database is at a clean starting point. You’ll be working through the whole MVC architecture, by creating a Model for registering a new website user (a <strong>Model</strong> is the code that puts stuff into or gets stuff out of the database).</p>
+      <p>You’ll make sure the registration form is sending the right data to the right places (this is the <strong>View</strong>).</p>
+      <p>And you’ll be adding a whole lot to the accounts controller to take the data from the registration form, and use a function from the model to submit the data into the database (the <strong>Controller</strong>, obviously).</p>
+      <ul>
+        <li><a href="https://www.w3schools.com/html/html_filepaths.asp">Review building paths within a web site</a></li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/db-leveling.html">Level the PHP Motors Database</a>
+          <ul>
+            <li>(02:15 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQTlGytmAo6s-EF6K5XLCEbl8VA4I31brchH3dLycVTizSB8I7aBhrzJYrmjbxS7CkbrHL1QhX_DcvT/pub">“Level PHP Motors Database” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/accounts-model.html">Create the Accounts Model</a>
+          <ul>
+            <li>(02:07 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQqS-CLrsqJEZ0QNWqWpU0pTiLsK3P8vCSWS_JRiZz0yTfMsGn_SnmPquqAXPZg-AvCkwlIRCLysel3/pub">“PHPMotors Account Model” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/accounts-register.html">Finalize the Registration Form</a>
+          <ul>
+            <li>(02:33 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vTPSxweLN93MCQNyOnmUuV9ljYxsSeFe399NKDLqV6gAzHlk76eTwdZN0WgpBXVLk52w06zPek5yydN/pub">“Finalize Registration Form” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/accounts-controller.html">Finalize the Accounts Controller</a> - This takes us through the entire registration process!
+          <ul>
+            <li>(03:40 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vSgnFSVWT4oVhlNpabOAi0yHbWPnhHBW5j5D3IRC_7NqbmHgoKNNftBuPr6nmYlHEPJuvHBoMLC2hR9/pub">“Motors Account and Registration Process” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Troubleshooting Techniques
+          <ul>
+            <li>(31:53 mins; <a href="https://docs.google.com/document/d/e/2PACX-1vQGcoI7eE9f10a58467aoKt3LGme6JT1jyxfas2u1qYlsFpAHbimldCdFKIUihD5LnAfgz9xsdOcZXv/pub">Troubleshooting Techniques Transcript</a></li>
+          </ul>
+        </li>
+        <li>Stage, commit and push your changes to your local Git repository. Name the message for the commit “Week 5 and 6 Activity”</li>
+      </ul>
+      <h3 id="enhancement-4">Enhancement 4</h3>
+      <p>For this assignment, you will create the pages and functions to add new classifications for vehicles and new vehicles to the database.</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement4.html">Complete Enhancement 4</a>.</li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="week-7">Week 7</h2>
+      <h3 id="activities-6">Activities</h3>
+      <p>For the activities this week, you will be adding validation to your forms. For the activity, you will work on the login and registration pages. You will be adding HTML (client-side) validation and PHP (server-side) validation. Client-side means the browser checks the input before it sends it to the server. Server-side means that the PHP on the server checks the input before sending it into the database.</p>
+      <p>The activity for this week will also walk you through storing the password as a “hash” rather than in “plain text” in the database. You’ll use PHP functions to scramble the password before inserting into the database.</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/novalidate2.html">Add the Novalidate Bookmarklet for Testing</a> to the browser
+          <ul>
+            <li>(02:22 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vR8scZmdXmoBngNJY6lW0imdJ1P6Ex9dIrCFudBz5FnR7j7joJ3dWTH7023NW_ErzFp7RHL3PEl_swZ/pub">“Bookmarklet Tool Creation and Use” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/form-validation.html">Form Validation using Native HTML5</a> (preferred method for client-side validation)
+          <ul>
+            <li>(05:02 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQiWbgxezIA8zxcx6lgo-GrMlgcpXFCLzBnibSTPL8_XsdDumiPPAIg91BcSgfc1_fMY8hkNRWlg6bJ/pub">“Client-Side Validation” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/server-validation.html">Server-side Validation</a>
+          <ul>
+            <li>(02:54 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQrcRvhvDRiGzYb19RW26un72PRGZ6HjxRTLqtmlfZZm3iWQwtNGLirPngad6YhIBzANasjLUap5_-N/pub">“Validation and Form Stickiness” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/password-hash.html">Password Hashing</a>
+          <ul>
+            <li>(02:24 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vR9OEyyL9PHobur7SOgGJ1KLon3tMmSyLgyU5TnEpodkTcwbSBX17psWY2YL-mKPaqR7p9349O9m385/pub">“Password Hashing” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Stage, commit and push your changes to your local Git repository. Name the message for the commit “Week 7 Activity”</li>
+      </ul>
+      <h3 id="enhancement-5">Enhancement 5</h3>
+      <p>For the enhancement, you’ll apply the techniques and code you learned for the login and registration forms and apply them to the new classification and new vehicle pages.</p>
+      <p>You’ll also be abstracting out the navigation code into a function that you can use in multiple places. Up to this point, you had the same code duplicated three times to create the navigation link. You basically copy this code, put it into a function (in a new PHP page you create called functions.php) and then call that function where you need the navigation to be.</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement5.html">Complete Enhancement 5</a>.
+          <ul>
+            <li>(02:06 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vSrLgwMOYBbwJEB9Sa_f11YPIDOBgF07Xs1_-1_T8ZYz-ZqLOL7MYB0i27PB7yxMeTw-VNRPZWrSkQt/pub">“Enhancement 5 Overview” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="week-8">Week 8</h2>
+      <p>For the activity part of this week, you’ll learn about web cookies and how to create one for making a personalized login screen.</p>
+      <p>A good thing to keep in mind here is that sessions and cookies are just bits of information (think of it like a text file) that is kept by your web browser. Very generally speaking, the web server sends a bit of information to the browser and the browser keeps it in a special spot until the browser visits that site again. Then the website can do lots of cool stuff like put up a personalized welcome message, keep track of certain preferences, and so forth.</p>
+      <p>You’ll also learn about creating PHP sessions. Sessions are like an open communication channel between the server and the web browser of whoever is visiting your site. You will use the session to facilitate the login and log out process. You’ll also create the admin page to manage users and access levels.</p>
+      <p>We’re turning this into a real content management system! 😊</p>
+      <h3 id="activities-7">Activities</h3>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/unique-registration.html">Ensure a unique visitor registration</a>
+          <ul>
+            <li>(03:55 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vRmJZUsMnozwIeacG0_tJ31mnP-V79z6cJpruyoa8HzuoE5g7TqF9zdJDSrm49t-bUGF-JqV8Yx-chW/pub">“Checking for Existing Table” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/cookie-registration.html">Creating a Registration Cookie</a>
+          <ul>
+            <li>(03:12 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vTzFWeYeEk85W4xccfly2xctehAJmz8DcweRx6vFMQ_Jfw9_qhAQ3LpxMbUIK17xF_I2AMo5UDnTfb-/pub">“Creating PHP Cookies” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/login.html">Using a Session for Visitor Login</a>
+          <ul>
+            <li>(05:52 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vSuxbDYmgVL0T1p8AIWr3vkiKT-5oJt3ScyGJiu4DWejvD-rZlWGBuNSY01yrPY661c65lPRHNap50y/pub">“Login Process and Sessions” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Stage, commit and push your changes to your local Git repository. Name the message for the commit “Week 8 Activity”</li>
+      </ul>
+      <h3 id="enhancement-6">Enhancement 6</h3>
+      <p>In the assignment this week, you will create an admin page to display after a user logs in, and populate the page with data from the session, show a link on the admin page based on a user’s “level”, and create the log out functionality.</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement6.html">Complete Enhancement 6</a>
+          <ul>
+            <li>(02:09 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQgasAinVfv4TwNf7dJP5Kqd9Lh1eO7ET_7wrF0hVEq4dPZKBwZrewfX6FZhp7TR1SFoMNMyv4IyblU/pub">“Enhancement 6 Overview” Transcript</a></li>
+          </ul>
+        </li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="week-9">Week 9</h2>
+      <p>For the Activity portion of this week, you’ll be implementing the page and functionality to display the vehicles. This page will show a link to edit the vehicle information or delete it. You’ll create a page for updating/editing the vehicle information (you’ll just duplicate the add vehicle page). There is a lot to do for this activity.</p>
+      <h3 id="activities-8">Activities</h3>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/select-products-js.html">Selecting Inventory Items</a>
+          <ul>
+            <li>(05:13 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vQsQSvf1BfI_gnqKdEbCahP4FJWksefBK1Y_1m106oXprS5ZJBIZvdLXAWq1qZ7z72bdgmBNNpKnkED/pub">“PHP JSON AJAX in Dynamic Site” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/update-product-one.html">Updating Inventory item information (Step 1)</a></li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/update-product-two.html">Updating Inventory item information (Step 2)</a>
+          <ul>
+            <li>(04:49 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vRToRldLp76gVfOPXEJAQl-IrtYQW8uOPQS8Zxsii6WGTofXiEtf50XkUm8JltbmREpyPgyZFxIoJgF/pub">“Updating Database Step 2” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/delete-product.html">Delete an Inventory Item</a>
+          <ul>
+            <li>(04:25 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vRtRk-tojdTa_k4ZH4DWgvUZuyIqP9B00kYiph4B9YFk9Vkmr3AsaTzBbALEv2k2urj6IR_aUP0AoxO/pub">“Delete Database Record from Website” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Stage, commit and push your changes to your local Git repository. Name the message for the commit “Week 9 Activity”</li>
+      </ul>
+      <h3 id="enhancement-7">Enhancement 7</h3>
+      <p>For the Enhancement portion of the week, you’ll take everything you learned about creating an update/edit page for vehicles and apply it to the users of the site. You’ll create a way for any logged in user to edit their information.</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement7.html">Complete Enhancement 7</a>
+          <ul>
+            <li>(03:45 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vROWtSiT4AtgVqLGehU8z2Zy5f7JSuIePtM78KS5EPvS045SqPvkaBAMmMLhF6siI1hJj1ToFIUtxZL/pub">“Enhancement 7 Overview” Transcript</a></li>
+          </ul>
+        </li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="week-10">Week 10</h2>
+      <p>For the Activity portion this week we’ll be making the main menu links usable. When a visitor clicks on a menu link (a classification or type of car) the visitor will be taken to a page that displays all of the cars in that category/classification. We’ll start by editing the function that creates the navigation menu. You’ll also learn the purpose of ?’s and &amp;’s in URLs. Then we’ll add a new ‘case’ to the vehicle controller to handle those links.</p>
+      <p>Next, we’ll create a new function in the vehicle model to pull all of the vehicles from the database. There are more elegant ways to get this information (we already created such a function to display vehicles in the admin page), but this function will introduce the concept of SQL sub-queries, or SQL queries within SQL queries. We’ll then create a new function in the function.php file to generate a list of vehicles from the array returned from the function just created in the vehicle model.</p>
+      <p>Finally, we’ll create the web page, the view, to display all of this data we just built. We’ll create a new classifications.php file (a copy of that good old template.php file) and plop in about 4 lines of code to get it working. While the code might be easy, the CSS might prove a little more work. This page needs to be valid HTML and CSS, and be responsive. The goal is to create a row of vehicles on large screens, but a column of vehicles on small screens, all handled by CSS.</p>
+      <h3 id="activities-9">Activities</h3>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/product-nav-links.html">Inventory Links and Controller</a>
+          <ul>
+            <li>(2:04 mins; <a href="https://docs.google.com/document/d/e/2PACX-1vTdhhYl2AoP64ZjTYK08lDpDc--mK_xwwFvubXCWm3OYfzFLv67B1p4u5W7Iaif69cxQcNTbmVgW9hZ/pub">PHPMotors Navigation Links and Controller Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/product-functions.html">Building Vehicle Functions</a>
+          <ul>
+            <li>(2:29 mins; <a href="https://docs.google.com/document/d/e/2PACX-1vQYAHCn06LQJmr7Emxfd08SjgYouiKkAP4Zkvu9j7rJzriAwRMY2MA_-S6PthAhqpBG6S9N63XoNc2R/pub">PHP Motors Display Vehicles Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/category-view.html">Build the Classification View</a>
+          <ul>
+            <li>(1:32 mins; <a href="https://docs.google.com/document/d/e/2PACX-1vTC7neXKAA--ejMc1qQyaZViKkr-ZkDhsrOrdinwmzYgDwpbAf-21KBIYC8s2tON8a2sa-lIYVQheuD/pub">PHP Motors Vehicle Processing Functions Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Stage, commit and push your changes to your local Git repository. Name the message for the commit “Week 10 Activity”</li>
+      </ul>
+      <h3 id="enhancement-8">Enhancement 8</h3>
+      <p>The actual assignment, or enhancement, to turn in this week is to take this work one step further and create a page (a new view) that will display all of the information about a vehicle. Your website visitors will get to this vehicle detail page by clicking on a link in your newly created classifications page. You’ll need to turn each of those vehicles in the list (the title and image, for example) on the classifications page into a link to that vehicle’s detail page. You’ll need to create a new case in the vehicle controller to handle this new set of links. You’ll need a new function in the vehicle model file to pull all the data for the selected vehicle. And you’ll need to create a new function in the function.php file to build the HTML that will display all the vehicle information. Remember to make this page valid HTML, CSS and responsive.</p>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement8.html">Complete Enhancement 8</a>
+          <ul>
+            <li>(1:35 mins; <a href="https://docs.google.com/document/d/e/2PACX-1vSvkEA8eph7nLmcNe_XYHhkJBCugpr52nOVvuej-6TmRkp783glCcf0ysZFx5r8E9PH9bKHmbvY6r6l/pub">Enhancement 8 Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="week-11">Week 11</h2>
+      <p>You will build a new section for the site, an image upload functionality. This will allow clients to upload multiple images for each vehicle. You’ll be adding parts to the whole MVC structure; creating a new database table, a new model file, a new view, a new controller, and some new functions. Much of the image manipulation functions are given to you. There is a lot of copy and paste in the activity this week. Take your time and read through the comments in the code. Make sure you understand what is going on in each section.</p>
+      <h3 id="activities-10">Activities</h3>
+      <ul>
+        <li><a href="https://youtu.be/uknjEhgNGGA">Preview the Finished Upload Application</a>
+          <ul>
+            <li>(03:39 mins, <a href="https://docs.google.com/document/d/e/2PACX-1vRfzkBXIWcooi4eNNULo_pkjwFX5ZVMaifyQ2UpotreNB1vDyBkIlx-6-iOoxyIY-e0hhEjQJJkjxxQ/pub">“PHPMotors Image Uploads” Transcript</a>)</li>
+          </ul>
+        </li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/images-table.html">Build the Images Table</a></li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/uploads-controller.html">Build the Uploads Controller</a></li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/uploads-model.html">Build the Uploads Model</a></li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/uploads-helpers.html">Add the Helper Functions</a></li>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/views/uploads-view.html">Build the View and Test</a>
+          <ul>
+            <li>(1:22 mins; <a href="https://docs.google.com/document/d/e/2PACX-1vSKNsc-koG_Wqb0bC0GFInBQuo6e8rXrENnvqv-IHHDuHkqH7kz1Cx8fFKTZz5o4fSaKWGCYR3jQMSW/pub">Image Management View Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Stage, commit and push your changes to your local Git repository. Name the message for the commit “Week 11 Activity”</li>
+      </ul>
+      <h3 id="enhancement-9">Enhancement 9</h3>
+      <p>For the enhancement, you’ll be doing three things:</p>
+      <ol type="1">
+        <li>adding images through the form you made in the activity so that you have all the right sizes</li>
+        <li>Then edit the code to use the right paths</li>
+        <li>Add code to display multiple thumbnail images if assigned to a vehicle.</li>
+      </ol>
+      <ul>
+        <li><a href="https://ammonshepherd.github.io/340br/phpmotors/enhancements/enhancement9.html">Complete Enhancement 9</a>
+          <ul>
+            <li>(3:04 mins; <a href="https://docs.google.com/document/d/e/2PACX-1vR5bchCgkzTUJzAepoo6zz_kvRBp8TGyTLMTKTCgatRXWoMymqx_G5kDlYg-9RFPw46WJT_n7ag-Z7A/pub">Enhancement 9 Transcript</a>)</li>
+          </ul>
+        </li>
+        <li>Save your work to your GitHub repository.</li>
+        <li>Make a video showing the code and website.</li>
+        <li>Send the the video and GitHub URLs to the instructor.</li>
+      </ul>
+      <h2 id="weeks-12-13-final-project">Weeks 12 &amp; 13: Final Project</h2>
+      <p>The instructor will email instructions for the Final Project at the beginning of Week 12. You will have two weeks to complete the project.</p>
+
+
+    </main>
+    <footer>
+      <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank"> <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png"></a> All materials (except as noted) are by Blaine Robertson and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" title="Read the license"
+         target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.
+    </footer>
+  </div>
+  <script src="/340br/js/prism-coy-dev.min.js"></script>
+</body>
+
+</html>
