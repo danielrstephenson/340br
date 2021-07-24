@@ -2,6 +2,10 @@
 
 Course materials for CSE 340
 
+## Assignments
+
+[Weekly assignments for the course](https://ammonshepherd.github.io/340br/assignments.html)
+
 # Changes From the Official Repo
 
 This fork of the "official" repo from Blaine Robertson makes a few significant changes:
