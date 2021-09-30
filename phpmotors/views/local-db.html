@@ -25,7 +25,7 @@
       <p>In order to work with the local database, the local Apache and MySQL database servers must be running, this means that Docker is up and running the containers. Once they are both running:</p>
       <ol>
         <li>Open a browser.</li>
-        <li>In the address bar type <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a>.</li>
+        <li>In the address bar type <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a> (or <a href="http://localhost/phpmyadmin/">http://localhost/phpmydamin/</a> if using XAMPP).</li>
         <li>The username and password were set in the docker-compose.yml file. If you did not change them, for the username, enter <code>root</code>. For the password, enter <code>rootPASS</code></li>
         <li>The PHPMyAdmin tool should now be visible
           <br>
@@ -74,10 +74,10 @@
       <ol>
         <li>With the Docker containers running (test with <code>docker ps</code> in the terminal), open a browser window or new tab.</li>
         <li>Type <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a> into the browser address bar.</li>
-        <li>You can log in with the MySQL root (super) user with all privileges:
+        <li>You can log in with the MySQL root (super) user with all privileges (needed to create a database):
           <p><code>username: root, password: rootPASS</code>
           <p>
-            or with the limited MySQL user with access to the phpmotors database only (if you did not change them in the docker-compose.yml file):
+            or with the limited MySQL user with access to the <strong>phpmotors database only</strong> (if you did not change them in the docker-compose.yml file):
           <p><code>username: dbuser, password: dbpass</code>
           <p>
         </li>
