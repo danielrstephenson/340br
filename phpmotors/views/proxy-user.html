@@ -24,6 +24,7 @@
       <p>The proxy user is generally only given "data manipulation" privileges. This means the proxy can read (SELECT) data, add (INSERT) new data, change (UPDATE) data, sometimes upload files (FILES), and perhaps remove (DELETE) data from the database. However, the proxy is <strong>never</strong> given the ability to change the actual database in any way! </p>
 
       <h2>Creating a Proxy Database User</h2>
+      <p class="strong">For Docker:</p>
       <p>The process of creating the MySQL server with Docker creates a proxy user for us. The username and password are in the docker-compose.yml file. As a reminder, that information is</p>
       <p>
         <code>
@@ -45,6 +46,9 @@
       </p>
 
       <p>As you follow the video instructions, <mark>use a percent sign <code>%</code> instead of <code>localhost</code> for the "Host Name"</mark>. This is wildcard variable, meaning any host is allowed.</p>
+
+      <p class="strong">For XAMPP:</p>
+      <p>Follow the steps in the video below.</p>
 
       <iframe src="https://www.youtube.com/embed/9UxdVpgibWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
