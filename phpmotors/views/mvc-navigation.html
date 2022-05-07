@@ -39,7 +39,7 @@
     <li>You should have a <b>model</b> folder in the phpmotors web site.</li>
     <li>Create a new PHP file in the model folder. Name the file
      <b>main-model.php</b>.</li>
-    <li>Modify the default comment in the model file to indicate that it is the "Main PHP Motors Model".</li>
+    <li>After the opening PHP tag, add a comment to the top of the file to indicate that it is the "Main PHP Motors Model".</li>
     <li>You will now create a new function to get the classification information from the carclassification table in the  phpmotors database.
     </li>
    </ol>
@@ -49,27 +49,27 @@
     <li>If needed, review <a href="//www.w3schools.com/php/php_functions.asp" title="Opens in a new tab" target="_blank">PHP
       Functions</a> before beginning.</li>
     <li>Create a new function using the "function" key word and name the function <b>getClassifications()</b>.</li>
-    <li>When creating functions (interactions) name them to describe what they do.</li>
+    <li>When creating functions, name them to describe what they do.</li>
     <li>Note that no parameters will be placed between the parentheses as the function will not need outside information to run.
     </li>
     <li>Build the function to look like the code below:
      <pre class="line-numbers"><code class="language-php">function getClassifications(){
- // Create a connection object from the phpmotors connection function
- $db = phpmotorsConnect(); 
- // The SQL statement to be used with the database 
- $sql = 'SELECT classificationName FROM carclassification ORDER BY classificationName ASC'; 
- // The next line creates the prepared statement using the phpmotors connection      
- $stmt = $db->prepare($sql);
- // The next line runs the prepared statement 
- $stmt->execute(); 
- // The next line gets the data from the database and 
- // stores it as an array in the $classifications variable 
- $classifications = $stmt->fetchAll(); 
- // The next line closes the interaction with the database 
- $stmt->closeCursor(); 
- // The next line sends the array of data back to where the function 
- // was called (this should be the controller) 
- return $classifications;
+  // Create a connection object from the phpmotors connection function
+  $db = phpmotorsConnect(); 
+  // The SQL statement to be used with the database 
+  $sql = 'SELECT classificationName FROM carclassification ORDER BY classificationName ASC'; 
+  // The next line creates the prepared statement using the phpmotors connection      
+  $stmt = $db->prepare($sql);
+  // The next line runs the prepared statement 
+  $stmt->execute(); 
+  // The next line gets the data from the database and 
+  // stores it as an array in the $classifications variable 
+  $classifications = $stmt->fetchAll(); 
+  // The next line closes the interaction with the database 
+  $stmt->closeCursor(); 
+  // The next line sends the array of data back to where the function 
+  // was called (this should be the controller) 
+  return $classifications;
 }</code></pre>
     </li>
     <li>
@@ -89,7 +89,7 @@
    <p>In real life, this is a bit harder to illustrate but let me try. Your car (even if you don't own one, pretend) is a car object. Meaning that your's isn't the only one, but it represents this abstract concept of "car". Your car has methods: move forward, move reverse, turn left, turn right, blow horn, etc... So, when you prepare to back up we could    represent it as $car->reverse();</p>
 
    <h2>Open the PHP Motors Controller</h2>
-   <p>The PHP Motors controller is index.php and should be at the root of the phpmotors folder. Open it.</p>
+  <p>The PHP Motors main controller is index.php and should be at the root of the phpmotors folder (ie. cse340/www/phpmotors/index.php or xampp/htdocs/phpmotors/index.php). Open it.</p>
    <ol>
     <li>In order to use the model we have two files that must be brought into the scope of the controller (refer to
      <a href="//www.w3schools.com/php/php_includes.asp" title="Opens in a new tab" target="_blank">PHP Include and Require</a> as needed).</li>
@@ -102,11 +102,11 @@
       <li>the main-model is needed to get the data from the database which the controller will use to build the dynamic navigation menu.</li>
      </ul>
     </li>
-    <li>Use the require_once function to bring both files into scope as shown below:
+    <li>Use the require_once function to bring both files into scope as shown below. This code should go at the top of the file, just under the comment.
      <pre class="line-numbers"><code class="language-php">// Get the database connection file
- require_once 'library/connections.php';
- // Get the PHP Motors model for use as needed
- require_once 'model/main-model.php';</code></pre>
+require_once 'library/connections.php';
+// Get the PHP Motors model for use as needed
+require_once 'model/main-model.php';</code></pre>
     </li>
     <li>The require_once function does three things:
      <ul>
@@ -116,7 +116,33 @@
      </ul>
     </li>
    </ol>
+<p>The main controller file should look similar to this:</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+/* PHPMotors Main Controller
+* This file is accessed at http://lvh.me/phpmotors/
+* or at http://lvh.me/phpmotors/index.php
+* 
+* This file controls all traffic to the http://lvh.me/phpmotors/ URL
+*/
 
+// Get the database connection file
+require_once 'library/connections.php';
+// Get the PHP Motors model for use as needed
+require_once 'model/main-model.php';
+
+$action = filter_input(INPUT_POST, 'action');
+if ($action == NULL) {
+  $action = filter_input(INPUT_GET, 'action');
+}
+
+switch ($action) {
+  case 'something':
+  break;
+
+  default:
+  include 'view/home.php';
+}
+</code></pre>
    <h2>Call the getClassifications() Function</h2>
    <p>With the connection and model pages in the scope of the controller, code can be written to call on them to do their jobs.</p>
    <p>
@@ -126,40 +152,79 @@
     <li>Create one or two empty lines beneath the lines where the connection and model files were required and brought into the controller's scope.</li>
     <li>Call the getClassifications() function and assign what it returns to a variable named <b>$classifications</b> as shown below:
      <pre class="line-numbers"><code class="language-php">// Get the array of classifications
-	$classifications = getClassifications();</code></pre>
+$classifications = getClassifications();</code></pre>
     </li>
     <li>Let's test to see what, if anything, we got from the database.
      <br>
      <ul>
-      <li>Write the following code on the next two lines:
-       <pre class="line-numbers"><code class="language-php">var_dump($classifications);
-	exit;</code></pre>
+      <li>Write the following code on the next lines:
+      
+<pre class="line-numbers"><code class="language-php">echo "&lt;pre>";
+var_dump($classifications);
+echo "&lt;/pre>";
+exit;
+</code></pre>
+
       </li>
-      <li>var_dump is a PHP function that displays information about a variable, array or object.</li>
-      <li>The exit directive stops all further processing by PHP.</li>
-      <li>Using var_dump and exit are great ways to test and see that what you thought you were getting is actually what you got!
+      <li><code>var_dump</code> is a PHP function that displays information about a variable, array or object.</li>
+      <li>We wrap the <code>var_dump</code> in a <code>pre</code> tag to make the output legible.</li>
+      <li>The <code>exit</code> directive stops all further processing by PHP.</li>
+      <li>Using <code>var_dump</code> and <code>exit</code> are great ways to test and see that what you thought you were getting is actually what you got!
       </li>
      </ul>
     </li>
     <li>Save all files.</li>
     <li>Run the controller in the phpmotors folder.
      <ol>
-      <li>Make sure the Apache and MySQL database servers are running</li>
-      <li>Open a new browser window or tab, type <code>localhost/phpmotors</code> and you should see the result of the var_dump on the screen. Remember that the controller is named "index.php" and it is a default name, meaning that if we don't specify a name, then the server will look for and deliver a file with a default name automatically.</li>
+      <li>Make sure the Docker containers (or XAMPP and the Apache and MySQL database servers) are running</li>
+      <li>Open a new browser window or tab, type <code>localhost/phpmotors/</code> (or browse to <a href="http://lvh.me/phpmotors/">http://lvh.me/phpmotors/</a>) and you should see the result of the var_dump on the screen. Remember that the controller is named "index.php" and it is a default name, meaning that if we don't specify a name, then the server will look for and deliver a file with a default name automatically.</li>
      </ol>
     </li>
     <li>If things are working, the var_dump should have dumped something similar to what you see below to your browser
      window:
-     <code class="language-php">array(5) { [0]=> array(2) { ["classificationName"]=> string(6) "Classic" [0]=>
-              string(6)
-              "Classic" } [1]=> array(2) { ["classificationName"]=>
-              string(9) "Sports" [0]=> string(9) "Sports" } [2]=> array(2) { ["classificationName"]=> string(4) "SUV"
-              [0]=>
-              string(4)
-              "SUV" } [3]=> array(2) { ["classificationName"]=> string(6) "Trucks" [0]=> string(6) "Trucks" } [4]=> array(2)
-              {
-              ["classificationName"]=>
-              string(4) "Used" [0]=> string(4) "Used" } }</code>
+    <br>
+    <br>
+<pre>
+array(5) {
+  [0]=>
+    array(2) {
+      ["classificationName"]=>
+      string(7) "Classic"
+      [0]=>
+      string(7) "Classic"
+    }
+  [1]=>
+    array(2) {
+      ["classificationName"]=>
+      string(6) "Sports"
+      [0]=>
+      string(6) "Sports"
+    }
+  [2]=>
+    array(2) {
+      ["classificationName"]=>
+      string(3) "SUV"
+      [0]=>
+      string(3) "SUV"
+    }
+  [3]=>
+    array(2) {
+      ["classificationName"]=>
+      string(6) "Trucks"
+      [0]=>
+      string(6) "Trucks"
+    }
+  [4]=>
+    array(2) {
+      ["classificationName"]=>
+      string(4) "Used"
+      [0]=>
+      string(4) "Used"
+    }
+}
+</pre>
+            <br>
+            <br>
     </li>
     <li>While it may look like a mess, in reality it tells us that we have a multidimensional array with 5 sub-arrays. That is exactly what we wanted!</li>
     <li>If you got nothing, go back and double check your code, talk with a peer, contact a TA or lab assistant or the professor. But it needs to be working.</li>
