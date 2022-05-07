@@ -75,6 +75,14 @@ code {
   background-color: #a1ff0a80;
   padding: 0.2rem;
 }
+
+.important {
+  background-color: #ffdddd80;
+  color: darkred;
+  padding: 0px 4px;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
 /********************************************
     FEATURES STYLING
 *********************************************/
