@@ -70,6 +70,11 @@ code {
   font-weight: bolder;
   font-size: 1.2rem;
 }
+
+.highlight {
+  background-color: #a1ff0a80;
+  padding: 0.2rem;
+}
 /********************************************
     FEATURES STYLING
 *********************************************/
