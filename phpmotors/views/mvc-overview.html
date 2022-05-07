@@ -38,11 +38,11 @@
       </ol>
 
       <h2>Create a Controller for the phpmotors root</h2>
-      <p>The controller is the default file that we want the server to use for all incoming traffic to the acme site and
+      <p>The controller is the default file that we want the server to use for all incoming traffic to the phpMotors site and
         for applications built within the site. Because the controller contains the logic, it makes the decisions as to what
         is needed to respond to incoming requests from the browser.</p>
       <ol>
-        <li>Create a PHP file at the phpmotors root (NOT a web page).</li>
+        <li>Create a PHP file in the 'phpmotors' folder (this will NOT be an HTML web page).</li>
         <li>Name the file <b>index.php</b>.</li>
         <li>Add the following code. When done, your code should look like this example:
           <pre class="line-numbers"><code class="language-php">$action = filter_input(INPUT_POST, 'action');
@@ -62,6 +62,34 @@
 }</pre></code>
         </li>
       </ol>
+      <p>When finished, the path to the file will look like this if using Docker: <code>cse340/phpmotors/index.php</code></p>
+      <p>When finished, the path to the file will look like this if using XAMPP: <code>xampp/htdocs/phpmotors/index.php</code></p>
+
+      <p>The complete file should look something like this:</p>
+
+      <pre class="line-numbers"><code class="language-php">&lt;?php
+        /* PHPMotors Main Controller
+         * This file is accessed at http://lvh.me/phpmotors/
+         * or at http://lvh.me/phpmotors/index.php
+         * 
+         * This file controls all traffic to the http://lvh.me/phpmotors/ URL
+        */
+        
+        $action = filter_input(INPUT_POST, 'action');
+        if ($action == NULL) {
+          $action = filter_input(INPUT_GET, 'action');
+        }
+        
+        switch ($action) {
+          case 'something':
+        
+            break;
+        
+          default:
+            include 'view/home.php';
+        }
+
+      </code></pre>
 
       <h3>An Explanation</h3>
       <ol>
@@ -71,15 +99,13 @@
         </li>
         <li>$action is a variable that we will use to store the type of content being requested.</li>
         <li>We use the
-          <i>filter_input()</i> function to sift the content to eliminate code that could do the web site harm (read more on
-          php.net about the
+          <i>filter_input()</i> function to sift the content to eliminate code that could allow hackers to control the server (read more on php.net about the
           <a href="//php.net/manual/en/function.filter-input.php" title="Go to php.net to read more"
              target="_blank">filter_input funtion</a>).
         </li>
         <li>We check the POST object (input from forms) and the GET object (input from links) to see if there is a "name -
-          value pair (aka key - value pair) where the key is the word "action". If such a combination is found, the value is
-          stored
-          in the $action variable.</li>
+          value" pair (aka key - value pair) where the key is the word "action". If such a combination is found, the value is
+          stored in the $action variable.</li>
         <li>The
           <a href="//php.net/manual/en/control-structures.switch.php"
              title="Read more about the switch control structure on php.net" target="_blank">switch control structure</a>
@@ -100,7 +126,7 @@
       <ol>
         <li>Save all of your work.</li>
         <li>Make sure the Apache server is running.</li>
-        <li>Open <a href="http://lvh.me/phpmotors/">http://lvh.me/phpmotors/</a> in a browser.</li>
+        <li>Open <a href="http://lvh.me/phpmotors/">http://lvh.me/phpmotors/</a> (or <a href="http://localhost/phpmotors/">http://localhost/phpmotors/</a> for XAMPP users) in a browser.</li>
         <li>If things work as they should, you should be looking at your home page.</li>
         <li>If things didn't work, check spelling, file and folder names and the path.</li>
       </ol>
