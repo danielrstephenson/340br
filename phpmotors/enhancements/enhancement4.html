@@ -55,13 +55,16 @@
       <p>Treat this enhancement as a <i>kinda</i> test. It gives us an opportunity to review, reinforce and provide a proof of learning.</p>
 
       <h3>Keeping Things Straight</h3>
-      <p>One of the most difficult tasks for new programmers is keeping data coming from the browser, being stored into variables, then inserted to database straight. While there is no perfect way to do this, there is a simple practice that may help: use the database field name for the same piece of data in all of its locations.</p>
-      <p>For example, When adding a new vehicle to the inventory table, the field in the table to store its name is "<b>invMake</b>". So, in the form give the input that name:
-        <br>
-        <code class="language-markup">&lt;input name="invMake" id="invMake" type="text"&gt;</code> Then, in the controller when collecting the value, store it into a variable of the same name:
-        <br>
-        <code class="language-php">$invMake = filter_input(INPUT_POST, 'invMake');</code> While not foolproof, it does help to keep track of what form field is sending what data, what variable is storing that value and what database field the data should be stored into.
-      </p>
+      <p>One of the most difficult tasks for new programmers is keeping  straight the data coming from the browser, data being stored into variables, and then data inserted to database. While there is no perfect way to do this, there is a simple practice that may help: use the database field name for the same piece of data in all of its locations.</p>
+      <p>For example, when adding a new vehicle to the inventory table, the field in the table to store its name is "<b>invMake</b>". So, in the form give the input that name:</p>
+
+        <p><code class="language-markup">&lt;input name="invMake" id="invMake" type="text"&gt;</code></p> 
+
+        <p>Then, in the controller when collecting the value, store it into a variable of the same name:</p>
+
+        <p><code class="language-php">$invMake = filter_input(INPUT_POST, 'invMake');</code></p>
+
+        <p>While not foolproof, it does help to keep track of what form field is sending what data, what variable is storing that value and what database field the data should be stored into.</p>
 
       <h2>Tasks</h2>
       <p>As described above you are being asked to build a process for adding new classifications to the carclassifications table and new vehicles (inventory items) to the inventory table, all using the MVC architecure, PHP, HTML and CSS. You will build the following items, test them for operation and validate the HTML and CSS code in all views.</p>
