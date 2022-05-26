@@ -46,7 +46,7 @@
 
       <pre><code class="language-markup">&lt;input type=&quot;text&quot; name=&quot;clientFirstname&quot; required&gt;</code></pre>
 
-      <p>This informs the web browser that the field is mandatory. Most browsers will mark the input box in some way if the client fails to complete the input correctly. You can actually create your own valid/invalid formatting using CSS to override the browser default. You should be aware that the CSS pseudo-classes for doing this are currently considered experimental and will result in CSS validation errors.</p>
+      <p>This informs the web browser that the field is mandatory. Most browsers will mark the input box in some way if the client fails to complete the input correctly. You can actually create your own valid/invalid formatting using CSS to override the browser default.</p>
 
       <h2>Different input types</h2>
       <p>Along with the text input type, there are a host of other options, including email, url, number, tel, date and others.</p>
@@ -132,7 +132,7 @@
       </ul>
 
       <h2>Styling valid/invalid inputs using CSS</h2>
-      <p>This first set of styles can be used to mark an input box as 'invalid', by adding an icon, coloring the text or borders or similar. It will apply to inputs that are required but empty, or to inputs that have a required format/pattern which hasn't yet been met. These pseudo-classes were considered experimental, but no longer are. Their use should now pass CSS validation.</p>
+      <p>This first set of styles can be used to mark an input box as 'invalid', by adding an icon, coloring the text or borders or similar. It will apply to inputs that are required but empty, or to inputs that have a required format/pattern which hasn't yet been met.</p>
 
       <pre><code class="language-css">input:required:invalid, input:focus:invalid {
  /* insert your own styles for invalid form input */
