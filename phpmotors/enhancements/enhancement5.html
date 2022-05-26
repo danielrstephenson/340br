@@ -58,7 +58,8 @@
       <p>In the "<b>vehicles</b>" controller add server-side validation to both the "add new carclassification" and "add new vehicle" processes. Specifically:</p>
       <ol>
         <li>Use a require_once to get the functionality of the "<b>functions.php</b>" page and make it available to this controller.</li>
-        <li>Make sure the filter_input functions are using appropriate types for the data being collected (all incoming data must be filtered using an appropriate type). <b>Note:</b> If using sanitize types for float values, you must add a second flag - FILTER_FLAG_ALLOW_FRACTION - to allow the decimal place to be retained. <mark><b>Note:</b> The float sanitize filter removes all characters except numbers and the + or - sign. This means if a person enters 50.5 and it is sanitized, it leaves 505.</mark></li>
+        <li>Make sure the filter_input functions are using appropriate types for the data being collected (all incoming data must be filtered using an appropriate type). <b>Note:</b> If using sanitize types for float values, you must add a second flag - FILTER_FLAG_ALLOW_FRACTION - to allow the decimal place to be retained. <mark><b>Note:</b> The float sanitize filter removes all characters except numbers and the + or - sign. This means if a person enters 50.5 and it is sanitized, it leaves 505.</mark>
+        <p>Make sure to add the filters to the code that checks for the 'action' input. Add this to the accounts, vehicle, and main controllers.</p></li>
         <li>Remember to use the trim() function with each of the data collection items to remove extra white space.</li>
         <li>If any specific patterns or requirements were used in the Native HTML5 validation, make sure that those patterns and requirements are duplicated using PHP. JavaScript and PHP patterns will be similar, but may not be exact. Use the Internet to find any differences.</li>
         <li>If you create custom functions for any part of the server-side validation, make sure they are created in the "<b>functions.php</b>" page and labeled.</li>
@@ -134,7 +135,7 @@
             <li>Objective 5:
               <ul>
                 <li>Show the client-side HTML to make all required inputs to be required in the add new classification and add new vehicle forms.</li>
-                <li>Show that data types have been added to all filter_input functions in the vehicles controller.</li>
+                <li>Show that data types have been added to all filter_input functions in the vehicles controller. Show that each controller (account, vehicle, main) has filter_input functions for the 'action' input.</li>
                 <li>Show that the add vehicle form elements are sticky when an incorrect submission is sent to the server and returned for correction.</li>
               </ul>
             </li>
