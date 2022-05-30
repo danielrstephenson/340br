@@ -124,9 +124,7 @@
             <li>Contain a form for adding a new classification (you will only need to add the name, the id in the table is auto-incrementing).</li>
             <li>The form must send all data to the vehicles controller for checking and insertion to the database.</li>
             <li>The view must have the means of displaying messages returned to it from the controller.</li>
-            <li>When the data is sent for insertion to the controller and if the insertion works, the vehicles controller should call itself using a
-              <code>header()</code> function and pass no name - value pair. This should result in the "vehicle management" view being displayed and the new classification should appear as part of the navigation menu.
-              <mark>Note: There will NOT be a success message. The classification item appearing in the navigation bar will be the indication of success.</mark> However, if it fails, then a clear failure message should be displayed in the add new classification view.
+            <li>When the data is sent for insertion to the controller and if the insertion works, the vehicles controller should call the vehicle management page using a <a href="https://wisetut.com/redirect-with-php-header-location/"><code class="highlight">header()</code> function</a> and pass no name - value pair. This should result in the "vehicle management" view being displayed and the new classification should appear as part of the navigation menu. <mark>Note: DO NOT show a success message! The classification item appearing in the navigation bar will be the indication of success.</mark> However, if it fails, then a clear failure message should be displayed in the add new classification view.
             </li>
           </ul>
         </li>
