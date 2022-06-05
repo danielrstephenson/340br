@@ -70,8 +70,8 @@
 
       <h3>Replace the Welcome Message</h3>
       <ol>
-        <li>Replace the cookie-welcome message with a session-based welcome message.</li>
-        <li>The new welcome message (e.g. "Welcome Susan") must take the firstname value from the session following login.</li>
+        <li>Replace the cookie-welcome message with a session-based welcome message. <span class="highlight">The cookie is not used to display the welcome message any more. Instead use the data in the $_SESSION array.</span></li>
+        <li>The new welcome message (e.g. "Welcome Susan") must take the firstname value from the session after login.</li>
         <li>The welcome message must appear in all views, throughout the site, while the client is logged in.</li>
         <li>When a client logs out, the welcome message will be removed completely.</li>
       </ol>
