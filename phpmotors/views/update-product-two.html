@@ -224,7 +224,7 @@ break;</code></pre>
 					this:
 					<pre><code class="language-php">$stmt->bindValue(':invId', $invId, PDO::PARAM_INT);</code></pre>
 				</li>
-				<li>When done the function should look similar to this (items that were changed are highlighted):
+				<li>When done the function should look similar to this:
 					<pre class="line-numbers"><code class="language-php">// Update a vehicle
 	function updateVehicle($invMake, $invModel, $invDescription, $invImage, $invThumbnail, $invPrice, $invStock, $invColor, $classificationId, $invId) {
   $db = phpmotorsConnect();
