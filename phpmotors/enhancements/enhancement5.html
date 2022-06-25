@@ -65,6 +65,7 @@
         <li>If you create custom functions for any part of the server-side validation, make sure they are created in the "<b>functions.php</b>" page and labeled.</li>
         <li>To dynamically select the correct carclassification in the "add new vehicle" view when returning errors from server-side validation you will want to watch and follow along with this video:<br>
           <iframe src="https://www.youtube.com/embed/kkNWOXF9RbY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="highlight">NOTE: If this is not working, and you are using XAMPP, then try changing the '===' in the if statement to '=='. MySQL under XAMPP has an issue that sometimes returns the value as an integer, rather than a string. The triple equal signs '===' check if the data and type are exactly the same. The double equal '==' check if the data is the same.</p>
         </li>
         <li>Thoroughly test both the client-side and server-side validation to ensure they work.</li>
       </ol>
