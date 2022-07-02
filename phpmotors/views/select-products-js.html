@@ -239,6 +239,7 @@ if (isset($classificationList)) {
 					<li>Create an empty line <strong>above</strong> the closing &lt;/body&gt; tag.</li>
 					<li>In this new empty line add the following HTML code:
 						<pre><code class="language-markup">&lt;script src="../js/inventory.js"&gt;&lt;/script&gt;</code></pre>
+						<p class="highlight">The javascript MUST be inserted at the bottom of the HTML file in order for all of the HTML elements to load before the Javascript is called. If this line of code is placed at the top of the file, the code will not work.</p>
 						Don't worry that the folder and file don't exist. We'll create them next.
 					</li>
 				</ol>
