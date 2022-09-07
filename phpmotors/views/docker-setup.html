@@ -41,7 +41,9 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/O4Yro0VN5Ds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
 
-      <p>Mac users with the new Apple silicon, download the correct version for Docker from here: <a href="https://docs.docker.com/desktop/mac/apple-silicon/">https://docs.docker.com/desktop/mac/apple-silicon/</a></p>
+      <div class="special">
+        <p>Mac users with the new Apple silicon, download the correct version for Docker from here: <a href="https://docs.docker.com/desktop/mac/apple-silicon/">https://docs.docker.com/desktop/mac/apple-silicon/</a></p>
+      </div>
 
       <h1 id="create-a-project-folder">Create a Project Folder</h1>
       <p>Next we need to decide where to locate the files for this course. Create a project folder anywhere on your computer that you like. One suggestion is to create this in your Documents folder.</p>
@@ -100,11 +102,14 @@
       <p>Change the name of the database on line 43 to <code>phpmotors</code>. Make sure to save the file!</p>
       <p><img src="/340br/images/docker/change-db-name.png" alt="Change db name" /></p>
 
-      <p>If you have a new Mac with the M1 or newer CPU, then you will also need to uncomment line #33</p>
-      <p><img src="/340br/images/docker/mac-silicon-change.png" alt="Uncomment this line if you have a new Mac" /></p>
+      <div class="special">
+        <h2>Only do this if you have a new Mac with an M1 chip or newer.</h2>
+        <p>If you have a new Mac with the M1 or newer CPU, then you will also need to uncomment line #33</p>
+        <p><img src="/340br/images/docker/mac-silicon-change.png" alt="Uncomment this line if you have a new Mac" /></p>
 
-      <p>You will also need to run this command in the terminal (if you haven't done it already):</p>
-      <p><code>softwareupdate --install-rosetta</code></p>
+        <p>You will also need to run this command in the terminal (if you haven't done it already):</p>
+        <p><code class="command">softwareupdate --install-rosetta</code></p>
+      </div>
 
       <p>You can change the root password, username and user password if you desire, but it's not necessary for this course. In a production environment, you would want to use a more secure password and use environment variables so that the passwords are not saved in a file that will be shared.</p>
 
