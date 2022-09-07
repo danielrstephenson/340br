@@ -93,7 +93,7 @@
         <li>If and when the database connection fails, a generic failure page, built using your template file, should be delivered (using the <a href="//php.net/manual/en/function.header.php" title="View the header function at php.net" target="_blank">PHP header function</a>) that states the database could not be reached. See the image below as an example of what the
           page could look like:<br>
           <img src="/340br/phpmotors/images/php-motors/php-motors-error.png" alt="Sample error page for illustration purposes">
-          <p>The error view should be named <b>500.php</b> and be stored in a folder named <b>view</b> at the root of the phpmotors folder.</p>
+          <p>Create a folder named <b>view</b> at the root of the phpmotors folder (/cse340/www/phpmotors/view for Docker users, or /htdocs/phpmotors/view for XAMPP users). Make a copy of the template.php file and name it <code>500.php</code>, and move it to the <b>view</b> folder.</p>
         </li>
         <li>Create a video that demonstrates that the connection works. Make sure to show all of the points in the Grading Matrix below.</li>
         <li>In the same video demonstrate that errors are successfully caught when the connection fails and the error page is delivered.</li>
