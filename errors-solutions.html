@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Weekly Activities and Assignments | Web Backend Development I</title>
+  <meta name="description"
+        content="This activity completes the registration process in the accounts controller for the PHP Motors project of CSE 340">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/340br/css/340course.css" media="screen">
+  <link rel="stylesheet" href="/340br/css/prism-coy-dev.min.css" media="screen">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <img src="/340br/340banner.jpg" alt="CSE 340 Banner Image">
+    </header>
+    <main>
+      <h1 id="cse-340">CSE 340 - Errors and Solutions</h1>
+
+      <dl>
+        <dt>When using XAMPP on Windows you get the error code api-ms-win-crt-runtime and it stops Apache from executing. </dt>
+        <dd>A Google search turns up these possible solutions
+          <li><a href="https://www.youtube.com/watch?v=EgixgR_OW98 ">https://www.youtube.com/watch?v=EgixgR_OW98 </a></li> 
+          <li><a href="https://softwarekeep.com/help-center/how-to-fix-the-api-ms-win-crt-runtime-l1-1-0dll-is-missing-error-in-windows ">https://softwarekeep.com/help-center/how-to-fix-the-api-ms-win-crt-runtime-l1-1-0dll-is-missing-error-in-windows </a></li>
+         </dd>
+         
+         <dt>Using Docker, in my docker-compose.yml file, I missed the 's' in "phpmotors" when I was setting up my Docker/phpmyadmin. To be more clear, my line 43 in the docker-compose.yml said "MYSQL_DATABASE: "phpmotor"" instead of "MYSQL_DATABASE: "phpmotors"". I continued my set up of Docker, and I don't have a phpmotors database. I tried to delete/restart my containers after I fixed the error, but I fear I may have to set up a completely different virtual environment and folder.</dt>
+         <dd>The quick solution is to stop all of the containers then delete them. You can use the Docker Dashboard for this. Then, delete the /cse340/dbdata/ folder, then restart the Docker containers.</dd>
+
+      </dl>
+
+
+    </main>
+    <p></p>
+    <footer>
+      <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" target="_blank"> <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png"></a> All materials (except as noted) are by Blaine Robertson and licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/deed.en_US" title="Read the license"
+         target="_blank">Creative Commons Attribution-ShareAlike 3.0 License</a>.
+    </footer>
+  </div>
+  <script src="/340br/js/prism-coy-dev.min.js"></script>
+</body>
+
+</html>
