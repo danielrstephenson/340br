@@ -21,14 +21,25 @@
       <h1 id="cse-340">CSE 340 - Errors and Solutions</h1>
 
       <dl>
-        <dt>When using XAMPP on Windows you get the error code api-ms-win-crt-runtime and it stops Apache from executing. </dt>
-        <dd>A Google search turns up these possible solutions
+        <dt><h2>Error:</h2>
+          <p>When using XAMPP on Windows you get the error code api-ms-win-crt-runtime and it stops Apache from executing.</p></dt>
+        <dd><h2>Solution:</h2>
+          A Google search turns up these possible solutions
           <li><a href="https://www.youtube.com/watch?v=EgixgR_OW98 ">https://www.youtube.com/watch?v=EgixgR_OW98 </a></li> 
           <li><a href="https://softwarekeep.com/help-center/how-to-fix-the-api-ms-win-crt-runtime-l1-1-0dll-is-missing-error-in-windows ">https://softwarekeep.com/help-center/how-to-fix-the-api-ms-win-crt-runtime-l1-1-0dll-is-missing-error-in-windows </a></li>
          </dd>
          
-         <dt>Using Docker, in my docker-compose.yml file, I missed the 's' in "phpmotors" when I was setting up my Docker/phpmyadmin. To be more clear, my line 43 in the docker-compose.yml said "MYSQL_DATABASE: "phpmotor"" instead of "MYSQL_DATABASE: "phpmotors"". I continued my set up of Docker, and I don't have a phpmotors database. I tried to delete/restart my containers after I fixed the error, but I fear I may have to set up a completely different virtual environment and folder.</dt>
-         <dd>The quick solution is to stop all of the containers then delete them. You can use the Docker Dashboard for this. Then, delete the /cse340/dbdata/ folder, then restart the Docker containers.</dd>
+         <dt><h2>Error:</h2> Using Docker, in my docker-compose.yml file, I missed the 's' in "phpmotors" when I was setting up my Docker/phpmyadmin. To be more clear, my line 43 in the docker-compose.yml said "MYSQL_DATABASE: "phpmotor"" instead of "MYSQL_DATABASE: "phpmotors"". I continued my set up of Docker, and I don't have a phpmotors database. I tried to delete/restart my containers after I fixed the error, but I fear I may have to set up a completely different virtual environment and folder.</dt>
+         <dd><h2>Solution:</h2> The quick solution is to stop all of the containers then delete them. You can use the Docker Dashboard for this. Then, delete the /cse340/dbdata/ folder, then restart the Docker containers.</dd>
+
+         <dt><h2>Error:</h2> With Docker set up and running, every time I try to view the template page I get the following 404 error:
+
+          Not Found
+          The requested URL was not found on this server.
+          
+          Apache/2.4.54 (Debian) Server at localhost Port 80.
+          </dt>
+          <dd><h2>Solution:</h2> You need to use the file name in the URL. http://localhost/phpmotors/template.php See this video <iframe width="560" height="315" src="https://www.youtube.com/embed/jaa66B0F7FA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></dd>
 
       </dl>
 
