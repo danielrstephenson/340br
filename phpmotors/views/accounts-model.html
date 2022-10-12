@@ -100,6 +100,42 @@
       <h2>Save the File</h2>
       <p>The function is finished. Be sure to compare your code (particularly your phpmotors connection function name)
         against the function name used in this sample code. Be sure to save the file.</p>
+      <p>The <code>/phpmotors/model/accounts-model.php</code> file should look like this:</p>
+<pre class="line-numbers"><code class="language-php">
+  &lt;?php
+  /* 
+  *  Accounts Model 
+  *  This file is included in the accounts controller (accounts/index.php).
+  *  It has functions that get data from the 'clients' table.
+  */
+  
+  function regClient($clientFirstname, $clientLastname, $clientEmail, $clientPassword){
+    // Create a connection object using the phpmotors connection function
+    $db = phpmotorsConnect();
+    // The SQL statement
+    $sql = 'INSERT INTO clients (clientFirstname, clientLastname,clientEmail, clientPassword)
+        VALUES (:clientFirstname, :clientLastname, :clientEmail, :clientPassword)';
+    // Create the prepared statement using the phpmotors connection
+    $stmt = $db->prepare($sql);
+    // The next four lines replace the placeholders in the SQL
+    // statement with the actual values in the variables
+    // and tells the database the type of data it is
+    $stmt->bindValue(':clientFirstname', $clientFirstname, PDO::PARAM_STR);
+    $stmt->bindValue(':clientLastname', $clientLastname, PDO::PARAM_STR);
+    $stmt->bindValue(':clientEmail', $clientEmail, PDO::PARAM_STR);
+    $stmt->bindValue(':clientPassword', $clientPassword, PDO::PARAM_STR);
+    // Insert the data
+    $stmt->execute();
+    // Ask how many rows changed as a result of our insert
+    $rowsChanged = $stmt->rowCount();
+    // Close the database interaction
+    $stmt->closeCursor();
+    // Return the indication of success (rows changed)
+    return $rowsChanged;
+   }
+  
+   ?&gt;
+</code></pre>
       <p>We aren't ready to test the function yet, but we will when we are done with the registration view and the controller, which we will do in the next activity.</p>
 
     </main>
