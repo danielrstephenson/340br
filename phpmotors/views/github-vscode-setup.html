@@ -125,7 +125,7 @@
       <p>Notice the Git icon on the left sidebar. Click on that.</p>
       <p><img src="/340br/images/github-vscode/new-vscode-window.png" alt="New VS Code window" /></p>
 
-      <p>You should see two pink colored buttons; one for <u>Open Folder</u> and one for <u>Clone Repository.</u> Click on the <u>Clone Repository</u> button. This opens the VS Code Command Prompt. </p>
+      <p>You should see two buttons; one for <u>Open Folder</u> and one for <u>Clone Repository.</u> Click on the <u>Clone Repository</u> button. This opens the VS Code Command Prompt. </p>
       <p><img src="/340br/images/github-vscode/git-open-repo.png" alt="Clone Repository button" /></p>
 
       <p>Click on the dropdown option <u>Clone from GitHub</u>.</p>
@@ -152,15 +152,17 @@
       <p>If the repo does not show up, you can type in your GitHub account name followed by the repo name: <code>username/phpmotors</code> Click on that option.</p>
       <p><img src="/340br/images/github-vscode/type-repo.png" alt="Type your GitHub username followed by repo name" /></p>
 
-      <p>Next, VS Code will ask you to select a location on your computer to put the files. Browse to your project folder, for example <code>Documents/cse340/www/</code>.</p>
+      <p>Next, VS Code will ask you to select a location on your computer to put the files. Browse to your project folder, for example <code>Documents/cse340/www/</code>, or <code>C:/xampp/htdocs/</code>.</p>
 
       <p>Now select the <code>www</code> folder and click the Select Repository Location button.</p>
       <p><img src="/340br/images/github-vscode/select-location.png" alt="Select a location to put your files" /></p>
 
+      <p>If using XAMPP, you will select the <code>htdocs</code> folder.</p>
+
       <p>Next click the <u>Open</u> or <u>Open in New Window</u> button on the VS Code notification pop-up. If the notification disappeared before you could click on it, you can click the little bell icon to get the notification to reappear.</p>
       <p><img src="/340br/images/github-vscode/open-in-vscode.png" alt="Open or Open in New Window" /></p>
 
-      <p> Or you can click on the <u>Open Folder</u> button and browse to the <code>Documents/cse340/www/phpmotors/</code> folder and select the <code>phpmotors</code> folder. This is the process for opening this folder from this point on if the VS Code application is closed.</p>
+      <p> Or you can click on the <u>Open Folder</u> button and browse to the <code>Documents/cse340/www/phpmotors/</code> folder and select the <code>phpmotors</code> folder. For XAMPP, you will select the <code>htdocs</code> folder. This is the process for opening this folder from this point on if the VS Code application is closed.</p>
       <p><img src="/340br/images/github-vscode/open-phpmotors-folder.png" alt="Open Folder, browse to phpmotors folder" /></p>
 
       <p>Now VS Code is connected to the GitHub repo and we can start adding files in VS Code.</p>
@@ -240,7 +242,7 @@
       <p><img src="/340br/images/github-vscode/github-repo-updated.png" alt="GitHub repo page updated" /></p>
       <p>Note: If you discard the changes (the bent arrow icon), then all the changes you made to the file will be lost and the file will change back to how it was before you 'staged' it for the commit.</p>
 
-      <p>This folder (the <code>phpmotors</code> folder inside the <code>www</code> folder) is where you will put your code as you work on the weekly Activities and Assignments. You will follow this process each week of adding and editing files, staging, committing, and pushing.</p>
+      <p>This folder (the <code>phpmotors</code> folder inside the <code>www</code> folder, if you are using Docker, or the <code>phpmotors</code> folder inside the <code>htdocs</code> folder if using XAMPP) is where you will put your code as you work on the weekly Activities and Assignments. You will follow this process each week of adding and editing files, staging, committing, and pushing.</p>
 
       <p>
       <ol>
@@ -253,7 +255,7 @@
       </p>
 
 
-      <h2>Add Collaborator</h2>
+      <h2 id="add-collaborator">Add Collaborator</h2>
       <p>In order for your instructor or the TAs to see your code on GitHub, you will need to add them as a collaborator. You at least want to add me, your instructor, as a collaborator. :)</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/a9To390OEUo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <p>[The video shows the steps detailed below. There is no audio, yet.]</p>
@@ -263,8 +265,8 @@
       <p>Click on the Settings tab.</p>
       <img src="/340br/images/github-vscode/settings-tab.png" alt="Settings tab" />
 
-      <p>Next, click the "Manage Access" tab.</p>
-      <p>Then, click the green <u>Invite a collaborator</u> button.</p>
+      <p>Next, click the "Collaborators" tab.</p>
+      <p>Then, click the green <u>Add people</u> button.</p>
       <img src="/340br/images/github-vscode/invite-button.png" alt="Manage access tab and Invite button" />
 
       <p>Type in your instructor's GitHub username: <code>ammonshepherd</code></p>

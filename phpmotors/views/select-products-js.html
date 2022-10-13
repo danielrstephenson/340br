@@ -239,6 +239,7 @@ if (isset($classificationList)) {
 					<li>Create an empty line <strong>above</strong> the closing &lt;/body&gt; tag.</li>
 					<li>In this new empty line add the following HTML code:
 						<pre><code class="language-markup">&lt;script src="../js/inventory.js"&gt;&lt;/script&gt;</code></pre>
+						<p class="highlight">The javascript MUST be inserted at the bottom of the HTML file in order for all of the HTML elements to load before the Javascript is called. If this line of code is placed at the top of the file, the code will not work.</p>
 						Don't worry that the folder and file don't exist. We'll create them next.
 					</li>
 				</ol>
@@ -356,7 +357,7 @@ function buildInventoryList(data) {
 					<li>Click the "My Account" link and you should now be viewing the login view.</li>
 					<li>Login using the administrative account that you created earlier - username: admin@cit340.net, password: Sup3rU$er</li>
 					<li>In the browser address bar, alter the URL to point to the vehicles folder (e.g. http://localhost/phpmotors/vehicles/) and press the "Enter" key.</li>
-					<li>If things worked correctly, you should be looking at the view and a heading and paragraph should appear indicating that your should choose a classification item from the select list.
+					<li>If things worked correctly, you should be looking at the view and a heading and paragraph should appear indicating that you can choose a classification item from the select list.
 					</li>
 					<li>The select list should appear below the heading and paragraph.</li>
 					<li>When you change the list to select a classification, there should be a very short pause and then the table of inventory should appear immediately below the select list.</li>

@@ -41,6 +41,9 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/O4Yro0VN5Ds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
 
+      <div class="special">
+        <p>Mac users with the new Apple silicon, download the correct version for Docker from here: <a href="https://docs.docker.com/desktop/mac/apple-silicon/">https://docs.docker.com/desktop/mac/apple-silicon/</a></p>
+      </div>
 
       <h1 id="create-a-project-folder">Create a Project Folder</h1>
       <p>Next we need to decide where to locate the files for this course. Create a project folder anywhere on your computer that you like. One suggestion is to create this in your Documents folder.</p>
@@ -48,10 +51,12 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/FhjLQYFg3FY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <p>[This video shows the steps that are detailed below. There is no audio, yet.]</p>
 
-      <p>Open VS Code in a new window (<u>File-&gt;New Window</u>). We will now create a new folder named <code>cse340</code> that will hold the Docker files and the website project files. Click the <u>Open Folder</u> button, browse to the path where you want your project files to reside, and create a new folder named <code>cse340</code>. Then click the <u>Open</u> button.</p>
+      <p>Open VS Code in a new window (<u>File-&gt;New Window</u>). We will now create a new folder named <code>cse340</code> that will hold the Docker files and the website project files. Click on the "Explorer" icon which is in the top left corner of the VS Code window. Click the <u>Open Folder</u> button, browse to the path where you want your project files to reside, and create a new folder named <code>cse340</code>. Then click the <u>Open</u> button.</p>
       <p><img src="/340br/images/docker/open-folder-button.png" alt="Open folder button" /></p>
 
       <p> <img src="/340br/images/docker/create-folder.png" alt="Create folder" /></p>
+
+      <p>Click the check boxes and buttons that say you approve and trust the authors of the folder. (That's you anyways, so hopefully you trust yourself. :) )</p>
       <p>Your workspace in VS Code should now look something like this:</p>
       <p><img src="/340br/images/docker/vscode-workspace.png" alt="VS Code Workspace" /></p>
       <p>When you are asked to zip your project folder, the <code>cse340</code> folder is the folder you will zip up, including all of the contents within.</p>
@@ -75,13 +80,14 @@
       <p><img src="/340br/images/docker/clone-before.png" alt="Clone command" /></p>
       <p>After the clone command runs, your VS Code will look like this:</p>
       <p><img src="/340br/images/docker/clone-after.png" alt="Clone command" /></p>
-      <p>You will notice a new folder and four files. Here is what they do:</p>
+      <p>You will notice a new folder and five files. Here is what they do:</p>
       <ul>
         <li><code>www</code> folder = This is where all of the website files will go (PHP, HTML, CSS, images, etc)</li>
         <li><code>.gitignore</code> = just ignore this file :) This file tells Git to ignore files and folders</li>
         <li><code>docker-compose.yml</code> = A file to select specific images and send commands to the containers. Docker uses this file to know what images to use to turn into running containers.</li>
         <li><code>Dockerfile</code> = Tells Docker how to create an image used in the docker-compose.yml file</li>
         <li><code>README.md</code> = Contains the text you see on the GitHub page for this repo</li>
+        <li><code>uploads.ini</code> = Contains settings to allow PHP to upload files as large as 256MB</li>
       </ul>
 
 
@@ -96,6 +102,15 @@
       <p>Change the name of the database on line 43 to <code>phpmotors</code>. Make sure to save the file!</p>
       <p><img src="/340br/images/docker/change-db-name.png" alt="Change db name" /></p>
 
+      <div class="special">
+        <h2>Only do this if you have a new Mac with an M1 chip or newer.</h2>
+        <p>If you have a new Mac with the M1 or newer CPU, then you will also need to uncomment line #33</p>
+        <p><img src="/340br/images/docker/mac-silicon-change.png" alt="Uncomment this line if you have a new Mac" /></p>
+
+        <p>You will also need to run this command in the terminal (if you haven't done it already):</p>
+        <p><code class="command">softwareupdate --install-rosetta</code></p>
+      </div>
+
       <p>You can change the root password, username and user password if you desire, but it's not necessary for this course. In a production environment, you would want to use a more secure password and use environment variables so that the passwords are not saved in a file that will be shared.</p>
 
       <p>To see what containers are currently running, type the command </p>
@@ -104,7 +119,7 @@
       <p><img src="/340br/images/docker/docker-ps-command.png" alt="Docker ps" /></p>
 
       <p>Now type in the command</p>
-      <p> <code class="command">docker-compose up</code> </p>
+      <p> <code class="command">docker compose up</code> </p>
       <p>and hit Enter. Docker will now go through a process of downloading all of the images, applying settings, and running the containers. Notice how long it takes to get all up and running.</p>
       <p><img src="/340br/images/docker/docker-compose-up.png" alt="Docker compose up" /></p>
 
@@ -127,11 +142,11 @@
       <p><img src="/340br/images/docker/docker-compose-up-d.png" alt="Docker Compose up command" /></p>
 
       <p> This will close the Docker process. Next, run a command to ensure all the Docker containers stopped correctly. Type the following command </p>
-      <p><code class="command">docker-compose down</code></p>
+      <p><code class="command">docker compose down</code></p>
       <p><img src="/340br/images/docker/docker-compose-down.png" alt="Docker Compose down command" /></p>
 
       <p>After that finishes, run the containers again using </p>
-      <p> <code class="command">docker-compose up -d</code> </p>
+      <p> <code class="command">docker compose up -d</code> </p>
       <p>This will run the processes in the background, freeing up the terminal for use. Also note how much quicker the process goes, as Docker does not need to download the images again.</p>
       <p><img src="/340br/images/docker/docker-compose-up-d.png" alt="Docker Compose up command" /></p>
 

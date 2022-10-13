@@ -1,4 +1,4 @@
-@import url('normalize-min.css');
+@import url("normalize-min.css");
 
 html * {
   box-sizing: border-box;
@@ -18,7 +18,7 @@ body {
   margin: 0 1rem;
 }
 
-main li{
+main li {
   margin-bottom: 1rem;
 }
 
@@ -66,10 +66,26 @@ code {
   color: #666;
 }
 
+.strong {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  background-color: #a1ff0a80;
+  padding: 0.2rem;
+}
+
+.important {
+  background-color: #ffdddd80;
+  color: darkred;
+  padding: 0px 4px;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
 /********************************************
     FEATURES STYLING
 *********************************************/
-
 
 /* Callout box */
 
@@ -87,7 +103,6 @@ code {
   margin-left: 0;
 }
 
-
 /* Drop downs */
 
 .drop-down {
@@ -98,9 +113,7 @@ code {
   background: #1f4a5a;
 }
 
-
 /* Rubric table */
-
 
 /* Column headings */
 
@@ -108,13 +121,11 @@ code {
   background-color: #225c72;
 }
 
-
 /* Row headings */
 
 .rubric th {
   background-color: #16985e;
 }
-
 
 /* Mouseover popups */
 
@@ -124,13 +135,12 @@ code {
 
 #main .popup span {
   background: #225c72;
-  box-shadow: 5px 5px 5px #0F0F0F;
+  box-shadow: 5px 5px 5px #0f0f0f;
 }
 
 #main .popup:after {
   border-color: #225c72 transparent transparent transparent;
 }
-
 
 /*Specific Styles to CSE 340*/
 
@@ -149,6 +159,7 @@ main dl dd {
 }
 
 footer {
+  margin-top: 2em;
   background-color: #f0f0f0;
 }
 
@@ -175,7 +186,6 @@ iframe {
 ***********************************/
 
 @media screen and (min-width: 680px) {
-
   #wrapper {
     max-width: 1300px;
     padding: 0 1rem;

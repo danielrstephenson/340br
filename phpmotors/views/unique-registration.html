@@ -49,7 +49,7 @@
 				<li>The new function will need the email address that is being submitted as part of the registration process, so make sure it is a parameter within the new function.</li>
 				<li>The function will use a SELECT query to see if a matching email address can be found in the database table.</li>
 				<li>We only want to get a single row from the database if a match is found, so use a "fetch()" not a "fetchAll()". In addition, we can indicate that we only want a simple numeric array by adding a parameter to the fetch of "<code>PDO::FETCH_NUM</code>".</li>
-				<li>You can then check if you got back and empty array or not.</li>
+				<li>You can then check if you got back an empty array or not.</li>
 				<li>If the array is empty, return a zero "0". If the array is not empty, return a "1".</li>
 				<li>Do your best to write the function on your own, then compare what you wrote with the code below:
 					<pre class="line-numbers"><code class="language-php">// Check for an existing email address
@@ -102,7 +102,7 @@ if($existingEmail){
 			<p>It is always a good idea to test before going on too far. Let's do that test now.</p>
 
 			<ol>
-				<li>For the moment, comment out the return statements in the function and replace them with simple echo statements followed by an exit. For example:
+				<li>For the moment, in the <code>accounts-model.php</code> file, comment out the return statements in the <code>checkExistingEmail()</code> function and replace them with simple echo statements followed by an exit. For example:
 					<pre><code class="language-php">if(empty($matchEmail)){
  // return 0;
  echo 'Nothing found';

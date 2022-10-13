@@ -66,7 +66,29 @@
         </li>
         <li>Add the same session creation code to all of the controllers within the PHP Motors site.</li>
         <li>
-          <strong>VERY IMPORTANT: You must use the MVC strictly for this to work. All views send requests to controllers, which process the requests and deliver views. Only by remembering this will the sessions be maintained.</strong>
+          <strong>VERY IMPORTANT: You must use the MVC strictly for this to work. All views send requests to controllers, which process the requests and deliver views. Only by remembering this will the sessions be maintained.</strong><p class="highlight">Using this MVC architecture means that you will NEVER enter a URL in the browser with the 'view' folder: http://localhost/phpmotors/view/filename.php </p>
+          <p>Instead, all of the files in the view folder are accessed through the controller; either 
+            <ul>
+              <li>Main Controller: 
+                <ul>
+                  <li>http://localhost/phpmotors/index.php?action=something or</li>
+                  <li>http://localhost/phpmotors/?action=something</li>
+                </ul>
+              </li>
+              <li>Accounts Controller:
+                <ul>
+                  <li>http://localhost/phpmotors/accounts/index.php?action=selection or</li>
+                  <li>http://localhost/phpmotors/accounts/?action=selection</li>
+                </ul>
+              </li>
+              <li>Vechicles Controller:
+                <ul>
+                  <li>http://localhost/phpmotors/vehicles/index.php?action=options or</li>
+                  <li>http://localhost/phpmotors/vehicles/?action=options</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
         </li>
       </ol>
 
@@ -130,10 +152,10 @@ function getClient($clientEmail){
       <ol>
         <li>Find and open the <b>accounts</b> controller (accounts > index.php).</li>
         <li>Look at your switch control structure.</li>
-        <li>See if you have a case statement to match the hidden input value that you just added or verified in the login view. For example:
+        <li>Find the case statement that matches the hidden input value that you just verified is in the login view. For example:
           <pre><code class="language-markup">case 'Login':
- 
-break;</code></pre> If you don't, add it. <mark>But, be sure you add it prior to the the "default:" which must ALWAYS be the last item in a switch control structure.</mark> <b>AND</b> <mark>make sure this case statement is unique and is not the same as the case statement used to deliver the login view.</mark>
+ ...
+break;</code></pre> 
         </li>
         <li>Within this case statement we will add the login process code. To review, the typical process will follow these steps:
           <ul>
@@ -148,9 +170,9 @@ break;</code></pre> If you don't, add it. <mark>But, be sure you add it prior to
       </ol>
       <h3>Login Processing</h3>
       <p>Add all of the code below inside the case statement mentioned above:</p>
-      <pre class="line-numbers"><code class="language-php">$clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
+      <pre class="line-numbers"><code class="language-php">$clientEmail = trim(filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL));
 $clientEmail = checkEmail($clientEmail);
-$clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
+$clientPassword = trim(filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 $passwordCheck = checkPassword($clientPassword);
 
 // Run basic checks, return if errors

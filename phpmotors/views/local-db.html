@@ -25,8 +25,9 @@
       <p>In order to work with the local database, the local Apache and MySQL database servers must be running, this means that Docker is up and running the containers. Once they are both running:</p>
       <ol>
         <li>Open a browser.</li>
-        <li>In the address bar type <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a> (or <a href="http://localhost/phpmyadmin/">http://localhost/phpmydamin/</a> if using XAMPP).</li>
-        <li>The username and password were set in the docker-compose.yml file. If you did not change them, for the username, enter <code>root</code>. For the password, enter <code>rootPASS</code></li>
+        <li>In the address bar type <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a> (or <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> if using XAMPP).</li>
+        <li>For Docker: The username and password were set in the docker-compose.yml file. If you did not change them, for the username, enter <code>root</code>. For the password, enter <code>rootPASS</code></li>
+        <li>For XAMPP: No username or password is needed.</li>
         <li>The PHPMyAdmin tool should now be visible
           <br>
           <img src="/340br/images/phpmyadmin.png" alt="Image of the PHPMyAdmin interface">
@@ -71,6 +72,7 @@
       <p>The directions below guide you through the process of importing a SQL file to create two tables and populate the tables with data for the phpmotors database.</p>
 
       <h2>Open The PHPMyAdmin Tool</h2>
+      <p class="strong">For Docker:</p>
       <ol>
         <li>With the Docker containers running (test with <code>docker ps</code> in the terminal), open a browser window or new tab.</li>
         <li>Type <a target="_blank" href="http://pma.lvh.me">http://pma.lvh.me</a> into the browser address bar.</li>
@@ -82,9 +84,23 @@
           <p>
         </li>
       </ol>
+      <p class="strong">For XAMPP:</p>
+      <ol>
+        <li>Make sure that XAMPP is open, and the MySQL server is running.</li>
+        <li>Open the URL <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a> or <a href="http://localhost/phpMyAdmin/">http://localhost/phpMyAdmin/</a></li>
+      </ol>
 
-      <h2>The <b>phpmotors</b> database</h2>
+      <h2>Create the <b>phpmotors</b> database</h2>
+      <p class="strong">For Docker:</p>
       <p>The process of setting up Docker created the phpmotors database for us already. Yay!</p>
+
+      <p class="strong">For XAMPP:</p>
+      <ol>
+        <li>Follow the generic process shown above for creating a database.</li>
+        <li>Name the new database "phpmotors".</li>
+      </ol>
+
+
 
       <h2>Import the SQL File</h2>
       <ol>

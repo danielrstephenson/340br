@@ -44,6 +44,8 @@
 
       <iframe width="560" height="315" src="https://www.youtube.com/embed/GZdQFudgzN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+      <p class="highlight">NOTE: The video does not have up to date instructions. Follow the instructions on this page exactly. They will be different than in the video. Do what this page says, not the video, or you could lose points.</p>
+
       <h2>For Your Information</h2>
       <p>The "firstname" cookie that was set to display in the "login" activity is completely independent of the Login - Logout process. When a client "logs in" or "logs out" the cookie remains. Do not let the fact that the "Welcome" message from the cookie appears after registration and prior to login interfere with your understanding of the login - logout process.</p>
 
@@ -70,8 +72,8 @@
 
       <h3>Replace the Welcome Message</h3>
       <ol>
-        <li>Replace the cookie-welcome message with a session-based welcome message.</li>
-        <li>The new welcome message (e.g. "Welcome Susan") must take the firstname value from the session following login.</li>
+        <li>Replace the cookie-welcome message with a session-based welcome message. <span class="highlight">The cookie is not used to display the welcome message any more. Instead use the data in the $_SESSION array.</span></li>
+        <li>The new welcome message (e.g. "Welcome Susan") must take the firstname value from the session after login.</li>
         <li>The welcome message must appear in all views, throughout the site, while the client is logged in.</li>
         <li>When a client logs out, the welcome message will be removed completely.</li>
       </ol>
@@ -137,7 +139,7 @@
         <li>Build, run and test to make sure that each of the tasks works.</li>
         <li>When satisfied that the code is operational:
           <ol>
-            <li>Create a video showing all of the items in Objective 6 in the Grading Matrix below.</li>
+            <li>Create a video showing all of the items in Objective 6 in the Grading Matrix below. The video should not be longer than 5 minutes. Just show the points. No need to explain in detail.</li>
             <li>Post your video to your YouTube channel as <b>Unlisted</b> and copy the link to the video when published.</li>
             <li>Zip the entire <code>cse340</code> folder and name it "enhancement6.zip" (save this zip file outside of your web site).</li>
             <li>Push your changes to your private GitHub repository with a comment named "Enhancement 6" and copy the link to the repository.</li>

@@ -118,7 +118,7 @@ function getInvItemInfo($invId){
 					<pre class="line-numbers"><code class="language-php">&lt;h1&gt;&lt;?php if(isset($invInfo['invMake']) && isset($invInfo['invModel'])){ 
 	echo "Modify $invInfo[invMake] $invInfo[invModel]";} 
 elseif(isset($invMake) && isset($invModel)) { 
-	echo "Modify$invMake $invModel"; }?&gt;&lt;/h1&gt;</code></pre>
+	echo "Modify $invMake $invModel"; }?&gt;&lt;/h1&gt;</code></pre>
 					By making these subtle changes we are personalizing the view's contents.
 				</li>
 				<li>Look for any instructions that may exist indicating that you are "adding" a new vehicle. Delete all references to "adding" and replace them with "modifying".</li>
@@ -148,12 +148,10 @@ elseif(isset($invMake) && isset($invModel)) {
 					<p><strong>It may be helpful to open the Inventory table and go to the "structure" tab of PHPMyAdmin to see the various field names as you work.</strong></p>
 				</li>
 				<li>If your form includes a <code>textarea</code> then the alteration occurs between the opening and closing tags and there is no "value" attribute. For example, if the original code looked like this:
-					<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;
-&lt;?php if(isset($invDescription)){ echo $invDescription; } ?&gt;&lt;/textarea&gt;</code></pre>
+					<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;&lt;?php if(isset($invDescription)){ echo $invDescription; } ?&gt;&lt;/textarea&gt;</code></pre>
 
 					After editing, it would look like this:
-					<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;
-&lt;?php if(isset($invDescription)){ echo $invDescription; } elseif(isset($invInfo['invDescription'])) {echo $invInfo['invDescription']; }?&gt;&lt;/textarea&gt;</code></pre>
+					<pre class="line-numbers"><code class="language-php">&lt;textarea name="invDescription" id="invDescription" required&gt;&lt;?php if(isset($invDescription)){ echo $invDescription; } elseif(isset($invInfo['invDescription'])) {echo $invInfo['invDescription']; }?&gt;&lt;/textarea&gt;</code></pre>
 				</li>
 				<li>Finally, we need to add the same test to our code that builds the car classification select drop down list.
 					<ol>

@@ -32,6 +32,9 @@
         like.</p>
       <iframe src="https://www.youtube.com/embed/sKetqesyRWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+      <p class="highlight">NOTE: The video does not have up to date instructions. Follow the instructions on this page exactly. They will be different than in the video. Do what this page says, not the video, or you could lose points.</p>
+
+
       <h2>Assumptions</h2>
       <p>This enhancement assumes:</p>
       <ol>
@@ -77,7 +80,7 @@
         <li>Use an inner join to select the invModel field from the inventory table and the classificationName field from the carclassification table for inventory items that belong to the "SUV" category. (These resources may help you: <a href="https://www.w3schools.com/sql/sql_join.asp" title="Link opens in a new tab" target="_blank">https://www.w3schools.com/sql/sql_join.asp</a> and <a href="https://www.youtube.com/watch?v=0FEjw2HnfDs" title="Link opens in a new tab" target="_blank">https://www.youtube.com/watch?v=0FEjw2HnfDs</a>) Four records should be
           returned as a result of the query.</li>
         <li>Delete the Jeep Wrangler from the database. [<b>Note:</b> You can restore the Inventory table by importing the SQL file that was used to create it again].</li>
-        <li>Update all records in the Inventory table to add "/phpmotors" to the beginning of the file path in the invImage and invThumbnail columns using a single query. These references may prove helpful - <a href="https://www.w3schools.com/sql/sql_update.asp" title="This page opens in a new tab" target="_blank">SQL Update</a>, <a href="https://www.plus2net.com/sql_tutorial/concat.php" title="This page opens in a new tab" target="_blank">SQL Concat()</a>.</li>
+        <li>Update all records in the Inventory table to add "/phpmotors" to the beginning of the file path in the invImage and invThumbnail columns <span class="highlight">using a single query</span>. These references may prove helpful - <a href="https://www.w3schools.com/sql/sql_update.asp" title="This page opens in a new tab" target="_blank">SQL Update</a>, <a href="https://www.plus2net.com/sql_tutorial/concat.php" title="This page opens in a new tab" target="_blank">SQL Concat()</a>.</li>
         <li>Create a video of you running all of these SQL statements and showing the result of running each SQL statement.
         </li>
       </ol>
@@ -90,7 +93,7 @@
         <li>If and when the database connection fails, a generic failure page, built using your template file, should be delivered (using the <a href="//php.net/manual/en/function.header.php" title="View the header function at php.net" target="_blank">PHP header function</a>) that states the database could not be reached. See the image below as an example of what the
           page could look like:<br>
           <img src="/340br/phpmotors/images/php-motors/php-motors-error.png" alt="Sample error page for illustration purposes">
-          <p>The error view should be named <b>500.php</b> and be stored in a folder named <b>view</b> at the root of the phpmotors folder.</p>
+          <p>Create a folder named <b>view</b> at the root of the phpmotors folder (/cse340/www/phpmotors/view for Docker users, or /htdocs/phpmotors/view for XAMPP users). Make a copy of the template.php file and name it <code>500.php</code>, and move it to the <b>view</b> folder.</p>
         </li>
         <li>Create a video that demonstrates that the connection works. Make sure to show all of the points in the Grading Matrix below.</li>
         <li>In the same video demonstrate that errors are successfully caught when the connection fails and the error page is delivered.</li>
@@ -104,7 +107,7 @@
         <li>Check your work to ensure that it meets all of the expectations listed.</li>
         <li>When satisfied that the code is operational:
           <ol>
-            <li>Create a single video showing all of the points in the Grading Matrix below, including the SQL statements in action and the connection object working and failing.</li>
+            <li><span class="highlight">Create a single video</span> showing all of the points in the Grading Matrix below, including the SQL statements in action and the connection object working and failing. The video should not be longer than 5 minutes. Just show the points. No need to explain in detail.</li>
             <li>Post your video to your YouTube channel as <b>Unlisted</b> and copy the link to the video when published.</li>
             <li>Zip the entire <code>cse340</code> folder and name it "enhancement2.zip" (save this zip file outside of your web site).</li>
             <li>Push your changes to your private GitHub repository with a comment named "Enhancement 2" and copy the link to the repository.</li>
@@ -116,16 +119,17 @@
       <h2>Grading Matrix</h2>
       <h3>Objective 4</h3>
       <ul>
-        <li>All SQL statements are in a single file, named "enhancement2.sql" within a folder named "sql".</li>
-        <li>The Tony Stark insert SQL statement works.</li>
-        <li>The Tony Stark update SQL statement works.</li>
-        <li>The spacious interior update SQL statement works.</li>
-        <li>The select "SUV" items SQL statement works.</li>
-        <li>The delete Jeep Wrangler SQL statement works.</li>
-        <li>The invImage and invThumbnail update query works.</li>
-        <li>The database connection function is in a single file named "connections.php" within a folder named "library".</li>
-        <li>The phpmotors PDO connection function works.</li>
-        <li>The phpmotors PDO connection function fails and redirects to a generic error page named "500.php" which is stored in a "view" folder.</li>
+        <li>Show that the SQL statements are in a single file, named "enhancement2.sql" within a folder named "sql".</li>
+        <li>Show the "view" folder with the "500.php" file inside.</li>
+        <li>Show that the Tony Stark insert SQL statement works.</li>
+        <li>Show that the Tony Stark update SQL statement works.</li>
+        <li>Show that the spacious interior update SQL statement works.</li>
+        <li>Show that the select "SUV" items SQL statement works.</li>
+        <li>Show that the delete Jeep Wrangler SQL statement works.</li>
+        <li>Show that the invImage and invThumbnail update query works.</li>
+        <li>Show the code in the "connections.php" file. It should be a single function. Show that it is within a folder named "library".</li>
+        <li>Show that the phpmotors PDO connection function works.</li>
+        <li>Show that the phpmotors PDO connection function fails and redirects to the "500.php" file.</li>
         <li>The video(s) of the SQL statements and connection function in action are present, narrated by you using your voice and demonstrate the actions called for.</li>
         <li>The video demonstrates each of the points above in the Grading Matrix.</li>
         <li>Total value: <b>30 points</b></li>

@@ -117,11 +117,14 @@
 
                <h2>Filter and Store the Data</h2>
                <p>We will collect our four expected inputs, while filtering them, and store each into its own variable. Write the following, beginning in the blank line where the echo statement was:
-               <pre class="line-numbers"><code class="language-php">// Filter and store the data
-$clientFirstname = filter_input(INPUT_POST, 'clientFirstname');
-$clientLastname = filter_input(INPUT_POST, 'clientLastname');
-$clientEmail = filter_input(INPUT_POST, 'clientEmail');
-$clientPassword = filter_input(INPUT_POST, 'clientPassword');</code></pre> You've seen the filter_input before. It "filters" or attempts to remove code that could do us harm. We will add to this code in the future. <i>To be clear, the filter_input does the filtering, by looking into the POST object (remember that we told our form to use "post" to send the data), and it is looking for a name - value pair where the name is "name" and it has a value of "clientFirstname" or "clinetLastname" etc.... When found, it stores the value (what the site visitor typed into the input field) into the variable.</i></p>
+               <pre class="line-numbers"><code class="language-php">case 'register':
+   // Filter and store the data
+   $clientFirstname = filter_input(INPUT_POST, 'clientFirstname');
+   $clientLastname = filter_input(INPUT_POST, 'clientLastname');
+   $clientEmail = filter_input(INPUT_POST, 'clientEmail');
+   $clientPassword = filter_input(INPUT_POST, 'clientPassword');
+   break;</code></pre> 
+You've seen the filter_input before. It "filters" or attempts to remove code that could do us harm. We will add to this code in the future. <i>To be clear, the filter_input does the filtering, by looking into the POST object (remember that we told our form to use "post" to send the data), and it is looking for a name - value pair where the name is "name" and it has a value of "clientFirstname" or "clinetLastname" etc.... When found, it stores the value (what the site visitor typed into the input field) into the variable.</i></p>
 
                <h2>Naming Variables</h2>
                <p>In an earlier document, it was mentioned that variables should have meaninful names. But, what determines meaning? There are at least two ways of determining "meaning" when it comes to variables in dynamic web sites:</p>
@@ -133,7 +136,7 @@ $clientPassword = filter_input(INPUT_POST, 'clientPassword');</code></pre> You'v
                <p>In any case, variable names should be <b>consistent across all uses</b> and should definitely <b>reflect the actual values stored in them</b>.</p>
 
                <h2>Check for Missing Data</h2>
-               <p>We will use some simple PHP "empty" functions to see if any of our variables are missing data. Write the following code after creating two empty lines:
+               <p>We will use some simple PHP <code>empty()</code> functions to see if any of our variables are missing data. Write the following code after the above 'Filter and store' lines:
                <pre class="line-numbers"><code class="language-php">// Check for missing data
 if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($clientPassword)){
  $message = '&lt;p&gt;Please provide information for all empty form fields.&lt;/p&gt;';
@@ -142,7 +145,7 @@ if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || e
 }</code></pre>
                </p>
                <h3>An Explanation</h3>
-               <p>In this code we look inside each variable to see it's "empty". Notice that each check is separated by <code>||</code>, this is an "or" symbol, so that if any of the variables are empty, the if becomes "TRUE".</p>
+               <p>In this code we look inside each variable to see if it's "empty". Notice that each check is separated by <code>||</code>, this is an "or" symbol, so that if any of the variables are empty, the if becomes "TRUE".</p>
                <p>If the if is "TRUE", then the <code>$message</code> variable is created ("set") and the error string is stored in it. The registration view is then included and the PHP on this page stops.</p>
                <p>Remember that when we finalized the registration view we added code to watch for a <code>$message</code> variable? If found, it will display the message in the form.</p>
 
