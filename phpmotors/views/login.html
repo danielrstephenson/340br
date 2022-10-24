@@ -151,7 +151,10 @@ function getClient($clientEmail){
 
       <ol>
         <li>Find and open the <b>accounts</b> controller (accounts > index.php).</li>
-        <li>Look at your switch control structure.</li>
+        <li>The first step is to make sure the controller uses PHP sessions. Just as you did with the main controller, add code to start the session. This code should go at the top of the file, below the comment that notes what this file does.
+          <pre><code class="language-markup">session_start();</code></pre>
+        </li>
+        <li>Now, look at your switch control structure.</li>
         <li>Find the case statement that matches the hidden input value that you just verified is in the login view. For example:
           <pre><code class="language-markup">case 'Login':
  ...
