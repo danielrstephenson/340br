@@ -41,7 +41,7 @@
 			</ol>
 
 			<h2>Vehicle Deletion View</h2>
-			<p>As mentioned above, we want a view to display the vehicle information into so the item can be confirmed prior to being deleted. Because it is so similar to an update we will use the <b>vehicle update</b> view to get us started.</p>
+			<p>As mentioned above, we want to display the vehicle information in a view with an option to confirm that the item should be deleted or to cancel the delete. Because it is so similar to an update we will use the <b>vehicle update</b> view to get us started.</p>
 			<ol>
 				<li>Find and open the <b>vehicle update</b> view in the <b>view</b> folder.</li>
 				<li>Do a "Save As..." and save the new view into the <b>view</b> folder with a name of <b>vehicle-delete.php</b>.</li>
@@ -121,12 +121,12 @@ echo $invInfo['invId'];} ?&gt;"&gt;
 			<p>Step one is to start the delete and deliver the information for confirmation.</p>
 			<ol>
 				<li>In the vehicle management view we display a "Delete" link that contains a name - value pair to indicate to the controller that a delete process was starting.</li>
-				<li>Open the <b>Vehicles</b> controller and find the code that was used to build the vehicle table for display in the <b>Vehicle Management</b> view.</li>
-				<li>You should find the name - value pair for this process is "action=del".</li>
-				<li>Scroll to the bottom of the existing control structures (in the "Switch") and if you don't already have a case statement for "del" create one. Such as:
+				<li>Find in the <code>/js/inventory.js</code> file the code that was used to build the vehicle table for display in the <b>Vehicle Management</b> view. You should find the name - value pair for this process is "action=del".</li>
+				<li>Open the vehicle controller (the /vehicles/index.php file) and scroll to the bottom of the existing control structures (in the "Switch") and if you don't already have a case statement for deleting the inventory item, create one. Such as:
 					<pre class="line-numbers"><code class="language-php">case 'del':
 	
 break;</code></pre>
+						The value for the case statement and the action variable from the link must match. For example, if <code>action=del</code> then the case statment should look like this: <code>case 'del':</code>. Or if <code>action=delete</code>, then the case statement should look like this: <code>case 'delete':</code>
 				</li>
 				<li>Now, find the case statement for beginning the "mod" process and copy everything inside of it.</li>
 				<li>Return to the "del" case and paste the code inside of it.</li>
