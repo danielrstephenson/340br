@@ -171,9 +171,11 @@ if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || e
                          <pre class="line-numbers"><code class="language-php">// Send the data to the model
 $regOutcome = regClient($clientFirstname, $clientLastname, $clientEmail, $clientPassword);</code></pre>
                     </li>
-                    <li>Remember that we are trying to insert a single record into the database table. If one row in the table is changed, then the database server will report back "1" and that same number will be sent to the controller and stored in our <code>$regOutcome</code> variable.</li>
-                    <li>If we get a <b>1</b> back, it means that the registration was a success!</li>
-                    <li>If we get a zero "0" back, it means the insert failed.</li>
+                    <p>Remember that we are trying to insert a single record into the database table. If one row in the table is changed, then the database server will report back "1" and that same number will be sent to the controller and stored in our <code>$regOutcome</code> variable.</p>
+                    <p>If we get a <b>1</b> back, it means that the registration was a success!</p>
+                    <p>If we get a zero "0" back, it means the insert failed.</p>
+                    <p>Note: the order of the parameters is important, not the names of the parameters. If the clientFirstname is first in the model, then it needs to be first here, too.</p>
+                    </li>
                </ol>
 
                <h2>Find Out the Result</h2>
