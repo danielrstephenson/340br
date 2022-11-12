@@ -65,7 +65,7 @@
         <li>Add the first form and display, from the <b>client information session array</b>, the client's first name, last name and email address in an appropriate input field for editing. Be sure that each input has an accompanying label element.</li>
         <li>Each of the three inputs must also be "sticky" if errors are returned from the controller during server-side validation.</li>
         <li>All three fields are required and all three must be checked using both client-side and server-side validation.</li>
-        <li>Make the client Id (also from the clientInfo session array) a hidden field with an appropriate name - value pair.</li>
+        <li>Make the client Id (also from the clientData session array) a hidden field with an appropriate name - value pair.</li>
         <li>Add a hidden input to pass an "action" name-value pair to the accounts controller indicating that an update is happening.</li>
         <li>Add an appropriate submit input for the account update.</li>
         <li>Add an appropriate HTML heading to precede the form and identify its purpose. </li>
@@ -77,7 +77,7 @@
         <li>Do NOT display the password in the input field (it is a hash anyway and wouldn't make any sense).</li>
         <li>Include a form input and accompanying label for entering a new password. Use the same validation for it as you did for the password field in the original registration form.</li>
         <li>Provide information to the client to know that by entering a password it will change the current password and reminding them of the requirements for a password (length, characters, etc...).</li>
-        <li>Make the client Id (also from the clientInfo session array) a hidden field with an appropriate name - value pair.</li>
+        <li>Make the client Id (also from the clientData session array) a hidden field with an appropriate name - value pair.</li>
         <li>Add a hidden input to pass an "action" name-value pair to the accounts controller indicating that a password change is happening.</li>
         <li>Add an appropriate submit input for the password change.</li>
         <li>Add an appropriate HTML heading to precede the form and identify its purpose.</li>
@@ -136,10 +136,10 @@
       </ol>
 
       <h3>Accounts Model</h3>
-      <p>The model will need two or three new functions:</p>
+      <p>The model will need three new functions:</p>
       <ol>
         <li>The first function will need to handle the update of the account information as submitted to the controller from the account update form. It will only need to update the first name, last name and email values based on the clientId.</li>
-        <li>The second function will be similar to the function that was previously built to get client information based on the email address. However, this function will get the client information based on the clientId.</li>
+        <li>The second function will be similar to the function that was previously built to get client information based on the email address. However, this function will get the client information based on the clientId. In reality, you can just use the function that uses the email address, but creating a new function serves two purposes: 1) it's always better to query the database using the unique ID, 2) creating another function gives you more practice! 😁</li>
         <li>The third function will need to update the password (as a hash) as submitted to the controller from the change password form, based on the clientId. Be sure that after submitting the new password to check the clients table to make sure the password is a hash as part of your testing.</li>
       </ol>
 
