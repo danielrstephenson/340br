@@ -274,7 +274,7 @@ exit;</code></pre>
 					<li>Find and open the <b>vehicles-model.php</b> file.</li>
 					<li>Scroll to the bottom and add a new comment indicating that the function will obtain information about all vehicles in inventory.</li>
 					<li>Add the following function to the model:
-						<pre class="line-numbers"><code class="language-php">/ Get information for all vehicles
+						<pre class="line-numbers"><code class="language-php">// Get information for all vehicles
 function getVehicles(){
 	$db = phpmotorsConnect();
 	$sql = 'SELECT invId, invMake, invModel FROM inventory';
