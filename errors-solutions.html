@@ -41,7 +41,15 @@
           </dt>
           <dd><h2>Solution:</h2> You need to use the file name in the URL. http://localhost/phpmotors/template.php See this video <iframe width="560" height="315" src="https://www.youtube.com/embed/jaa66B0F7FA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></dd>
 
+          <dt>
+            <h2>Error:</h2>
+            <p>Fatal error: Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect decimal value: '$18000' for column 'invPrice' at row 1 in /var/www/html/phpmotors/model/vehicles-model.php:30 Stack trace: #0 /var/www/html/phpmotors/model/vehicles-model.php(30): PDOStatement->execute() #1 /var/www/html/phpmotors/vehicles/index.php(97): addVehicle('Toyota', 'Yaris iA', 'fuelly', '/phpmotors/imag...', '/phpmotors/imag...', '$18000', '1', 'silver', '5') #2 {main} thrown in /var/www/html/phpmotors/model/vehicles-model.php on line 30</p>
+          </dt>
+          <dd><h2>Solution:</h2>
+          <p>Check the value entered in the Price field and compare with the value expected in the database. In phpMyAdmin, click on the inventory table, and then the Structure tab. What type of input is expected? A number!</p></dd>
       </dl>
+
+      <
 
 
     </main>

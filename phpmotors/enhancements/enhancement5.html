@@ -44,7 +44,7 @@
 
       <h2>Tasks</h2>
       <p>As described above you are being asked to add client-side and server-side validation to forms and controllers (just like you did in this week's activities), while making form inputs "sticky". Also, to create a custom function out of code that you already have, then just call the function to get the html navigation list code.</p>
-      <p><i style="font-size: larger;"><strong>Note:</strong> Remember that you access the <b>vehicles</b> folder by simply typing it into the URL (e.g. http://localhost/phpmotors/vehicles).</i></p>
+      <p><i style="font-size: larger;"><strong>Note:</strong> Remember that you access the <b>vehicles</b> folder by simply typing it into the URL (e.g. http://localhost/phpmotors/vehicles).</i> We will create a better way to access the vehicle management page later in the course.</p>
 
 
       <h3>Client-side Validation</h3>
@@ -52,7 +52,7 @@
         <li>Add HTML5 attributes as needed to the various input elements in the "<b>new carclassification</b>" and "<b>new vehicle</b>" forms. Make sure that each input's data type is also appropriate to the data being requested.</li>
         <li>The classificationName field in the database is limited to 30 characters. Add client-side code to limit the input to no more than 30 characters. In addition, be sure to inform the client of this limitation prior to their entering text.</li>
         <li>Add a PHP code block to each input in the "<b>new vehicle</b>" form so that the form inputs become "sticky" if and when errors in submissions are returned.</li>
-        <li><strong>Note:</strong> <mark>To display the value of a variable in a <code>textarea</code> element, it must be echoed between the opening and closing tags with no extra spaces or line breaks between the html opening and closing tags and the PHP code block between them.</mark></li>
+        <li><strong>Note:</strong><mark>The <code>&lt;textarea&gt;</code> tag is handled differently than <code>&lt;input&gt;</code> tags. To display the value of a variable in a <code>&lt;textarea&gt;</code> tag, it must be echoed between the opening and closing tags with no extra spaces or line breaks between the html opening and closing tags and the PHP code block between them. Also note, that you will echo just the variable.</mark></li>
       </ol>
       <h3>Server-side Validation</h3>
 
@@ -125,7 +125,7 @@
       <ul>
         <li>The video URL is submitted and the video is narrated by you using your own voice. The video should be about 5 minutes in length. To receive the points above, the video should demonstrate each of the items below:
           <ul>
-            <li>Objective 1: Show that the "add new carclassification" and "add new vehicle" views are valid HTML and CSS (show just one page, since they all use the same CSS), and are responsive. Do NOT show all of the items from the Frontend Checklist. <span class="important">REMEMBER: Only show valid HTML, CSS, and responsive (different screen sizes). Do NOT show all of the Frontend Checklist requirements from this week forward.</span></li>
+            <li>Objective 1: Show that the "add new carclassification" and "add new vehicle" views are valid HTML and CSS (show just one page, since they all use the same CSS), and are responsive. Do NOT show all of the items from the Frontend Checklist. <p>REMEMBER: Only show valid HTML, CSS, and responsive (different screen sizes). Do NOT show all of the Frontend Checklist requirements.</p></li>
             <li>Objective 2:
               <ul>
                 <li>Show the new function in the functions.php file. Show how it is creating the navigation.</li>

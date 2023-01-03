@@ -273,7 +273,7 @@ if (isset($classificationList)) {
    buildInventoryList(data); 
   }) 
   .catch(function (error) { 
-   console.log('There was a problem: ', error.message) 
+   console.log('There was a problem: ', error.message); 
   }) 
  })</code></pre>
 				<h4>An Explanation</h4>
@@ -303,8 +303,9 @@ if (isset($classificationList)) {
 					<li><b>Line 23:</b> Ends the eventListener.</li>
 				</ul>
 				<p>In short, the function shown above requests the data, based on the classificationId and catches any errors if they exist, and sends the retrieved data to the <b>buildInventoryList</b> function for building it into HTML and then displays it into the vehicle management web page.</p>
+
 				<h3>The buildInventoryList Function</h3>
-				<p>Finally, let's build the function that will parse the JavaScript object and wrap it up into HTML, then inject it into the vehicle management view.</p>
+				<p>Finally, let's build the function that will parse the JavaScript object and wrap it up into HTML, then inject it into the vehicle management view. Add this fuction to the <b>inventory.js</b> file.</p>
 				<pre class="line-numbers"><code class="language-javascript">// Build inventory items into HTML table components and inject into DOM 
 function buildInventoryList(data) { 
  let inventoryDisplay = document.getElementById("inventoryDisplay"); 
@@ -352,7 +353,7 @@ function buildInventoryList(data) {
 				<h2>Time to Test</h2>
 				<ol id="showlist">
 					<li>Save all files if you haven't already done so.</li>
-					<li>Run the <b>Vehicles Controller</b>.</li>
+					<li>Open the <b>Vehicles Controller</b> in your browser.</li>
 					<li>If you are not logged in as an adminstrative user you should be redirected to the PHP Motors home view.</li>
 					<li>Click the "My Account" link and you should now be viewing the login view.</li>
 					<li>Login using the administrative account that you created earlier - username: admin@cit340.net, password: Sup3rU$er</li>

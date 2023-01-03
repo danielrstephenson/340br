@@ -63,6 +63,7 @@
                               </li>
                               <li>If your code looks like the example, then things are good. If not, modify your code to match the example.
                               </li>
+                              <li>You may have used the word 'register' as the case statement for showing the 'view/registration.php' file. If this is the case, you will need to change it. Each case statement should be unique. Using 'registration' is a good idea. Remember to change the link in the login.php file! It should now have '?action=registration'.</li>
                               <li>As long as you're here, check each of the inputs for the four data items. Ensure that each has a "name" attribute and that the value matches the data being requested. For example:
 
                                    <pre class="line-numbers"><code class="language-markup">&lt;input type="text" name="clientFirstname" id="fname"&gt;
@@ -146,7 +147,7 @@ if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || e
                </p>
                <h3>An Explanation</h3>
                <p>In this code we look inside each variable to see if it's "empty". Notice that each check is separated by <code>||</code>, this is an "or" symbol, so that if any of the variables are empty, the if becomes "TRUE".</p>
-               <p>If the if is "TRUE", then the <code>$message</code> variable is created ("set") and the error string is stored in it. The registration view is then included and the PHP on this page stops.</p>
+               <p>If the condition is "TRUE", then the <code>$message</code> variable is created ("set") and the error string is stored in it. The registration view is then included and the PHP on this page stops.</p>
                <p>Remember that when we finalized the registration view we added code to watch for a <code>$message</code> variable? If found, it will display the message in the form.</p>
 
                <h3>Test Again</h3>
@@ -170,9 +171,11 @@ if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || e
                          <pre class="line-numbers"><code class="language-php">// Send the data to the model
 $regOutcome = regClient($clientFirstname, $clientLastname, $clientEmail, $clientPassword);</code></pre>
                     </li>
-                    <li>Remember that we are trying to insert a single record into the database table. If one row in the table is changed, then the database server will report back "1" and that same number will be sent to the controller and stored in our <code>$regOutcome</code> variable.</li>
-                    <li>If we get a <b>1</b> back, it means that the registration was a success!</li>
-                    <li>If we get a zero "0" back, it means the insert failed.</li>
+                    <p>Remember that we are trying to insert a single record into the database table. If one row in the table is changed, then the database server will report back "1" and that same number will be sent to the controller and stored in our <code>$regOutcome</code> variable.</p>
+                    <p>If we get a <b>1</b> back, it means that the registration was a success!</p>
+                    <p>If we get a zero "0" back, it means the insert failed.</p>
+                    <p>Note: the order of the parameters is important, not the names of the parameters. If the clientFirstname is first in the model, then it needs to be first here, too.</p>
+                    </li>
                </ol>
 
                <h2>Find Out the Result</h2>
